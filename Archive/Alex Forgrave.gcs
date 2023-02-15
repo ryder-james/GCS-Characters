@@ -1,0 +1,3482 @@
+{
+	"type": "character",
+	"version": 1,
+	"id": "74cf6a55-8ed7-4f33-b033-7da4e75b0f40",
+	"settings": {
+		"version": 1,
+		"default_length_units": "ft_in",
+		"default_weight_units": "lb",
+		"user_description_display": "tooltip",
+		"modifiers_display": "inline",
+		"notes_display": "inline",
+		"base_will_on_10": false,
+		"base_per_on_10": false,
+		"use_multiplicative_modifiers": false,
+		"use_modifying_dice_plus_adds": false,
+		"use_know_your_own_strength": false,
+		"use_reduced_swing": false,
+		"use_thrust_equals_swing_minus_2": false,
+		"use_simple_metric_conversions": true,
+		"show_college_in_sheet_spells": true,
+		"show_difficulty": false,
+		"use_title_in_footer": false,
+		"extra_space_around_encumbrance": false,
+		"block_layout": [
+			"reactions",
+			"melee",
+			"ranged",
+			"advantages skills",
+			"spells",
+			"equipment",
+			"other_equipment",
+			"notes"
+		]
+	},
+	"created_date": "Feb 27, 2021, 8:21 PM",
+	"modified_date": "Mar 18, 2021, 7:14 PM",
+	"profile": {
+		"player_name": "RyderTheFirst",
+		"name": "Alexander Forgrave",
+		"title": "Captain",
+		"age": "51",
+		"birthday": "January 12",
+		"eyes": "Grey",
+		"hair": "Blond, Curly, Long",
+		"skin": "Pale",
+		"handedness": "Left",
+		"height": "6' 3\"",
+		"weight": "195 lb",
+		"gender": "Male",
+		"body_type": "humanoid",
+		"tech_level": "9"
+	},
+	"total_points": 250,
+	"ST": 10,
+	"DX": 11,
+	"IQ": 13,
+	"HT": 11,
+	"advantages": [
+		{
+			"type": "advantage_container",
+			"version": 1,
+			"id": "3a6c2fc8-db57-4503-91ce-e794bd1313f1",
+			"name": "A Man of Many Talents",
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "1ed54015-ec22-4472-a2a2-8ac3ee6cf991",
+					"based_on_id": "b11df077-4692-4016-9f47-b97653f64efc",
+					"based_on_hash": "G4jLvW4t0beZ45igRtwrMe6vxA7/VPnKxRoky6bOYKs",
+					"name": "Talent (Smooth Operator(Modified))",
+					"mental": true,
+					"levels": "1",
+					"points_per_level": 10,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "98ab1b0e-e6c5-4d60-8b02-65e430311a8c",
+							"based_on_id": "673ac6d5-88a0-46ff-9c61-a92a5908fd6d",
+							"based_on_hash": "Gq1Kv4D2fGYA7OqzjcUKLA9gL9FF8aKQSOIT3m9FzN4",
+							"disabled": true,
+							"name": "Alternate Benefit",
+							"cost_type": "percentage",
+							"cost": 0,
+							"affects": "total",
+							"notes": "Bonus to resist covered skills"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "992ab2a4-0b09-4edc-93f2-a0783514934d",
+							"based_on_id": "d7bc77f2-e124-4076-a8c1-e9845d9583c0",
+							"based_on_hash": "GfBOmdQ2LIFudPtV/GB8VgyFV1s4y5iBKIz4UQ1OTm8",
+							"disabled": true,
+							"name": "Alternative Cost",
+							"cost_type": "points",
+							"cost": -2,
+							"affects": "levels_only"
+						}
+					],
+					"reference": "B90,PU3:15",
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Acting"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Carousing"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Detect Lies"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Diplomacy"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Fast-Talk"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Intimidation"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Leadership"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Politics"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Public Speaking"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Savoir-Faire"
+							}
+						},
+						{
+							"type": "reaction_bonus",
+							"amount": 1,
+							"per_level": true,
+							"situation": "from con artists, politicians, salesmen, etc. – but only if you aren’t trying to manipulate them."
+						}
+					],
+					"categories": [
+						"Advantage",
+						"Talent"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "65b34671-fb46-4f78-935d-ba6ab81b7ea3",
+					"based_on_id": "6e4e2676-6071-4cb0-93b6-2ce842e8f40c",
+					"based_on_hash": "ioNourxBEEs0+A1bbB3yXzawlv+J546NTtuHuMabhxo",
+					"name": "Talent (Business Acumen)",
+					"mental": true,
+					"levels": "1",
+					"points_per_level": 10,
+					"reference": "B90",
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Accounting"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Administration"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Economics"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Finance"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Gambling"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Market Analysis"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Merchant"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Propaganda"
+							}
+						},
+						{
+							"type": "reaction_bonus",
+							"amount": 1,
+							"per_level": true,
+							"situation": "from business partners"
+						}
+					],
+					"categories": [
+						"Advantage",
+						"Talent"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "6d998c60-8201-4ae6-9543-3a0be8550916",
+					"based_on_id": "b08962b3-5c25-41f6-899e-209b374bd9e3",
+					"based_on_hash": "SXo1SK44JcyZSCAUZpynHAUMEAvMgjmLFQAUW9h7RIs",
+					"name": "Talent (Engineer (Modified Artificer))",
+					"mental": true,
+					"levels": "2",
+					"points_per_level": 5,
+					"reference": "B90",
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Armoury"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Electrician"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Electronics Repair"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Engineer"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Machinist"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Mechanic"
+							}
+						},
+						{
+							"type": "reaction_bonus",
+							"amount": 1,
+							"per_level": true,
+							"situation": "from other engineers who see me at work"
+						}
+					],
+					"categories": [
+						"Advantage",
+						"Talent"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "21cc4ec6-5ad2-4f06-8215-24799fdb9a28",
+					"based_on_id": "2f60c1fd-d76b-40f3-9843-644ff3e111bf",
+					"based_on_hash": "t/Xt1q2+kvjO2nPdtM3JzJetq1UNs0HJGyFlas1D+Qk",
+					"name": "Talent (Intuitive Admiral (Space))",
+					"mental": true,
+					"levels": "1",
+					"points_per_level": 10,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "2520a262-0760-4c6f-ade3-4e2e665d8b43",
+							"based_on_id": "d07dd491-25bb-43ac-bc17-a91d6b83365c",
+							"based_on_hash": "Nz9GVOL7xN+YvdOehOLQe3dcOHFxIcJBcfr1WuX4u30",
+							"name": "Reaction Bonus",
+							"cost_type": "percentage",
+							"cost": 0,
+							"affects": "total",
+							"notes": "Anyone you serve with or command"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "68c3192d-0ac4-4c84-a9bd-6f48f4248416",
+							"based_on_id": "e0fed3a0-626e-42fa-b38d-8ce30573f3a0",
+							"based_on_hash": "REmeWEL1t1CPvT+KoaXuQcqAZCX6kUWJlZdCvr24zSE",
+							"disabled": true,
+							"name": "Alternate Benefit",
+							"cost_type": "percentage",
+							"cost": 0,
+							"affects": "total",
+							"notes": "Bonus to initiative roll if leader"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "dfecdeaa-a038-406b-841f-97108ffd3d01",
+							"based_on_id": "6b4056b2-f507-4ca1-be05-ed68cd4d4fb1",
+							"based_on_hash": "o5z/vE6TRtGi1rMzG3dnXyz9y+0sUc42sEF/ogliwnM",
+							"disabled": true,
+							"name": "Alternative Cost",
+							"cost_type": "points",
+							"cost": -2,
+							"affects": "levels_only"
+						}
+					],
+					"reference": "PU3:12",
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Expert Skill"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "Military Science"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "History"
+							},
+							"specialization": {
+								"compare": "ends_with",
+								"qualifier": "Military"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Intelligence Analysis"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Leadership"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Savoir-Faire"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "Military"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Shiphandling"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "Spaceship"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Shiphandling"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "Spaceship"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Spacer"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Strategy"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "Space"
+							}
+						}
+					],
+					"categories": [
+						"Advantage",
+						"Talent"
+					]
+				}
+			]
+		},
+		{
+			"type": "advantage_container",
+			"version": 1,
+			"id": "e66336e0-a3cf-44b3-a541-ae1b01cbb1b4",
+			"name": "Retired Naval Captain",
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "892418cf-6dcf-4cd0-8a4e-1454764e63bc",
+					"based_on_id": "2c71cf8a-9c27-4734-9991-fb13571a34cd",
+					"based_on_hash": "hYU7S5w1EsMer+EfBXjGEaC9nRADvWPKixh0IU/JD0E",
+					"name": "Intuition",
+					"mental": true,
+					"base_points": 15,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "9372bc31-24ce-4211-ab49-58271322831a",
+							"based_on_id": "e06e6e3c-d4d0-43d5-8c38-b91e8b10d310",
+							"based_on_hash": "6NRz7FoYqA+NsM6WDrAofJdLESseEH1o19Ukn5yj9js",
+							"disabled": true,
+							"name": "Inspired",
+							"reference": "P56",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total"
+						}
+					],
+					"reference": "B63",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "8f11ba31-f3f6-4939-9926-1383dea02b65",
+					"based_on_id": "5dc66a7f-9895-4ee9-9e11-6c6dd00243f8",
+					"based_on_hash": "6Uq22m3GzLc2MurjV5iv4X23B8XegUotfSo4bCMgwxc",
+					"name": "Ambidexterity",
+					"physical": true,
+					"base_points": 5,
+					"reference": "B39",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "b4514b57-8efd-4f92-a7db-18103c6e5234",
+					"based_on_id": "5867f5cb-1be1-446d-b978-4c552109ceb0",
+					"based_on_hash": "RmbbQsUMWMLh/LivTG2sbiaQhq98613RfTwjVjobVGg",
+					"name": "Less Sleep",
+					"physical": true,
+					"levels": "1",
+					"points_per_level": 2,
+					"reference": "B65",
+					"notes": "Require 1 hour/level less sleep for a full night's rest (max 4)",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "71fe7d90-51f9-4bb8-b54f-e8e8775b2b2e",
+					"based_on_id": "de9dae51-5548-45e6-a6b2-c163886753a2",
+					"based_on_hash": "oUVHUY3OKvGBahQ2t0HCYFqdQ0ioEb+0dfIPs4HCl7Y",
+					"name": "License (Ship Captain)",
+					"social": true,
+					"base_points": 1,
+					"reference": "PU2:18",
+					"categories": [
+						"Perk"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "729fd7ed-77ec-453c-9f68-5465ebc11871",
+					"based_on_id": "0d765966-559c-4364-b9e3-b0ba30c9963e",
+					"based_on_hash": "nl0Q3DZ5rGKz4Wrk9qq37mrLjxxXfB8g1RzYQjEnCJU",
+					"name": "Penetrating Voice",
+					"physical": true,
+					"base_points": 1,
+					"reference": "B101",
+					"notes": "In situations where you want to be heard over noise, others get +3 to their Hearing roll",
+					"categories": [
+						"Perk"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "ccf7ee61-afae-45d1-8d98-3665dab414fe",
+					"based_on_id": "e8bfbdc6-b47c-470a-a80c-fe4574662193",
+					"based_on_hash": "czWrTVqU9kRPn/pJwvs4GtSM92ab/7YFIj7mlILR7t0",
+					"name": "Cultural Familiarity (Martian)",
+					"mental": true,
+					"base_points": 1,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "c7502a22-be41-4ee9-9be4-69f97d553d1f",
+							"based_on_id": "ab12b725-01c8-4fc4-8e71-619a54c79496",
+							"based_on_hash": "sr2bPGPOcPs6708ecOcUCLaKeljqtiQTuOmpipdc/zI",
+							"disabled": true,
+							"name": "Alien",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "7f9ae127-b26b-44a9-8110-376281811931",
+							"based_on_id": "f72aa995-6766-4eaf-a3ca-0f4ff76d47c5",
+							"based_on_hash": "saPDuD/AQ76GciEXnfev3rMgfAiyaxnoF1h9uZd0C6M",
+							"disabled": true,
+							"name": "Native",
+							"cost_type": "points",
+							"cost": -1,
+							"affects": "total"
+						}
+					],
+					"reference": "B23",
+					"notes": "Do not suffer the normal -3 penalty for unfamiliarity",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "ba1d4726-2e87-4884-a640-d1e7a0bac924",
+					"based_on_id": "e8bfbdc6-b47c-470a-a80c-fe4574662193",
+					"based_on_hash": "czWrTVqU9kRPn/pJwvs4GtSM92ab/7YFIj7mlILR7t0",
+					"name": "Cultural Familiarity (Belter)",
+					"mental": true,
+					"base_points": 1,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "1faefc67-db75-43bd-9e80-9656cd8a8b40",
+							"based_on_id": "ab12b725-01c8-4fc4-8e71-619a54c79496",
+							"based_on_hash": "sr2bPGPOcPs6708ecOcUCLaKeljqtiQTuOmpipdc/zI",
+							"disabled": true,
+							"name": "Alien",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "7d9ce58c-f8ad-4123-b588-636de36a3646",
+							"based_on_id": "f72aa995-6766-4eaf-a3ca-0f4ff76d47c5",
+							"based_on_hash": "saPDuD/AQ76GciEXnfev3rMgfAiyaxnoF1h9uZd0C6M",
+							"disabled": true,
+							"name": "Native",
+							"cost_type": "points",
+							"cost": -1,
+							"affects": "total"
+						}
+					],
+					"reference": "B23",
+					"notes": "Do not suffer the normal -3 penalty for unfamiliarity",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "1caf8596-5821-436d-b9df-6cd2a8c69a99",
+					"based_on_id": "25c2f293-248a-4c7b-8487-5cf5c77d572d",
+					"based_on_hash": "uB2utExMQ8f0+S+QcVpFr175RQMXhAweWnX/5/TJ6rY",
+					"name": "Captain",
+					"physical": true,
+					"levels": "2",
+					"points_per_level": 5,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "5f009ad7-63cb-4b21-b351-259dd4f6d08d",
+							"based_on_id": "f2152f52-b337-4072-ab43-d66afcbc319e",
+							"based_on_hash": "7tMZBiCQks3eQyOxAr8yxjxsA+BbPLZ7GDN+3NL/ANk",
+							"disabled": true,
+							"name": "Replaces Status",
+							"reference": "B29",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "ed9695ce-3aa5-46aa-a40e-1f5e3276a332",
+							"based_on_id": "42caab58-9f7b-4911-9ef0-a47a92e63801",
+							"based_on_hash": "Uuirc0hfFJoctS+1fFBL0S8vasipYU8X4jBuHjHX+zA",
+							"name": "Courtesy",
+							"reference": "B29",
+							"cost_type": "points",
+							"cost": -4,
+							"affects": "levels_only"
+						}
+					],
+					"reference": "B29",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "b0651f9b-4a48-46c4-8263-bd8af9d3d336",
+					"based_on_id": "3c155ebc-3a17-4a33-abec-c8392e2dbe95",
+					"based_on_hash": "QqC/eT58hyd4Y02Qa34U88dD7WqNr6N8r2ZIYW9sw+w",
+					"round_down": true,
+					"name": "Reputation",
+					"social": true,
+					"levels": "1",
+					"points_per_level": 5,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "c48de1d8-2534-42af-8eb9-214b1bf8658e",
+							"based_on_id": "7d4d8a6d-ba26-4a51-a142-7ccb248dadab",
+							"based_on_hash": "4i1NEHyAljir8/fKo1mUGP6NE5+wAs7jQEbRt3h0ANQ",
+							"disabled": true,
+							"name": "People Affected",
+							"reference": "B27",
+							"cost_type": "multiplier",
+							"cost": 1,
+							"notes": "Almost everyone"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "7a9f9aa1-6894-47db-a3a7-41c4ec078ff9",
+							"based_on_id": "9f5faa6a-848c-4767-85ce-a6bb8a74b5e2",
+							"based_on_hash": "IIj1RFlpJ1FTF18g8Kg1SMBiMzaVzvX9I6UYopuN99A",
+							"disabled": true,
+							"name": "People Affected",
+							"reference": "B27",
+							"cost_type": "multiplier",
+							"cost": 0.67,
+							"notes": "Almost everyone except @large class of people@"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "c2546116-dc22-42ba-998c-5307096009d1",
+							"based_on_id": "a7c852e7-949f-401b-8465-7f6533a34dea",
+							"based_on_hash": "y59fvZ4TM9brvZZyFx1CbTkK1sxrQnlYfJ30e/kF/5s",
+							"name": "People Affected",
+							"reference": "B27",
+							"cost_type": "multiplier",
+							"cost": 0.5
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "b441bbdf-194d-4c69-9a44-65fbf014808e",
+							"based_on_id": "9785b776-58c0-4920-bdac-8aac6581a4de",
+							"based_on_hash": "OUcF1/Ow+dzsLIgUynBmhXEKkn8sauZ5sZeAx1QP0Ww",
+							"disabled": true,
+							"name": "People Affected",
+							"reference": "B27",
+							"cost_type": "multiplier",
+							"cost": 0.33,
+							"notes": "@Small class of people@"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "86aaf3e4-3927-4f38-beeb-55f8d78d9f66",
+							"based_on_id": "8e47eebb-1910-42ae-b6d2-99c6fdd5f4d4",
+							"based_on_hash": "kCFdbsDhYL4X2+nQlx28mOqieHtIVWqc9dteGYgQXCU",
+							"disabled": true,
+							"name": "Recognized all the time",
+							"reference": "B28",
+							"cost_type": "multiplier",
+							"cost": 1
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "222dcb8c-d406-40ca-8bb3-92c81e9b90ce",
+							"based_on_id": "47144c21-c103-47c5-8b34-c458312dd804",
+							"based_on_hash": "7MyqwsMuzZyoGM/pzO/x3ovm5/yakPz2gwAcxc02HYg",
+							"name": "Recognized sometimes",
+							"reference": "B28",
+							"cost_type": "multiplier",
+							"cost": 0.5,
+							"notes": "10-"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "c22f1a0b-f31b-4bcd-870d-6117f429e271",
+							"based_on_id": "88d48467-af6d-401e-b629-8fb4df53fb6e",
+							"based_on_hash": "RRqdmSzC0i5ieyAZNCKfOgTdJAiAG9tzPf6enzmKs2g",
+							"disabled": true,
+							"name": "Recognized occasionally",
+							"reference": "B28",
+							"cost_type": "multiplier",
+							"cost": 0.33,
+							"notes": "7-"
+						}
+					],
+					"reference": "B26",
+					"notes": "People in the military with me",
+					"categories": [
+						"Advantage"
+					]
+				}
+			]
+		},
+		{
+			"type": "advantage_container",
+			"version": 1,
+			"id": "2cc63974-89ee-44ae-8d5d-09b7a2a0a268",
+			"name": "Honorable Man",
+			"open": false,
+			"children": [
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "15152399-4069-4d9e-9725-2e43f2dfb95c",
+					"based_on_id": "8fdafaf5-5a2a-43f9-a3da-fd1570fd2823",
+					"based_on_hash": "/2+kQ3TaiQ8XzzSkTc0XYncZblRUNt2uVUE906Rn1m0",
+					"name": "Charisma",
+					"mental": true,
+					"levels": "2",
+					"points_per_level": 5,
+					"reference": "B41",
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "fortune-telling"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "leadership"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "panhandling"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "public speaking"
+							}
+						},
+						{
+							"type": "reaction_bonus",
+							"amount": 1,
+							"per_level": true,
+							"situation": "from sapient being with whom you actively interact (converse, lecture, etc.)"
+						},
+						{
+							"type": "reaction_bonus",
+							"amount": 1,
+							"per_level": true,
+							"situation": "to Influence rolls"
+						}
+					],
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "e1e7703a-1800-4929-8997-a0b29371b2a7",
+					"based_on_id": "7255d058-ce5b-4ec3-8730-dab0d41aeafa",
+					"based_on_hash": "slIXp3VZh/QdaA3IPExoq7McE+35A6O97TvicWqg3hI",
+					"name": "Honest Face",
+					"physical": true,
+					"base_points": 1,
+					"reference": "B101",
+					"notes": "+1 to trained Acting skill for the sole purpose of \"acting innocent\"",
+					"categories": [
+						"Perk"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "c0428fa8-e0cd-4b8d-9598-db98ef3a27f6",
+					"based_on_id": "a31d3c41-54dc-4bdb-8743-976a1b5cbeb9",
+					"based_on_hash": "FTS4OCUsOPxM+zZ3wrd+mAEg8iXkgOo0FY8ehD4yGiQ",
+					"name": "Sense of Duty",
+					"mental": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "1d8971e5-8d78-4c90-acea-62f4c218f1cf",
+							"based_on_id": "de47158b-455d-4448-8055-86065b81d6d1",
+							"based_on_hash": "WjsWuvKr7HEQGNLiAJ2Gpk0vS16J6cBfCZIad0CMEnA",
+							"disabled": true,
+							"name": "Friends and Companions",
+							"reference": "B153",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "b6a619b5-84a8-4fa5-851e-befeed317f83",
+							"based_on_id": "8fde1c7b-7271-4b9b-9032-8551dde325a8",
+							"based_on_hash": "sJNYn9mgnnEMBMeh4bKLsMVWZtosxIebdKtTHubH+6s",
+							"name": "My Crew",
+							"reference": "B153",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "b168d130-1708-463f-81c8-995cd7479747",
+							"based_on_id": "89ec98d8-237b-4ab6-82e5-f9767592c065",
+							"based_on_hash": "bfHObGHwkzMZT2/ypaQAH5PcljWActOJh5BQuu0bsm0",
+							"disabled": true,
+							"name": "@Individual@",
+							"reference": "B153",
+							"cost_type": "points",
+							"cost": -2,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "491b9ad4-3be8-40c1-a704-d4062c1a7b0e",
+							"based_on_id": "0daad494-07fe-4b61-a1fe-ab5e198b6411",
+							"based_on_hash": "+mNP1QWRd4ag8jTrKUzzvdke0Zam6vkz5mlniy63QMo",
+							"disabled": true,
+							"name": "@Large Group@",
+							"reference": "B153",
+							"cost_type": "points",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "952fca5e-3713-458a-8056-ddfba09d436c",
+							"based_on_id": "103f5c35-d3d6-4f0f-9336-447062d5c050",
+							"based_on_hash": "vzUw9Yibr4SF6ejYaee9uPwFMtb3dDylb4ftrdNLWr8",
+							"disabled": true,
+							"name": "@Entire Race@",
+							"reference": "B153",
+							"cost_type": "points",
+							"cost": -15,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"version": 1,
+							"id": "43dec60c-6914-49d9-863e-ef84c8b62603",
+							"based_on_id": "721ee069-0e87-46c8-9638-0f2dee3142e6",
+							"based_on_hash": "Bq7WsSHB60v/roE0I9HZia/BCNn+O0S+SrItyXf6Hpw",
+							"disabled": true,
+							"name": "Every Living Being",
+							"reference": "B153",
+							"cost_type": "points",
+							"cost": -20,
+							"affects": "total"
+						}
+					],
+					"reference": "B153",
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "45eed131-69a2-41b3-9dd1-e3c87d7a4119",
+					"based_on_id": "2241b57a-5ca1-4bbe-b8e2-a5e963e1645d",
+					"based_on_hash": "edfSHsTQcYija9MAkDCDv3VQ8XtsqrK92k/ZdUb71XI",
+					"name": "Selfless",
+					"mental": true,
+					"base_points": -5,
+					"cr": 6,
+					"reference": "B153",
+					"notes": "You must make a self-control roll to put your needs – even survival – before those of someone else.",
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"version": 1,
+					"id": "eb34179d-828b-4682-843b-d802b215642b",
+					"based_on_id": "e9b12a42-c2b7-436e-9752-75438eebbb44",
+					"based_on_hash": "2Fg8lb0+niO5tQ4V/ySLOGHq1T/pLJRC1Za9hyFtDyw",
+					"name": "Honesty",
+					"mental": true,
+					"base_points": -10,
+					"cr": 6,
+					"reference": "B138",
+					"notes": "Make a self-control roll when faced with the “need” to break unreasonable laws; if you fail, you must obey the law, whatever the consequences. If you manage to resist your urges and break the law, make a second self-control roll afterward. If you fail, you must turn yourself in to the authorities!",
+					"categories": [
+						"Disadvantage"
+					]
+				}
+			]
+		},
+		{
+			"type": "advantage",
+			"version": 1,
+			"id": "68e11dbc-95a3-4442-9bb0-16699728a599",
+			"based_on_id": "b5be5c9e-af78-40a3-8f94-c061622c27d7",
+			"based_on_hash": "hyridNk+9dP9jML+A5QFLzBHerKoYrDfi1LMbIUv4jg",
+			"name": "Ally (Anachronistic Mining Drone)",
+			"social": true,
+			"modifiers": [
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "f08aac53-0869-4501-a681-e1a520ff0af3",
+					"based_on_id": "c1eb750d-bdd1-4483-a293-892526735fad",
+					"based_on_hash": "IKm9X0HWSSyvhX5UpuDaRfrUfYACFQm3v9VlbYTfyV8",
+					"disabled": true,
+					"name": "Point total",
+					"reference": "B37",
+					"cost_type": "points",
+					"cost": 1,
+					"affects": "total",
+					"notes": "25% of your starting points"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "64ee0ccc-d9c6-4ab2-a6c0-7a5799ebb2d7",
+					"based_on_id": "0b93dc24-8f30-4c58-8595-a5f2bd05173d",
+					"based_on_hash": "9jtwhLJkPYI4RBscaM3C3LKOoEXT45SYhkMKSe1mOhI",
+					"disabled": true,
+					"name": "Point total",
+					"reference": "B37",
+					"cost_type": "points",
+					"cost": 2,
+					"affects": "total",
+					"notes": "50% of your starting points"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "ff1570e6-e3a4-4333-b262-c38a846393b1",
+					"based_on_id": "469b4a79-c6cf-4f87-be4d-c39428a08d9b",
+					"based_on_hash": "Ef8OY8hxRkTZBoOwUSXba97S4Ov0lW18KjLocZJnvQY",
+					"disabled": true,
+					"name": "Point total",
+					"reference": "B37",
+					"cost_type": "points",
+					"cost": 3,
+					"affects": "total",
+					"notes": "75% of your starting points"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "39ad4866-668d-4399-aea6-6b653a08e7c6",
+					"based_on_id": "1c5fa2a8-39df-4651-a06b-21635ead97ca",
+					"based_on_hash": "MBKHyPiPFpEB66bxl1smmb/wGcBHDQZ9OYuhgC61nHc",
+					"disabled": true,
+					"name": "Point total",
+					"reference": "B37",
+					"cost_type": "points",
+					"cost": 5,
+					"affects": "total",
+					"notes": "100% of your starting points"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "b97831fc-d6d0-430f-8387-f5ca461005fa",
+					"based_on_id": "b9452cfa-cda2-4ce0-8531-7a6b9c33ddb9",
+					"based_on_hash": "M0NwokUw9uMeUMAiDgbnOuK9fQGeGVUAX7fH9zcIgHU",
+					"name": "Point total",
+					"reference": "B37",
+					"cost_type": "points",
+					"cost": 10,
+					"affects": "total",
+					"notes": "150% of your starting points"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "82d36abf-cc13-42d2-a3b0-43aacbe09d4c",
+					"based_on_id": "d2c39c4d-c98d-4266-8b8c-dcd6383e3a0a",
+					"based_on_hash": "0B0bC8S+zr3ydOd96TsKd6xKs3k18Rnq+2uzhUeabiw",
+					"disabled": true,
+					"name": "Appears constantly",
+					"reference": "B36",
+					"cost_type": "multiplier",
+					"cost": 4,
+					"notes": "No roll required"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "f858143d-abd6-417d-8f4f-fec90a59a418",
+					"based_on_id": "1f0b6315-dff4-473e-bdef-19346d578523",
+					"based_on_hash": "IseNydwxIiy4Y8n7+fpknsip/On3J2rjLlMofmrrzv0",
+					"disabled": true,
+					"name": "Appears almost all the time",
+					"reference": "B36",
+					"cost_type": "multiplier",
+					"cost": 3,
+					"notes": "15-"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "ea301354-762d-4329-a8ce-a14df12e8a6d",
+					"based_on_id": "558c0415-bdd8-4a47-bf06-09fd5e1d7e80",
+					"based_on_hash": "Y49y+Sh/ckP4gJ0CPo9/VZwKtLQ0Lj4SBWnXXhzNDR4",
+					"disabled": true,
+					"name": "Appears quite often",
+					"reference": "B36",
+					"cost_type": "multiplier",
+					"cost": 2,
+					"notes": "12-"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "d84b4055-fbf3-466b-8033-956f4d50fd7c",
+					"based_on_id": "be41be9a-9e87-47cf-bff3-755e3635a670",
+					"based_on_hash": "ioT95FJB0PStV6QPyN9t14YsrK/EIIZliGPZ9DfqYaM",
+					"name": "Appears fairly often",
+					"reference": "B36",
+					"cost_type": "multiplier",
+					"cost": 1,
+					"notes": "9-"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "07ff5c73-b0bf-4fda-8684-f86fe71c3362",
+					"based_on_id": "90ea2d51-49e6-484c-9cb3-461df7b7bd54",
+					"based_on_hash": "2VXc8L1muB1KZrRkVln6wX8uEOTUZDZGfVVFXuzQngw",
+					"disabled": true,
+					"name": "Appears quite rarely",
+					"reference": "B36",
+					"cost_type": "multiplier",
+					"cost": 0.5,
+					"notes": "6-"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "d5e17fa2-7d88-4592-a74f-300f23fe3ce2",
+					"based_on_id": "9b920170-2506-4d12-b871-be1100043704",
+					"based_on_hash": "vDVYhTxwvDAnvOFC6c1L0wxnx7ZIq0gaCNExaF/L/94",
+					"disabled": true,
+					"name": "Group of 6-10",
+					"reference": "B37",
+					"cost_type": "multiplier",
+					"cost": 6
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "0ce3d530-8723-4d26-b6e8-edc49535f40a",
+					"based_on_id": "d0e44bc7-5889-46ec-879f-3d9ba9a4e54f",
+					"based_on_hash": "3iNRUt/E/Y+Wkqsl5QG8xsRJ+3Cjs8h+ADyF1zTZdEQ",
+					"disabled": true,
+					"name": "Group of 11-20",
+					"reference": "B37",
+					"cost_type": "multiplier",
+					"cost": 8
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "9ff00f99-b571-49c4-81d9-f9746a3b7641",
+					"based_on_id": "8fc8e24d-4b27-4e45-9b3a-5a6f64ada309",
+					"based_on_hash": "gx4cb/5D3VsUL3D2vLo1L/YEHPojqD4CIunY4Gj0GTo",
+					"disabled": true,
+					"name": "Group of 21-50",
+					"reference": "B37",
+					"cost_type": "multiplier",
+					"cost": 10
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "48dd9f2d-bbd9-4937-a6bd-f579551c0912",
+					"based_on_id": "1dedde55-e356-448c-961a-53dc73e8e58b",
+					"based_on_hash": "G9Cdd+lMyixYp+RJb3/+V0IavG459mnuGbebQIZkXqk",
+					"disabled": true,
+					"name": "Group of 51-100",
+					"reference": "B37",
+					"cost_type": "multiplier",
+					"cost": 12
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "3fc7dbeb-d1c0-4174-a835-cbb4f62f5d36",
+					"based_on_id": "a6fa2681-e601-4915-9e43-e357c1119e73",
+					"based_on_hash": "nV92uVpesMU4g6bsYIcJUVZ/JtNBjWB2LwIpElY4BlY",
+					"disabled": true,
+					"name": "Group of 101-1000",
+					"reference": "B37",
+					"cost_type": "multiplier",
+					"cost": 18
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "f4531743-222e-451b-9d59-f8df3eec5cc2",
+					"based_on_id": "d176a29c-87f6-41b9-8d4e-10beb54d1822",
+					"based_on_hash": "ui6KuxUD5l2fFb/QNh4DT+0X0jZd92sDtBn9Kumo4l8",
+					"disabled": true,
+					"name": "Group of 1001-10000",
+					"reference": "B37",
+					"cost_type": "multiplier",
+					"cost": 24
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "eafec66b-f35c-4b9e-8e35-16c711746229",
+					"based_on_id": "8584249f-64fa-4939-87eb-63382071fbf3",
+					"based_on_hash": "ZCWVxE67S7QL9qSBnnlBzOVCuiwIuDIJow16GjQy8uI",
+					"disabled": true,
+					"name": "Group of 10001-100000",
+					"reference": "B37",
+					"cost_type": "multiplier",
+					"cost": 30
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "ddbc2d2c-85c8-4466-bc32-96942d4adafd",
+					"based_on_id": "7429f8b9-70f3-4fe7-8c48-a9d1b9c06e0a",
+					"based_on_hash": "r7VBfiwUUjdGEZZ6GfwW5kEPXQMKsYvmKUYIxTzjCrY",
+					"disabled": true,
+					"name": "Group of 100001-1000000",
+					"reference": "B37",
+					"cost_type": "multiplier",
+					"cost": 36
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "f1c90dfc-b1fe-4463-a689-3b64b25245c3",
+					"based_on_id": "1423dd75-af66-4dfb-bf98-39ebd775beb3",
+					"based_on_hash": "5RPIV18XRndNzmOoyx9yl59wcz9X4i15OcfsEwTog0o",
+					"disabled": true,
+					"name": "Minion",
+					"reference": "B38",
+					"cost_type": "percentage",
+					"cost": 50,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "bf58a9df-5f67-48cb-820a-0b31ebb293ba",
+					"based_on_id": "6dc2adbd-08c7-4ef0-8614-22ec36071dbb",
+					"based_on_hash": "hTHKiPQjUA92u59Zi3KYPgMlGhigfWj8TsGaCLuHxkY",
+					"disabled": true,
+					"name": "Minion",
+					"reference": "B38",
+					"cost_type": "percentage",
+					"cost": 0,
+					"affects": "total",
+					"notes": "IQ 0 or Slave Mentality"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "d698a9b1-d4bf-487c-bc31-eb98db5a1f53",
+					"based_on_id": "d8886838-7444-495b-aa11-02ac3ae23dd2",
+					"based_on_hash": "eSELzba1wHwI0/SrfoARP9YK1y6WKo3vF5sFodSNIRo",
+					"disabled": true,
+					"name": "Special Abilities",
+					"reference": "B38",
+					"cost_type": "percentage",
+					"cost": 50,
+					"affects": "total",
+					"notes": "@Abilities@"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "03d9aa8c-0500-4986-8702-1f9bb7476049",
+					"based_on_id": "d00c3a09-82c4-4569-81df-955e8e62ef34",
+					"based_on_hash": "82tScPhC5leAg+KyUOpj9UGm9dY9YVdX3x49SK6/Ujc",
+					"disabled": true,
+					"name": "Summonable",
+					"reference": "B38",
+					"cost_type": "percentage",
+					"cost": 100,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "fbf8c707-a5c6-4a3b-a870-bc7f314a8c7a",
+					"based_on_id": "d3be4428-f357-41d5-8bce-142240934518",
+					"based_on_hash": "ShG40np0V14zHxFkt32eqBbC4O4hYaC7XBEprE/sIaQ",
+					"disabled": true,
+					"name": "Sympathy",
+					"reference": "B38",
+					"cost_type": "percentage",
+					"cost": -25,
+					"affects": "total",
+					"notes": "Death of one party reduces the other to 0 HP"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "ced2e0d3-db52-45bf-9c49-947c8832b94d",
+					"based_on_id": "036a0c85-d7af-4de9-af22-eea6cec5ed47",
+					"based_on_hash": "5ynIgywRYZN22og+LOIJ3npsdCLm1hTECqkTGQK/VSA",
+					"disabled": true,
+					"name": "Sympathy",
+					"reference": "B38",
+					"cost_type": "percentage",
+					"cost": -5,
+					"affects": "total",
+					"notes": "Death of one party reduces the other to 0 HP and wounds affect ally but not you"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "d57746e6-26b4-49bd-a203-4bb2a55c3b9c",
+					"based_on_id": "f3001c31-1cbb-4f95-af86-c92a7755a044",
+					"based_on_hash": "Z2q3zS++k7NJ/kzEckrxSM3op1/nXIvAbqdasLW/p50",
+					"disabled": true,
+					"name": "Sympathy",
+					"reference": "B38",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "total",
+					"notes": "Death of one party kills the other"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "9708642a-3534-4270-a449-a89e6b8311ca",
+					"based_on_id": "30df2a61-903a-4f3f-b7ce-6319dcc61e6a",
+					"based_on_hash": "z/GzJaSs2sEiYAjEHqzoTSqvDF82BC/F6iv4v+ggU2k",
+					"disabled": true,
+					"name": "Sympathy",
+					"reference": "B38",
+					"cost_type": "percentage",
+					"cost": -10,
+					"affects": "total",
+					"notes": "Death of one party kills the other and wounds affect ally but not you"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "009d2486-89f4-4de9-b90e-b79f0e2e6095",
+					"based_on_id": "2777d1e3-2b29-4c22-b543-d2553828e7e9",
+					"based_on_hash": "3w3fCt7zXHmoDvm0HGEjVNdxvYSuVi52LBpFOwgN3LA",
+					"disabled": true,
+					"name": "Unwilling",
+					"reference": "B38",
+					"cost_type": "percentage",
+					"cost": -50,
+					"affects": "total"
+				},
+				{
+					"type": "modifier",
+					"version": 1,
+					"id": "78f283f1-177b-42eb-9747-016cacbc04e1",
+					"based_on_id": "689f0318-5bb4-45b8-bc81-74c14097fe68",
+					"based_on_hash": "gailS2C9Y8TOe3tWqZh90vHxmggRhTO15/RSTotKTzA",
+					"disabled": true,
+					"name": "Favor",
+					"reference": "B55",
+					"cost_type": "multiplier",
+					"cost": 0.2
+				}
+			],
+			"reference": "B36",
+			"categories": [
+				"Advantage"
+			]
+		}
+	],
+	"skills": [
+		{
+			"type": "skill_container",
+			"version": 1,
+			"id": "be9eebab-703b-4fb3-9a96-94ef24285344",
+			"name": "Captain",
+			"open": false,
+			"children": [
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "9f0a317f-03b9-4711-89d8-b6f1019573ff",
+					"based_on_id": "5414376d-0309-4d99-951b-f08c80b64717",
+					"based_on_hash": "Bjq6Dx56DKYOzRPkWHkATcy7rM6aInCkGCdZaZUGuMg",
+					"name": "Current Affairs",
+					"reference": "B186",
+					"specialization": "Science & Technology",
+					"tech_level": "9",
+					"difficulty": "IQ/E",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -4,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Research",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Current Affairs",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Everyman",
+						"Knowledge",
+						"Social"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "4abcc0f3-fef0-4f1d-b5b8-047cfb44c5df",
+					"based_on_id": "96e83d91-42f9-4154-94c7-451e403a4a91",
+					"based_on_hash": "2EDTvq+B1YDZk5ByzS5aIQr8lAIAFFhT3rfxW0o1V20",
+					"name": "Diplomacy",
+					"reference": "B187",
+					"difficulty": "IQ/H",
+					"points": 2,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Politics",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Business",
+						"Police",
+						"Social"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "1dd38adc-eacc-4b49-9b62-8f794ed1910f",
+					"based_on_id": "684500a0-7edb-4175-9496-d4a0c3eb434f",
+					"based_on_hash": "Y9TPQ8emW9+nHlgSAQzqfY9ztif/ZpqG2lBy46+VHAk",
+					"name": "Leadership",
+					"reference": "B204",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Military",
+						"Social"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "b71dc49e-11ca-45d4-922b-5ff17bdbb472",
+					"based_on_id": "f32a12ed-0138-4cc6-89bb-606cc95eb47c",
+					"based_on_hash": "1Q+jjR8Bop5KWvLrjHiLVjzKInj6tUhoiuRIc8G0cTc",
+					"name": "Shiphandling",
+					"reference": "B220",
+					"specialization": "Spaceship",
+					"tech_level": "9",
+					"difficulty": "IQ/H",
+					"points": 4,
+					"defaulted_from": {
+						"type": "Skill",
+						"name": "Spacer",
+						"modifier": -5,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "spacer"
+								},
+								"specialization": {
+									"compare": "is"
+								}
+							},
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "navigation"
+								},
+								"specialization": {
+									"compare": "is",
+									"qualifier": "space"
+								}
+							},
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "leadership"
+								},
+								"specialization": {
+									"compare": "is"
+								}
+							}
+						]
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Spacer",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Piloting",
+							"specialization": "Low-Performance Spacecraft",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Piloting",
+							"specialization": "High-Performance Spacecraft",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Vehicle"
+					]
+				}
+			]
+		},
+		{
+			"type": "skill_container",
+			"version": 1,
+			"id": "c6a494e5-fd10-42a4-9030-d4607f8d2b00",
+			"name": "Communicator",
+			"open": false,
+			"children": [
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "5489842b-a1ee-44ed-8deb-622550c848ec",
+					"based_on_id": "cb7bffc2-b5d3-4e4d-8a23-93ae3e62f50f",
+					"based_on_hash": "zfwOO0c1OjPkhIR4RU5JknDxy3OsaHl0DrhsZgKzoOM",
+					"name": "Body Language",
+					"reference": "B181",
+					"difficulty": "Per/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "Skill",
+						"name": "Detect Lies",
+						"modifier": -4,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"defaults": [
+						{
+							"type": "Skill",
+							"name": "Detect Lies",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Psychology",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Police",
+						"Social",
+						"Spy"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "7a727114-651f-499c-90d5-bc71de4b645c",
+					"based_on_id": "0e9bebf0-af68-455f-96ab-57b63e3d2a9c",
+					"based_on_hash": "0b2tLEVWrYUYlipSfnXG9/H3jK51aYvBNehzlJezaW4",
+					"name": "Detect Lies",
+					"reference": "B187",
+					"difficulty": "Per/H",
+					"points": 4,
+					"defaulted_from": {
+						"type": "Per",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "Per",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Body Language",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Psychology",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Police",
+						"Social",
+						"Spy"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "80009ad2-385b-4794-8ad5-8bfaeb08a4a1",
+					"based_on_id": "23669f29-65d1-4749-8d09-c8729950b030",
+					"based_on_hash": "oPafr87nOfInGq5TFWeQ6ydVMVMqmTqFjgYh+HD6dI4",
+					"name": "Gesture",
+					"reference": "B198",
+					"difficulty": "IQ/E",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -4,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Social"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "19b135ea-7726-4eed-9bbb-cbfe85b59825",
+					"based_on_id": "b96bb6df-9c3e-44e8-9e35-d32b301c4b2e",
+					"based_on_hash": "naHfdZJ9BM+sa1N7sDS2RI3Dx1MJ/v8p3Vk+VhucBU0",
+					"name": "Lip Reading",
+					"reference": "B205",
+					"difficulty": "Per/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "Per",
+						"modifier": -10,
+						"level": 3,
+						"adjusted_level": 3,
+						"points": -3
+					},
+					"defaults": [
+						{
+							"type": "Per",
+							"modifier": -10
+						}
+					],
+					"categories": [
+						"Spy"
+					]
+				}
+			]
+		},
+		{
+			"type": "skill_container",
+			"version": 1,
+			"id": "840eb8c6-7b72-49c0-be01-18c0136f80b0",
+			"name": "Ex-Navy",
+			"open": false,
+			"children": [
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "315e30aa-1131-49d0-bda3-593090d1f983",
+					"based_on_id": "7bee7b50-708f-4557-8736-a68184f980e0",
+					"based_on_hash": "O+w0ad59P9VlvOIbrlfUqtw5/Yt/ku/r0T0dWnFCFe8",
+					"name": "Expert Skill",
+					"reference": "B193",
+					"specialization": "Military Science",
+					"difficulty": "IQ/H",
+					"points": 1,
+					"categories": [
+						"Knowledge",
+						"Military",
+						"Scholarly"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "9123751d-7794-4c48-a0ba-a84df759b388",
+					"based_on_id": "2856d9a0-b914-4002-8d7b-91f18afd1148",
+					"based_on_hash": "RVYXdKZu5prC2IaDZevGI+6Ix3nD/pavQ0okf6I7q2Y",
+					"name": "First Aid",
+					"reference": "B195",
+					"tech_level": "9",
+					"difficulty": "IQ/E",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -4,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Esoteric Medicine"
+						},
+						{
+							"type": "Skill",
+							"name": "Physician"
+						},
+						{
+							"type": "Skill",
+							"name": "Veterinary",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Everyman",
+						"Medical"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "24491fd8-e8a1-4ef2-92c7-0984d688276e",
+					"based_on_id": "dfac08e6-3434-4391-b2e9-8954c32e04af",
+					"based_on_hash": "9PujoXERQIHE6IOs5FIGGuei05yYlFqiFUOBeI/0eiQ",
+					"name": "Guns",
+					"reference": "B198",
+					"specialization": "Pistol",
+					"tech_level": "9",
+					"difficulty": "DX/E",
+					"points": 0,
+					"defaulted_from": {
+						"type": "Skill",
+						"name": "Guns",
+						"specialization": "Rifle",
+						"modifier": -2,
+						"level": 13,
+						"adjusted_level": 13,
+						"points": 4
+					},
+					"defaults": [
+						{
+							"type": "DX",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Grenade Launcher",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Gyroc",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Light Anti-Armor Weapon",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Light Machine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Musket",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Beam Weapons",
+							"specialization": "Pistol",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Rifle",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Shotgun",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Submachine Gun",
+							"modifier": -2
+						}
+					],
+					"categories": [
+						"Combat/Weapon",
+						"Ranged Combat"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "4c71b7e1-94a0-4ca8-8fad-ea664f759de3",
+					"based_on_id": "f4078925-07f5-439e-8ddf-7e41e717ccbf",
+					"based_on_hash": "fHUAKxoda6fR5j6ev3VZqicdmW+s0v8zAEL2aFlI8O4",
+					"name": "Guns",
+					"reference": "B198",
+					"specialization": "Rifle",
+					"tech_level": "9",
+					"difficulty": "DX/E",
+					"points": 12,
+					"defaulted_from": {
+						"type": "DX",
+						"modifier": -4,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "DX",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Grenade Launcher",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Gyroc",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Light Anti-Armor Weapon",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Light Machine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Musket",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Pistol",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Beam Weapons",
+							"specialization": "Rifle",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Shotgun",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Guns",
+							"specialization": "Submachine Gun",
+							"modifier": -2
+						}
+					],
+					"categories": [
+						"Combat/Weapon",
+						"Ranged Combat"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "fe1dd370-e201-48bd-8e56-21d4a10cdd20",
+					"based_on_id": "235b3784-075e-47f9-b4bc-aee82497527e",
+					"based_on_hash": "aP32csA7XnBV1sp5FsdNkKQ4lPfKvo8o0rmgqImqkJQ",
+					"name": "Intelligence Analysis",
+					"reference": "B201",
+					"tech_level": "9",
+					"difficulty": "IQ/H",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Strategy",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Military",
+						"Police",
+						"Spy"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "9942b8ee-fa58-4c64-a88e-a6d91055c468",
+					"based_on_id": "fb0b45ea-dbba-4b5e-a2e0-428055b39521",
+					"based_on_hash": "kL4sQq+dSNBdnnFf4toZ2kShQP0Wo2ZQ+j9TnUuZ0Hs",
+					"name": "Savoir-Faire",
+					"reference": "B218",
+					"specialization": "Military",
+					"difficulty": "IQ/E",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -4,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Knowledge",
+						"Military",
+						"Social"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "2d599d3a-2f89-4d75-b860-dda32b795a3c",
+					"based_on_id": "a7288278-088e-470f-a2fe-bf613d403efa",
+					"based_on_hash": "uH231+C/x6Jw+6YxhvTk0Q18HSGQKouRDkOTAtT3qJM",
+					"name": "Strategy",
+					"reference": "B222",
+					"specialization": "Space",
+					"difficulty": "IQ/H",
+					"points": 2,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Intelligence Analysis",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Tactics",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Strategy",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Military"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "d9061cf7-8556-4fbb-a1cc-4214a2f7cd16",
+					"based_on_id": "205a6d44-71e3-4305-b25f-950a3ac004cd",
+					"based_on_hash": "/b/DKpDrjNSU4jbMzpq5E+Lh3P/v0aHYoIThSZFqsrI",
+					"name": "Tactics",
+					"reference": "B224",
+					"difficulty": "IQ/H",
+					"points": 4,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Strategy",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Military",
+						"Police"
+					]
+				}
+			]
+		},
+		{
+			"type": "skill_container",
+			"version": 1,
+			"id": "55a7bf28-9bb4-4643-b441-dc7ae63f6191",
+			"name": "Manager",
+			"open": false,
+			"children": [
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "52ee264f-6995-4913-be4d-a2e733253f3c",
+					"based_on_id": "435aab38-e1ac-43ac-89bd-c72cd1b2dc1a",
+					"based_on_hash": "J3bWj7aLGye3fXcWsaDtxs7hvxM3rNlO12DYsyxMvHk",
+					"name": "Accounting",
+					"reference": "B174",
+					"difficulty": "IQ/H",
+					"points": 8,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Finance",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Mathematics",
+							"specialization": "Statistics",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Merchant",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Business"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "dad5b69f-4e54-477a-8980-40d808a3dda5",
+					"based_on_id": "3a6a81af-a2e5-414e-92e4-093df1e1b9dd",
+					"based_on_hash": "GSj3MGdkxNaoVU36j3QUpD8bXaQnZlkwoTDtjl+IjkM",
+					"name": "Administration",
+					"reference": "B174",
+					"difficulty": "IQ/A",
+					"points": 2,
+					"defaulted_from": {
+						"type": "Skill",
+						"name": "Merchant",
+						"modifier": -3,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"defaults": [
+						{
+							"type": "Skill",
+							"name": "Merchant",
+							"modifier": -3
+						},
+						{
+							"type": "IQ",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Business",
+						"Social"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "6cf7325f-e570-4174-a8e6-710d236472e9",
+					"based_on_id": "d10536e7-400c-40c5-8547-2548958271c3",
+					"based_on_hash": "WPxhqf2VE29LskCLFEayW6l+i/1lT27RjmB/uqyxGsQ",
+					"name": "Economics",
+					"reference": "B189",
+					"difficulty": "IQ/H",
+					"points": 2,
+					"defaulted_from": {
+						"type": "Skill",
+						"name": "Finance",
+						"modifier": -3,
+						"level": 11,
+						"adjusted_level": 11,
+						"points": 1
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Finance",
+							"modifier": -3
+						},
+						{
+							"type": "Skill",
+							"name": "Market Analysis",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Merchant",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Business",
+						"Social Sciences/Humanities"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "80700f08-1852-417e-8c61-fbe96f505471",
+					"based_on_id": "f170aea1-0c02-4af9-80ec-4ebe1f850c2b",
+					"based_on_hash": "3urUGXGnp33dGpTS3oF3gzKAdzpgctQ2FrsDrPYDqUE",
+					"name": "Finance",
+					"reference": "B195",
+					"difficulty": "IQ/H",
+					"points": 8,
+					"defaulted_from": {
+						"type": "Skill",
+						"name": "Accounting",
+						"modifier": -4,
+						"level": 10,
+						"adjusted_level": 10,
+						"points": -10
+					},
+					"defaults": [
+						{
+							"type": "Skill",
+							"name": "Accounting",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Economics",
+							"modifier": -3
+						},
+						{
+							"type": "Skill",
+							"name": "Merchant",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Business"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "e66e6c29-1cfc-41cc-aa7f-c80e40d1a9af",
+					"based_on_id": "0b904698-3e3c-4991-852f-ea28e946048b",
+					"based_on_hash": "KRKtmeh0SKIyTlTWz3TVhjCDEbyCBpTDOM+bOk/FENc",
+					"name": "Market Analysis",
+					"reference": "B207",
+					"difficulty": "IQ/H",
+					"points": 8,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Economics",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Merchant",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Business"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "04ca4b32-7e3b-4ddd-95e7-4bbb16191e78",
+					"based_on_id": "10713241-ad54-4595-aed5-ef37eb151850",
+					"based_on_hash": "zVeukar79CowaLeWC/E2LrdO8B31cwEkqCOrDt2p4vA",
+					"name": "Merchant",
+					"reference": "B209",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "Skill",
+						"name": "Market Analysis",
+						"modifier": -4,
+						"level": 10,
+						"adjusted_level": 10,
+						"points": -10
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Finance",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Market Analysis",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Business",
+						"Social"
+					]
+				}
+			]
+		},
+		{
+			"type": "skill_container",
+			"version": 1,
+			"id": "1ac3f2f8-8766-4305-97dc-5519c0525861",
+			"name": "Spacer",
+			"open": false,
+			"children": [
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "a4793baf-8598-4ce7-b225-231b97eef8d6",
+					"based_on_id": "21b938c9-8f3d-41d1-aee6-ff52be66fd99",
+					"based_on_hash": "bnFA7e0ws0L9GxCw2BTM2Q8lSQAvRitZ50ND99MnaEE",
+					"name": "Free Fall",
+					"reference": "B197",
+					"difficulty": "DX/A",
+					"points": 4,
+					"defaulted_from": {
+						"type": "HT",
+						"modifier": -5,
+						"level": 6,
+						"adjusted_level": 6,
+						"points": -6
+					},
+					"defaults": [
+						{
+							"type": "HT",
+							"modifier": -5
+						},
+						{
+							"type": "DX",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Athletic"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "5416dcb4-56de-40aa-8479-acc28939e51b",
+					"based_on_id": "9f72d18a-dd46-4b99-be6d-4b39471c1492",
+					"based_on_hash": "CZgoOn6Yir5U8f1oynotkzr2tlCfmkjmkLcHmHPz+CI",
+					"name": "Navigation",
+					"reference": "B211",
+					"specialization": "Space",
+					"tech_level": "9",
+					"difficulty": "IQ/A",
+					"points": 2,
+					"defaulted_from": {
+						"type": "Skill",
+						"name": "Mathematics",
+						"specialization": "Applied",
+						"modifier": -4,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "Skill",
+							"name": "Astronomy",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Mathematics",
+							"specialization": "Applied",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Navigation",
+							"specialization": "Hyperspace",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Outdoor/Exploration",
+						"Technical",
+						"Vehicle"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "5ff07cc2-e5a5-41e0-bb99-f81dce6524be",
+					"based_on_id": "e0837464-8bf0-4e1c-9a84-7f055af79c15",
+					"based_on_hash": "YyFCusbFviFIWZuNLqxKcMshloA4sCkBZPsvKdXr5Uo",
+					"name": "Piloting",
+					"reference": "B214",
+					"specialization": "High-Performance Spacecraft",
+					"tech_level": "9",
+					"difficulty": "DX/A",
+					"points": 4,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Piloting",
+							"specialization": "Aerospace",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Piloting",
+							"specialization": "Low-Performance Spacecraft",
+							"modifier": -2
+						}
+					],
+					"categories": [
+						"Vehicle"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "1cc55ef4-5360-4cc7-a87d-e6106e7dd3b4",
+					"based_on_id": "11576b1c-81aa-4525-9c91-d6cd8b1ecb1b",
+					"based_on_hash": "cc5kETO38z/3t7Ce69vI8DNk/hdXSKkm2SK5V2YuWxo",
+					"name": "Spacer",
+					"reference": "B185",
+					"tech_level": "9",
+					"difficulty": "IQ/E",
+					"points": 2,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -4,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Vehicle"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "cdcdd725-b1bd-4017-8846-bc9c917bd76f",
+					"based_on_id": "5486e8c3-07ca-4c5e-8b95-d871d0da7774",
+					"based_on_hash": "45ErKCusjbNj3S9U27KdywwNbda3t5CWrjOjSHHmw2k",
+					"name": "Vacc Suit",
+					"reference": "B192",
+					"tech_level": "9",
+					"difficulty": "DX/A",
+					"points": 4,
+					"defaulted_from": {
+						"type": "DX",
+						"modifier": -5,
+						"level": 6,
+						"adjusted_level": 6,
+						"points": -6
+					},
+					"defaults": [
+						{
+							"type": "DX",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Diving Suit",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "NBC Suit",
+							"modifier": -2
+						},
+						{
+							"type": "Skill",
+							"name": "Battlesuit",
+							"modifier": -2
+						}
+					],
+					"categories": [
+						"Technical"
+					]
+				}
+			]
+		},
+		{
+			"type": "skill_container",
+			"version": 1,
+			"id": "f6e3ffef-ef3e-427b-a0be-ff83c10da8e3",
+			"name": "Technician",
+			"open": false,
+			"children": [
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "ce1a1501-c7ef-452b-a275-1955c380fa5b",
+					"based_on_id": "e21fb9d5-fa53-4a60-ae63-956c2937fc73",
+					"based_on_hash": "r1atbTL1+AP+v4wPxcsrej+FeGpM8RKcFE2JQLnmUE0",
+					"name": "Armoury",
+					"reference": "B178",
+					"specialization": "Heavy Weapons",
+					"tech_level": "9",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Engineer",
+							"specialization": "Heavy Weapons",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Military",
+						"Repair/Maintainance"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "37675aec-b2bc-438c-a907-c2340e775c1a",
+					"based_on_id": "8115d1f0-a8d3-4aaf-8522-190e0b53aeb4",
+					"based_on_hash": "NiKovgGasYDivdm+6ITDxBmnpw9HaeQgtzcQ7wAZTLM",
+					"name": "Armoury",
+					"reference": "B178",
+					"specialization": "Vehicular Armor",
+					"tech_level": "9",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Engineer",
+							"specialization": "Vehicular Armor",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Military",
+						"Repair/Maintainance"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "18b6f570-ba32-4d9b-8fbd-36a78d1f9cdb",
+					"based_on_id": "9e5a62f6-d881-4ec2-9d7a-e353923ea3a8",
+					"based_on_hash": "28trsWGTJ/CVgznU3P4QElXspszJAP6X7P7Fwtay8uA",
+					"name": "Computer Operation",
+					"reference": "B184",
+					"tech_level": "9",
+					"difficulty": "IQ/E",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -4,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Everyman",
+						"Scholarly",
+						"Technical"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "cdf874be-d0d6-4397-aff6-9d0e23412c34",
+					"based_on_id": "a78d2990-3bc9-469a-be81-d326557d2b2d",
+					"based_on_hash": "KXgaxhrRMXvnn1nQ35GO8Qyts4gBFxvfZ8GgX8o8Fn4",
+					"name": "Electrician",
+					"reference": "B189",
+					"tech_level": "9",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Engineer",
+							"specialization": "Electrical",
+							"modifier": -3
+						}
+					],
+					"categories": [
+						"Repair/Maintainance"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "472673b2-1a57-42db-b7b9-1272a84dd614",
+					"based_on_id": "3d9e9640-dfd0-4a65-b82c-b312974c75e9",
+					"based_on_hash": "ULeDV7ZrmTyXLFJnioZi9kh1Rb0yia7pxD57BRJd9Xw",
+					"name": "Electronics Operation",
+					"reference": "B189",
+					"specialization": "Communications",
+					"tech_level": "9",
+					"difficulty": "IQ/A",
+					"points": 2,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Electronics Operation",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Electronics Repair",
+							"specialization": "Communications",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Technical"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "aca73186-e1bd-4ff3-b6fd-5015d0af279e",
+					"based_on_id": "1cf9192b-49d0-4e1c-ac21-74382bc3c7f4",
+					"based_on_hash": "g4rQvVhLj0iN+OKBKWy6ABnGXa8cAdwNKgaMYBBg51w",
+					"name": "Electronics Operation",
+					"reference": "B189",
+					"specialization": "Security",
+					"tech_level": "9",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Electronics Operation",
+							"specialization": "Security",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Electronics Operation",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Criminal/Street",
+						"Spy",
+						"Technical"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "7c0a3411-0616-443e-9680-590fad5c084d",
+					"based_on_id": "7b25f678-d669-4ada-947c-430df2e21f8c",
+					"based_on_hash": "2borON/mT9Rw6v2h2OiGwTcEn4LIQr1JEJ/qKtHgAj0",
+					"name": "Electronics Operation",
+					"reference": "B189",
+					"specialization": "Sensors",
+					"tech_level": "9",
+					"difficulty": "IQ/A",
+					"points": 2,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Electronics Repair",
+							"specialization": "Sensors",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Electronics Operation",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Technical"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "6f6b3879-8635-4ee5-921a-07b8b0c11f71",
+					"based_on_id": "b759c4bf-4c20-4389-aee0-db157ca5e530",
+					"based_on_hash": "dsx0117aZb2XQR3BxJVO8Kj3ZF8yX8vHiyxsTidHBsw",
+					"name": "Electronics Repair",
+					"reference": "B190",
+					"specialization": "Communications",
+					"tech_level": "9",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "Skill",
+						"name": "Electronics Operation",
+						"specialization": "Communications",
+						"modifier": -3,
+						"level": 10,
+						"adjusted_level": 10,
+						"points": -10
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Electronics Operation",
+							"specialization": "Communications",
+							"modifier": -3
+						},
+						{
+							"type": "Skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -3
+						},
+						{
+							"type": "Skill",
+							"name": "Electronics Repair",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Repair/Maintainance"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "a82e99fa-6e6d-4507-a413-fb7873f356e8",
+					"based_on_id": "d43471e6-628d-488e-9991-508420e07446",
+					"based_on_hash": "GjFXmG3WtnMzrNsdl50D3JgfgD33S0oI/KaGiSAbZVM",
+					"name": "Electronics Repair",
+					"reference": "B190",
+					"specialization": "Sensors",
+					"tech_level": "9",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "Skill",
+						"name": "Electronics Operation",
+						"specialization": "Sensors",
+						"modifier": -3,
+						"level": 10,
+						"adjusted_level": 10,
+						"points": -10
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Electronics Operation",
+							"specialization": "Sensors",
+							"modifier": -3
+						},
+						{
+							"type": "Skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -3
+						},
+						{
+							"type": "Skill",
+							"name": "Electronics Repair",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Repair/Maintainance"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "2cdf8c51-46c4-4119-a7ed-6a2c7b479cea",
+					"based_on_id": "c9a925c5-41b8-43a4-9332-05226dabdab3",
+					"based_on_hash": "0ToHDHJnozxSk0wNj4slJFWcYwC33K0dFBUemYiOtqM",
+					"name": "Machinist",
+					"reference": "B206",
+					"tech_level": "9",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Mechanic",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Repair/Maintainance"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "c16be776-fd78-4dea-a824-76edcacccc9c",
+					"based_on_id": "1bb06923-d677-441e-a281-a55631f6d0be",
+					"based_on_hash": "RYfoLbYBw6PcEkIyqajbL/x9Y3fwnwosquUbGS6JYWw",
+					"name": "Mathematics",
+					"reference": "B207",
+					"specialization": "Applied",
+					"tech_level": "9",
+					"difficulty": "IQ/H",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Physics",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Engineer",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Natural Science"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "33b10a48-5377-4438-ad7f-d01228e60772",
+					"based_on_id": "c5b71113-497a-46f7-8eb9-bb7cfaeafef1",
+					"based_on_hash": "ntr6ZX59K91F28xECj3/W9z2dglT5BLl1UOdjRAWb0k",
+					"name": "Mathematics",
+					"reference": "B207",
+					"specialization": "Surveying",
+					"tech_level": "9",
+					"difficulty": "IQ/H",
+					"points": 1,
+					"defaulted_from": {
+						"type": "Skill",
+						"name": "Navigation",
+						"modifier": -4,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -6
+						},
+						{
+							"type": "Skill",
+							"name": "Cartography",
+							"modifier": -3
+						},
+						{
+							"type": "Skill",
+							"name": "Navigation",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Natural Science",
+						"Technical"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "78feb2f4-73cb-4359-8ab9-6f029655b0d1",
+					"based_on_id": "b18ee6a0-a10d-4578-b86c-3d555440458e",
+					"based_on_hash": "2VstSbcgULOFhNoEX9JzexHOCJ2cElbVDnxPsN+3t+s",
+					"name": "Mechanic",
+					"reference": "B207",
+					"specialization": "Fission Reactor",
+					"tech_level": "9",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Engineer",
+							"specialization": "Fission Reactor",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Machinist",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Mechanic",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Repair/Maintainance"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "2066eaf3-629d-4636-8598-1e6ffda6e993",
+					"based_on_id": "52a8cf2e-068d-4c38-9c63-a2f110a9b7e4",
+					"based_on_hash": "BKThXrIxtZKMeDe6DD0fWx9Xtfq9Zlhf9F/nbSQ4Kdg",
+					"name": "Mechanic",
+					"reference": "B207",
+					"specialization": "High-Performance Spacecraft",
+					"tech_level": "9",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Engineer",
+							"specialization": "High-Performance Spacecraft",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Machinist",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Mechanic",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Repair/Maintainance"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "a4101599-b377-4edb-a974-bdbb17a94975",
+					"based_on_id": "9a3a4e09-7e9b-4b01-a28c-366693516bd5",
+					"based_on_hash": "XwIDicz0x6/2X3l9x66ge8imjZxn/Z0RvGmEFgs51is",
+					"name": "Mechanic",
+					"reference": "B207",
+					"specialization": "Rockets",
+					"tech_level": "9",
+					"difficulty": "IQ/A",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -5,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Engineer",
+							"specialization": "Rockets",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Machinist",
+							"modifier": -5
+						},
+						{
+							"type": "Skill",
+							"name": "Mechanic"
+						}
+					],
+					"categories": [
+						"Repair/Maintainance"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "a79ab8aa-7dac-4597-a1c7-ccf96eccece1",
+					"based_on_id": "7401f24e-a2cb-4d71-a967-c22d638feb68",
+					"based_on_hash": "RNDmG22mrFpUI6K4K9x2sliMZL4xaXkQzt6U+5AGpA4",
+					"name": "Physics",
+					"reference": "B213",
+					"tech_level": "9",
+					"difficulty": "IQ/VH",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -6,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"when_tl": {
+							"compare": "at_least",
+							"qualifier": 5
+						},
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "mathematics"
+								},
+								"specialization": {
+									"compare": "is",
+									"qualifier": "applied"
+								}
+							}
+						]
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Natural Science"
+					]
+				}
+			]
+		},
+		{
+			"type": "skill_container",
+			"version": 1,
+			"id": "4baae94c-9982-4eb1-8707-d40798de3a18",
+			"name": "Sol Explorer",
+			"open": false,
+			"children": [
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "a6f32b24-ef6d-4225-b99a-700c543df4ce",
+					"based_on_id": "1ed9d73d-5134-4245-b2b2-d07851b8d7ff",
+					"based_on_hash": "kkKRyj/jiZWV30o/Ra7lc3tREDlZbomK8DELjoxvVrU",
+					"name": "Area Knowledge",
+					"reference": "B176",
+					"specialization": "Sol; Lived there",
+					"difficulty": "IQ/E",
+					"points": 1,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -4,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Geography",
+							"modifier": -3
+						}
+					],
+					"notes": "Location of the capitals of interplanetary states and the homeworlds of major races; general awareness of all major races; knowledge of individuals of Status 8; general understanding of relations between interplanetary states",
+					"categories": [
+						"Everyman",
+						"Knowledge"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "bdc52a77-d21a-41f8-9a27-bf5af14c0f27",
+					"based_on_id": "40b13bc3-2749-45e3-aa0c-11ca50d40544",
+					"based_on_hash": "b+PJ2gDrdJhMBUPEop4KH9bi5ALpaW7NvlhcW/PHa5Y",
+					"name": "Area Knowledge",
+					"reference": "B176",
+					"specialization": "Mars",
+					"difficulty": "IQ/E",
+					"points": 1,
+					"defaults": [
+						{
+							"type": "Skill",
+							"name": "Geography",
+							"modifier": -3
+						}
+					],
+					"notes": "Location of its major cities and important sites; awareness of its major customs, ethnic groups, and languages (but not necessarily expertise); names of folk of Status 7+; and a general understanding of the economic and political situation",
+					"categories": [
+						"Everyman",
+						"Knowledge"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "6bd1842d-9322-4377-b10d-aba9f69e73e4",
+					"based_on_id": "0e75293e-e099-42cf-b863-eb74ead31e04",
+					"based_on_hash": "uoAA3V6NrWgvg2P89TtN014npmUL7McpEvxfjNwwmps",
+					"name": "Area Knowledge",
+					"reference": "B176",
+					"specialization": "Earth; Lived there",
+					"difficulty": "IQ/E",
+					"points": 2,
+					"defaulted_from": {
+						"type": "IQ",
+						"modifier": -4,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"defaults": [
+						{
+							"type": "IQ",
+							"modifier": -4
+						},
+						{
+							"type": "Skill",
+							"name": "Geography",
+							"modifier": -3
+						}
+					],
+					"notes": "Location of its major cities and important sites; awareness of its major customs, ethnic groups, and languages (but not necessarily expertise); names of folk of Status 7+; and a general understanding of the economic and political situation",
+					"categories": [
+						"Everyman",
+						"Knowledge"
+					]
+				},
+				{
+					"type": "skill",
+					"version": 1,
+					"id": "3ed74beb-0711-4497-b440-dcd49869c0a4",
+					"based_on_id": "40b13bc3-2749-45e3-aa0c-11ca50d40544",
+					"based_on_hash": "b+PJ2gDrdJhMBUPEop4KH9bi5ALpaW7NvlhcW/PHa5Y",
+					"name": "Area Knowledge",
+					"reference": "B176",
+					"specialization": "The Belt",
+					"difficulty": "IQ/E",
+					"points": 1,
+					"defaults": [
+						{
+							"type": "Skill",
+							"name": "Geography",
+							"modifier": -3
+						}
+					],
+					"notes": "Location of its major cities and important sites; awareness of its major customs, ethnic groups, and languages (but not necessarily expertise); names of folk of Status 7+; and a general understanding of the economic and political situation",
+					"categories": [
+						"Everyman",
+						"Knowledge"
+					]
+				}
+			]
+		}
+	],
+	"print_settings": {
+		"printer": "HP ENVY 5640 series",
+		"units": "in",
+		"orientation": "portrait",
+		"width": 8.5,
+		"height": 11,
+		"top_margin": 0.25,
+		"left_margin": 0.25,
+		"bottom_margin": 0.25,
+		"right_margin": 0.25,
+		"ink_chromaticity": "monochrome",
+		"sides": "single",
+		"quality": "normal"
+	}
+}

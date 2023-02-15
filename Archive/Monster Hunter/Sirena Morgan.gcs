@@ -1,0 +1,4604 @@
+{
+	"type": "character",
+	"version": 2,
+	"id": "3455c80d-e8a1-4a9b-82b2-2d25eb0e8d03",
+	"settings": {
+		"default_length_units": "ft_in",
+		"default_weight_units": "lb",
+		"user_description_display": "tooltip",
+		"modifiers_display": "inline",
+		"notes_display": "inline",
+		"skill_level_adj_display": "tooltip",
+		"use_multiplicative_modifiers": false,
+		"use_modifying_dice_plus_adds": false,
+		"damage_progression": "basic_set",
+		"use_simple_metric_conversions": true,
+		"show_college_in_sheet_spells": false,
+		"show_difficulty": false,
+		"show_advantage_modifier_adj": false,
+		"show_equipment_modifier_adj": false,
+		"show_spell_adj": true,
+		"use_title_in_footer": false,
+		"page": {
+			"paper_size": "na-letter",
+			"top_margin": "0.25 in",
+			"left_margin": "0.25 in",
+			"bottom_margin": "0.25 in",
+			"right_margin": "0.25 in",
+			"orientation": "portrait"
+		},
+		"block_layout": [
+			"reactions conditional_modifiers",
+			"melee",
+			"ranged",
+			"advantages skills",
+			"spells",
+			"equipment",
+			"other_equipment",
+			"notes"
+		],
+		"attributes": [
+			{
+				"id": "st",
+				"type": "integer",
+				"name": "ST",
+				"full_name": "Strength",
+				"attribute_base": "10",
+				"cost_per_point": 10,
+				"cost_adj_percent_per_sm": 10
+			},
+			{
+				"id": "dx",
+				"type": "integer",
+				"name": "DX",
+				"full_name": "Dexterity",
+				"attribute_base": "10",
+				"cost_per_point": 20,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "iq",
+				"type": "integer",
+				"name": "IQ",
+				"full_name": "Intelligence",
+				"attribute_base": "10",
+				"cost_per_point": 20,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "ht",
+				"type": "integer",
+				"name": "HT",
+				"full_name": "Health",
+				"attribute_base": "10",
+				"cost_per_point": 10,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "will",
+				"type": "integer",
+				"name": "Will",
+				"full_name": "",
+				"attribute_base": "$iq",
+				"cost_per_point": 5,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "fright_check",
+				"type": "integer",
+				"name": "Fright Check",
+				"full_name": "",
+				"attribute_base": "$will",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "per",
+				"type": "integer",
+				"name": "Per",
+				"full_name": "Perception",
+				"attribute_base": "$iq",
+				"cost_per_point": 5,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "vision",
+				"type": "integer",
+				"name": "Vision",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "hearing",
+				"type": "integer",
+				"name": "Hearing",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "taste_smell",
+				"type": "integer",
+				"name": "Taste & Smell",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "touch",
+				"type": "integer",
+				"name": "Touch",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "basic_speed",
+				"type": "decimal",
+				"name": "Basic Speed",
+				"full_name": "",
+				"attribute_base": "($dx+$ht)/4",
+				"cost_per_point": 20,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "basic_move",
+				"type": "integer",
+				"name": "Basic Move",
+				"full_name": "",
+				"attribute_base": "floor($basic_speed)",
+				"cost_per_point": 5,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "fp",
+				"type": "pool",
+				"name": "FP",
+				"full_name": "Fatigue Points",
+				"attribute_base": "$ht",
+				"cost_per_point": 3,
+				"cost_adj_percent_per_sm": 0,
+				"thresholds": [
+					{
+						"state": "Unconscious",
+						"explanation": "",
+						"multiplier": -1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Collapse",
+						"explanation": "Roll vs. Will to do anything besides talk or rest; failure causes unconsciousness\nEach FP you lose below 0 also causes 1 HP of injury\nMove, Dodge and ST are halved (B426)",
+						"multiplier": 0,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tired",
+						"explanation": "Move, Dodge and ST are halved (B426)",
+						"multiplier": 1,
+						"divisor": 3,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tiring",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": -1,
+						"ops": [
+
+						]
+					},
+					{
+						"state": "Rested",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+
+						]
+					}
+				]
+			},
+			{
+				"id": "hp",
+				"type": "pool",
+				"name": "HP",
+				"full_name": "Hit Points",
+				"attribute_base": "$st",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 10,
+				"thresholds": [
+					{
+						"state": "Dead",
+						"explanation": "",
+						"multiplier": -5,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #4",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-4 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"multiplier": -4,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #3",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-3 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"multiplier": -3,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #2",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-2 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"multiplier": -2,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #1",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-1 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"multiplier": -1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Collapse",
+						"explanation": "Roll vs. HT every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"multiplier": 0,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Reeling",
+						"explanation": "Move and Dodge are halved (B419)",
+						"multiplier": 1,
+						"divisor": 3,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Wounded",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": -1,
+						"ops": [
+
+						]
+					},
+					{
+						"state": "Healthy",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+
+						]
+					}
+				]
+			},
+			{
+				"id": "er",
+				"type": "pool",
+				"name": "ER",
+				"full_name": "Energy Reserve",
+				"attribute_base": "21",
+				"cost_per_point": 0,
+				"cost_adj_percent_per_sm": 0,
+				"thresholds": [
+
+				]
+			},
+			{
+				"id": "sc",
+				"type": "pool",
+				"name": "SC",
+				"full_name": "Spell Cost",
+				"attribute_base": "0",
+				"cost_per_point": 0,
+				"cost_adj_percent_per_sm": 0,
+				"thresholds": [
+
+				]
+			},
+			{
+				"id": "ch",
+				"type": "pool",
+				"name": "CH",
+				"full_name": "Charms/Hanging Rituals",
+				"attribute_base": "25",
+				"cost_per_point": 0,
+				"cost_adj_percent_per_sm": 0,
+				"thresholds": [
+
+				]
+			},
+			{
+				"id": "lk",
+				"type": "pool",
+				"name": "LK",
+				"full_name": "Luck",
+				"attribute_base": "4",
+				"cost_per_point": 0,
+				"cost_adj_percent_per_sm": 0,
+				"thresholds": [
+
+				]
+			}
+		],
+		"hit_locations": {
+			"id": "humanoid",
+			"name": "Humanoid",
+			"roll": "3d",
+			"locations": [
+				{
+					"id": "eye",
+					"choice_name": "Eyes",
+					"table_name": "Eyes",
+					"slots": 0,
+					"hit_penalty": -9,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Only impaling (imp), piercing (pi-, pi, pi+, pi++), and tight-beam burning (burn) attacks can target the eye – and only from the front or sides. Injury over HP÷10 blinds the eye. Otherwise, treat as skull, but without the extra DR!",
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "skull",
+					"choice_name": "Skull",
+					"table_name": "Skull",
+					"slots": 2,
+					"hit_penalty": -7,
+					"dr_bonus": 2,
+					"description": "An attack that misses by 1 hits the torso instead. Wounding modifier is x4. Knockdown rolls are at -10. Critical hits use the Critical Head Blow Table (B556). Exception: These special effects do not apply to toxic (tox) damage.",
+					"calc": {
+						"roll_range": "3-4",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "face",
+					"choice_name": "Face",
+					"table_name": "Face",
+					"slots": 1,
+					"hit_penalty": -5,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Jaw, cheeks, nose, ears, etc. If the target has an open-faced helmet, ignore its DR. Knockdown rolls are at -5. Critical hits use the Critical Head Blow Table (B556). Corrosion (cor) damage gets a x1½ wounding modifier, and if it inflicts a major wound, it also blinds one eye (both eyes on damage over full HP). Random attacks from behind hit the skull instead.",
+					"calc": {
+						"roll_range": "5",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Right Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "6-7",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Right Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
+					"calc": {
+						"roll_range": "8",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "torso",
+					"choice_name": "Torso",
+					"table_name": "Torso",
+					"slots": 2,
+					"hit_penalty": 0,
+					"dr_bonus": 0,
+					"description": "",
+					"calc": {
+						"roll_range": "9-10",
+						"dr": {
+							"all": 35
+						}
+					}
+				},
+				{
+					"id": "groin",
+					"choice_name": "Groin",
+					"table_name": "Groin",
+					"slots": 1,
+					"hit_penalty": -3,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Human males and the males of similar species suffer double shock from crushing (cr) damage, and get -5 to knockdown rolls. Otherwise, treat as a torso hit.",
+					"calc": {
+						"roll_range": "11",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Left Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
+					"calc": {
+						"roll_range": "12",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Left Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "13-14",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "hand",
+					"choice_name": "Hand",
+					"table_name": "Hand",
+					"slots": 1,
+					"hit_penalty": -4,
+					"dr_bonus": 0,
+					"description": "If holding a shield, double the penalty to hit: -8 for shield hand instead of -4. Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "15",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "foot",
+					"choice_name": "Foot",
+					"table_name": "Foot",
+					"slots": 1,
+					"hit_penalty": -4,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "16",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "neck",
+					"choice_name": "Neck",
+					"table_name": "Neck",
+					"slots": 2,
+					"hit_penalty": -5,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Neck and throat. Increase the wounding multiplier of crushing (cr) and corrosion (cor) attacks to x1½, and that of cutting (cut) damage to x2. At the GM’s option, anyone killed by a cutting (cut) blow to the neck is decapitated!",
+					"calc": {
+						"roll_range": "17-18",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "vitals",
+					"choice_name": "Vitals",
+					"table_name": "Vitals",
+					"slots": 0,
+					"hit_penalty": -3,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Heart, lungs, kidneys, etc. Increase the wounding modifier for an impaling (imp) or any piercing (pi-, pi, pi+, pi++) attack to x3. Increase the wounding modifier for a tight-beam burning (burn) attack to x2. Other attacks cannot target the vitals.",
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 35
+						}
+					}
+				}
+			]
+		}
+	},
+	"created_date": "Sep 26, 2021, 1:40 PM",
+	"modified_date": "Mar 6, 2022, 4:56 PM",
+	"profile": {
+		"player_name": "Ryder",
+		"name": "Sirena Morgan",
+		"age": "19",
+		"birthday": "February 29",
+		"eyes": "Silver, Blue",
+		"hair": "Black, Purple, and White Streaks",
+		"skin": "White",
+		"handedness": "Right",
+		"height": "5' 5\"",
+		"weight": "100 lb",
+		"gender": "Female",
+		"tech_level": "8"
+	},
+	"attributes": [
+		{
+			"attr_id": "st",
+			"adj": 1,
+			"calc": {
+				"value": 11,
+				"points": 10
+			}
+		},
+		{
+			"attr_id": "dx",
+			"adj": 2,
+			"calc": {
+				"value": 12,
+				"points": 40
+			}
+		},
+		{
+			"attr_id": "iq",
+			"adj": 7,
+			"calc": {
+				"value": 17,
+				"points": 140
+			}
+		},
+		{
+			"attr_id": "ht",
+			"adj": 2,
+			"calc": {
+				"value": 12,
+				"points": 20
+			}
+		},
+		{
+			"attr_id": "will",
+			"adj": 1,
+			"calc": {
+				"value": 18,
+				"points": 5
+			}
+		},
+		{
+			"attr_id": "fright_check",
+			"adj": 0,
+			"calc": {
+				"value": 20,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "per",
+			"adj": -1,
+			"calc": {
+				"value": 16,
+				"points": -5
+			}
+		},
+		{
+			"attr_id": "vision",
+			"adj": 0,
+			"calc": {
+				"value": 16,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "hearing",
+			"adj": 0,
+			"calc": {
+				"value": 16,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "taste_smell",
+			"adj": 0,
+			"calc": {
+				"value": 16,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "touch",
+			"adj": 0,
+			"calc": {
+				"value": 16,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "basic_speed",
+			"adj": 0,
+			"calc": {
+				"value": 6,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "basic_move",
+			"adj": 0,
+			"calc": {
+				"value": 6,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "fp",
+			"adj": 1,
+			"damage": 0,
+			"calc": {
+				"value": 13,
+				"current": 13,
+				"points": 3
+			}
+		},
+		{
+			"attr_id": "hp",
+			"adj": 4,
+			"damage": 0,
+			"calc": {
+				"value": 15,
+				"current": 15,
+				"points": 8
+			}
+		},
+		{
+			"attr_id": "er",
+			"adj": 0,
+			"damage": 0,
+			"calc": {
+				"value": 21,
+				"current": 21,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "sc",
+			"adj": 27,
+			"damage": 27,
+			"calc": {
+				"value": 27,
+				"current": 0,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "ch",
+			"adj": 0,
+			"damage": 0,
+			"calc": {
+				"value": 25,
+				"current": 25,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "lk",
+			"adj": 0,
+			"damage": 3,
+			"calc": {
+				"value": 4,
+				"current": 1,
+				"points": 0
+			}
+		}
+	],
+	"total_points": 450,
+	"advantages": [
+		{
+			"type": "advantage_container",
+			"id": "b83acab2-e643-4a75-931a-14ee828da196",
+			"name": "Witch",
+			"calc": {
+				"points": 156
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "a4c717ba-60be-40f0-84ef-5cd1567a6087",
+					"name": "Magery (Ritual Path)",
+					"mental": true,
+					"supernatural": true,
+					"levels": "7",
+					"base_points": 5,
+					"points_per_level": 10,
+					"reference": "TRPM5",
+					"calc": {
+						"points": 75
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "e803cebc-cf93-42c9-a41b-57857d3cb356",
+					"name": "Ritual Adept",
+					"mental": true,
+					"supernatural": true,
+					"base_points": 40,
+					"reference": "TRPM6",
+					"calc": {
+						"points": 40
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "advantage_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Magery (Ritual Path)"
+								}
+							}
+						]
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "2063dd0e-6e06-4a11-85b0-67eb74468b8b",
+					"name": "Signature Gear",
+					"social": true,
+					"levels": "3",
+					"points_per_level": 1,
+					"reference": "B85",
+					"calc": {
+						"points": 3
+					},
+					"notes": "Infernal Cookbook",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "09c6e6f2-b9a4-41ec-a751-076eeff61163",
+					"name": "Raspberry Blood",
+					"physical": true,
+					"exotic": true,
+					"levels": "1",
+					"points_per_level": 4,
+					"weapons": [
+						{
+							"type": "ranged_weapon",
+							"damage": {
+								"type": "tox",
+								"base": "1d"
+							},
+							"range": "100",
+							"calc": {
+								"level": 11,
+								"range": "100",
+								"damage": "1d tox"
+							},
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Innate Attack",
+									"specialization": "Organ Failure"
+								},
+								{
+									"type": "skill",
+									"name": "Innate Attack",
+									"modifier": -2
+								},
+								{
+									"type": "dx",
+									"modifier": -4
+								}
+							]
+						}
+					],
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "9d064b4a-1f6b-44a7-85f0-c751d7136f97",
+							"name": "Symptoms",
+							"reference": "B109",
+							"cost_type": "percentage",
+							"cost": 90,
+							"affects": "total",
+							"notes": "Nausea, Cumulative Damage Exceeding 1/3HP"
+						},
+						{
+							"type": "modifier",
+							"id": "d93fbde3-7274-400d-8c28-8c33688fe0b8",
+							"name": "Malediction (Size/Speed Modifier Table)",
+							"reference": "B106",
+							"cost_type": "percentage",
+							"cost": 150,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "6fbb09fc-5c0d-4e60-b2a2-2ee3cb4112b5",
+							"name": "Based On (HT)",
+							"reference": "B102",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "a44e54f4-bbdc-439f-abfb-7bcd3b530c25",
+							"name": "No Signature",
+							"reference": "B106",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "edca51af-e0bc-4900-a196-afec899c568d",
+							"name": "Magic",
+							"reference": "P27",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "85da9728-1644-4c85-b48e-133816dbab22",
+							"name": "Symptoms",
+							"reference": "B109",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total",
+							"notes": "Retching, Cumulative Damage Exceeding 1/2HP"
+						}
+					],
+					"reference": "B62",
+					"calc": {
+						"points": 19
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "6659b381-27b0-4f7f-a802-e2003fbc3110",
+					"name": "Signature Gear",
+					"social": true,
+					"levels": "6",
+					"points_per_level": 1,
+					"reference": "B85",
+					"calc": {
+						"points": 6
+					},
+					"notes": "Workspace Kit, Fine",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "6c12adca-2bf1-4d2b-874f-68134bb5d883",
+					"name": "Language: Gaelic",
+					"mental": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "7a57417f-0b40-4e49-a9d3-29a05586d344",
+							"disabled": true,
+							"name": "Native",
+							"reference": "B23",
+							"cost_type": "points",
+							"cost": -6,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "9ac06a06-cb69-4965-8213-d4d696572c4f",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"id": "f312739f-21af-4b27-9c95-e5004830fdc1",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"id": "6002ac82-a03a-4062-b4e2-8b6c00e2ebc3",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"id": "6f447d2e-e974-4d09-817f-6cc693047b26",
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						},
+						{
+							"type": "modifier",
+							"id": "53964a3a-c80f-44a6-85da-b771ab2d5fc6",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"id": "64ecd0ba-a5b6-40e7-aa4f-436a30ed3c14",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"id": "dd164a04-9f7b-4db5-a137-d80c5c574dcc",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"id": "e5d9c55d-dfb0-41ca-96d5-357f86e680cd",
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						}
+					],
+					"reference": "B24",
+					"calc": {
+						"points": 6
+					},
+					"categories": [
+						"Advantage",
+						"Language"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "33fa045b-c1cd-4a6b-86c6-b2edb4ecef2b",
+					"name": "Candyman",
+					"physical": true,
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					},
+					"notes": "Always has candy on hand"
+				},
+				{
+					"type": "advantage_container",
+					"id": "c6111538-0781-4967-a020-2a5ebb302c22",
+					"name": "Ritual Masteries",
+					"calc": {
+						"points": 6
+					},
+					"open": true,
+					"children": [
+						{
+							"type": "advantage",
+							"id": "9411b82e-21ec-4ab6-9666-5cfe6c7b3a9f",
+							"name": "Ritual Mastery (Raspberry Blood)",
+							"mental": true,
+							"supernatural": true,
+							"base_points": 1,
+							"reference": "TRPM6",
+							"calc": {
+								"points": 1
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Magery (Ritual Path)"
+										}
+									}
+								]
+							},
+							"categories": [
+								"Perk"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "de6591ec-ce5d-43f2-939a-372140bf5fd7",
+							"name": "Ritual Mastery (Honey Trap)",
+							"mental": true,
+							"supernatural": true,
+							"base_points": 1,
+							"reference": "TRPM6",
+							"calc": {
+								"points": 1
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Magery (Ritual Path)"
+										}
+									}
+								]
+							},
+							"categories": [
+								"Perk"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "8add0fd6-8c5b-4e1e-9c9f-c339857f20d6",
+							"name": "Ritual Mastery (Hex of Unhealing)",
+							"mental": true,
+							"supernatural": true,
+							"base_points": 1,
+							"reference": "TRPM6",
+							"calc": {
+								"points": 1
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Magery (Ritual Path)"
+										}
+									}
+								]
+							},
+							"categories": [
+								"Perk"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "ccd7be22-6164-4597-9511-01235bf6393c",
+							"name": "Ritual Mastery (Chocolate (No Nuts))",
+							"mental": true,
+							"supernatural": true,
+							"base_points": 1,
+							"reference": "TRPM6",
+							"calc": {
+								"points": 1
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Magery (Ritual Path)"
+										}
+									}
+								]
+							},
+							"categories": [
+								"Perk"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "c98fff3a-6d7a-400a-97b6-9451b54af88c",
+							"name": "Ritual Mastery (Taffeelimb)",
+							"mental": true,
+							"supernatural": true,
+							"base_points": 1,
+							"reference": "TRPM6",
+							"calc": {
+								"points": 1
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Magery (Ritual Path)"
+										}
+									}
+								]
+							},
+							"categories": [
+								"Perk"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "37c77b4b-5455-4e6c-9006-a06d5ecbbf9d",
+							"name": "Ritual Mastery (Lemon Bomb)",
+							"mental": true,
+							"supernatural": true,
+							"base_points": 1,
+							"reference": "TRPM6",
+							"calc": {
+								"points": 1
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Magery (Ritual Path)"
+										}
+									}
+								]
+							},
+							"categories": [
+								"Perk"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "advantage_container",
+			"id": "ff80d2cc-02e6-427b-a5c3-bed08b48faed",
+			"name": "Studied Combatant",
+			"calc": {
+				"points": 5
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "d3185cdf-7475-4063-9292-d8ae6d611e48",
+					"name": "Absent-Mindedness",
+					"mental": true,
+					"base_points": -15,
+					"reference": "B122",
+					"calc": {
+						"points": -15
+					},
+					"notes": "-5 on all IQ and IQ-based skill rolls, save those for the task you are currently concentrating on. Once adrift in your own thoughts, you must roll against Perception-5 in order to notice any event short of personal physical injury.",
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "bd2206d0-2fb1-43c3-8e0c-5fd34c43c4eb",
+					"name": "Easy to Read",
+					"mental": true,
+					"base_points": -10,
+					"reference": "B134",
+					"calc": {
+						"points": -10
+					},
+					"notes": "Gives others +4 on all Empathy, Body Language, and Psychology rolls to discern your intentions or the truth of your words. They also get +4 to their IQ, Detect Lies, and Gambling rolls in any Quick Contest with your Acting, Fast-Talk, or Gambling skill when you try to lie or bluff.",
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "02c00a6b-2529-48ba-9743-cc8fcdb78084",
+					"name": "Combat Reflexes",
+					"mental": true,
+					"base_points": 15,
+					"reference": "B43",
+					"calc": {
+						"points": 15
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "advantage_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Enhanced Time Sense"
+								}
+							}
+						]
+					},
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "starts_with",
+								"qualifier": "fast-draw"
+							}
+						},
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"attribute": "dodge"
+						},
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"attribute": "parry"
+						},
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"attribute": "block"
+						},
+						{
+							"type": "attribute_bonus",
+							"amount": 2,
+							"attribute": "fright_check"
+						},
+						{
+							"type": "conditional_modifier",
+							"amount": 6,
+							"situation": "on all IQ rolls to wake up or to recover from surprise or mental stun"
+						},
+						{
+							"type": "conditional_modifier",
+							"amount": 1,
+							"situation": "to initiative rolls for your side (+2 if you are the leader)"
+						}
+					],
+					"notes": "Never freeze",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "33b811f5-9ae9-4e3d-8fe2-e2b98bbf9f53",
+					"name": "Natural Attacks",
+					"physical": true,
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "cr",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Bite",
+							"reach": "C",
+							"parry": "No",
+							"block": "No",
+							"calc": {
+								"level": 12,
+								"parry": "No",
+								"block": "No",
+								"damage": "1d-2 cr"
+							},
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								}
+							]
+						},
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "cr",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Punch",
+							"reach": "C",
+							"parry": "0",
+							"calc": {
+								"level": 12,
+								"parry": "10",
+								"block": "",
+								"damage": "1d-2 cr"
+							},
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Boxing"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "skill",
+									"name": "Karate"
+								}
+							]
+						},
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "cr",
+								"st": "thr"
+							},
+							"usage": "Kick",
+							"reach": "C,1",
+							"parry": "No",
+							"calc": {
+								"level": 10,
+								"parry": "No",
+								"block": "",
+								"damage": "1d-1 cr"
+							},
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Brawling",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Karate",
+									"modifier": -2
+								}
+							]
+						}
+					],
+					"reference": "B271",
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"type": "advantage",
+					"id": "825beb95-90d0-432f-b4bb-4e041d6914c1",
+					"name": "Bad Sight (Nearsighted)",
+					"physical": true,
+					"base_points": -25,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "4b74eb02-1b61-432f-ac1f-46f1f5faeb0d",
+							"name": "Mitigator",
+							"cost_type": "percentage",
+							"cost": -60,
+							"affects": "total",
+							"notes": "Glasses"
+						}
+					],
+					"reference": "B123",
+					"calc": {
+						"points": -10
+					},
+					"notes": " -6 to Vision rolls to spot items more than 1 yd away; -2 to all melee attacks; double actual distance to the target when calculating the range modifier for ranged attacks",
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "c7c9cac7-a199-4eb3-9c26-3495fbf57334",
+					"name": "Luck",
+					"mental": true,
+					"base_points": 15,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "7b8bd593-e5b3-475d-a475-3e4e9285ed94",
+							"disabled": true,
+							"name": "Active",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "a22aa17b-5d95-4b54-9447-37c88eab9a99",
+							"disabled": true,
+							"name": "Aspected",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "@Aspect@"
+						},
+						{
+							"type": "modifier",
+							"id": "9e364da4-4c7c-4c4a-9346-f7d1ef915946",
+							"disabled": true,
+							"name": "Defensive",
+							"reference": "B66",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "60f16756-7e94-4923-aadb-0f65960c1bc0",
+							"disabled": true,
+							"name": "Wishing",
+							"reference": "P59",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total"
+						}
+					],
+					"reference": "B66",
+					"calc": {
+						"points": 15
+					},
+					"notes": "Usable once per hour of play",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "604a6b19-ab3d-4a8e-a067-4e40849650b0",
+					"name": "Common Sense",
+					"mental": true,
+					"base_points": 10,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "3ec256da-997e-4f5a-869d-5b1a52aef02e",
+							"disabled": true,
+							"name": "Concious",
+							"reference": "P45",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						}
+					],
+					"reference": "B43",
+					"calc": {
+						"points": 10
+					},
+					"categories": [
+						"Advantage"
+					]
+				}
+			]
+		},
+		{
+			"type": "advantage_container",
+			"id": "6f999c3f-b45b-4126-9ebc-8c5326474cf0",
+			"name": "Monster Chaser",
+			"calc": {
+				"points": -15
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "2467dde4-9fe7-4cbb-bcc5-f7a68bed489d",
+					"name": "Curious",
+					"mental": true,
+					"base_points": -5,
+					"cr": 12,
+					"reference": "B129",
+					"calc": {
+						"points": -5
+					},
+					"notes": "Make a self-control roll when presented with an interesting item or situation",
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "b1991b27-bf50-4542-bbdd-025b5747f33d",
+					"name": "Xenophilia",
+					"mental": true,
+					"base_points": -10,
+					"cr": 12,
+					"reference": "B162",
+					"calc": {
+						"points": -10
+					},
+					"categories": [
+						"Disadvantage"
+					]
+				}
+			]
+		}
+	],
+	"skills": [
+		{
+			"type": "skill_container",
+			"id": "919408cb-a1bc-45f2-ab3c-4506a1735434",
+			"name": "Acrobat",
+			"open": true,
+			"children": [
+				{
+					"type": "skill",
+					"id": "e9a2c2bd-d998-4492-be65-4b2c7e748586",
+					"name": "Acrobatics",
+					"reference": "B174",
+					"difficulty": "dx/h",
+					"points": 4,
+					"defaulted_from": {
+						"type": "dx",
+						"modifier": -6,
+						"level": 6,
+						"adjusted_level": 6,
+						"points": -6
+					},
+					"calc": {
+						"level": 12,
+						"rsl": "DX+0"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Aerobatics",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Aquabatics",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Athletic"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "ca802388-78c5-4a23-93c4-f652c9a7b023",
+					"name": "Judo",
+					"reference": "B203",
+					"encumbrance_penalty_multiplier": 1,
+					"difficulty": "dx/h",
+					"points": 4,
+					"calc": {
+						"level": 12,
+						"rsl": "DX+0"
+					},
+					"notes": "Allows parrying two different attacks per turn, one with each hand.",
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "8ef37453-13f7-4cfe-8c5d-5a19ea4abfee",
+					"name": "Staff",
+					"reference": "B208",
+					"difficulty": "dx/a",
+					"points": 4,
+					"defaulted_from": {
+						"type": "dx",
+						"modifier": -5,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"calc": {
+						"level": 13,
+						"rsl": "DX+1"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Spear",
+							"modifier": -2
+						}
+					],
+					"categories": [
+						"Combat/Weapon",
+						"Melee Combat"
+					]
+				}
+			]
+		},
+		{
+			"type": "skill_container",
+			"id": "b73b33b6-f27b-4bfd-8df1-e937eafd58fa",
+			"name": "Doctor-in-Training",
+			"open": true,
+			"children": [
+				{
+					"type": "skill",
+					"id": "f3d812b3-970d-4f79-b022-3415b899d4a8",
+					"name": "Computer Operation",
+					"reference": "B184",
+					"tech_level": "8",
+					"difficulty": "iq/e",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -4,
+						"level": 13,
+						"adjusted_level": 13,
+						"points": -13
+					},
+					"calc": {
+						"level": 17,
+						"rsl": "IQ+0"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Everyman",
+						"Scholarly",
+						"Technical"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "469ee14d-f731-4843-a491-3d596f498578",
+					"name": "Diagnosis",
+					"reference": "B187",
+					"tech_level": "8",
+					"difficulty": "iq/h",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -6,
+						"level": 11,
+						"adjusted_level": 11,
+						"points": -11
+					},
+					"calc": {
+						"level": 15,
+						"rsl": "IQ-2"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "First Aid",
+							"modifier": -8
+						},
+						{
+							"type": "skill",
+							"name": "Physician",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Veterinary",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Medical"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "e22ac9ff-34f8-4921-8ed0-fd1da8273be8",
+					"name": "Chemistry",
+					"reference": "B183",
+					"tech_level": "8",
+					"difficulty": "iq/h",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -6,
+						"level": 11,
+						"adjusted_level": 11,
+						"points": -11
+					},
+					"calc": {
+						"level": 15,
+						"rsl": "IQ-2"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Alchemy",
+							"modifier": -3
+						}
+					],
+					"categories": [
+						"Natural Science"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "e3872827-d99a-4dc8-829d-4f9f5f23cb3a",
+					"name": "First Aid",
+					"reference": "B195",
+					"tech_level": "8",
+					"difficulty": "iq/e",
+					"points": 1,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Physician",
+						"level": 15,
+						"adjusted_level": 15,
+						"points": -15
+					},
+					"calc": {
+						"level": 17,
+						"rsl": "IQ+0"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Esoteric Medicine"
+						},
+						{
+							"type": "skill",
+							"name": "Physician"
+						},
+						{
+							"type": "skill",
+							"name": "Veterinary",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Everyman",
+						"Medical"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "4dc7a654-777e-41d1-8883-ed17c9eaa171",
+					"name": "Hazardous Materials",
+					"reference": "B199",
+					"specialization": "Chemical",
+					"tech_level": "8",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -5,
+						"level": 12,
+						"adjusted_level": 12,
+						"points": -12
+					},
+					"calc": {
+						"level": 16,
+						"rsl": "IQ-1"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Technical"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "247649ee-e867-4ff8-a8f2-a05613176a8b",
+					"name": "Hobby Skill",
+					"reference": "B200",
+					"specialization": "Candymaking",
+					"difficulty": "iq/e",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -4,
+						"level": 13,
+						"adjusted_level": 13,
+						"points": -13
+					},
+					"calc": {
+						"level": 17,
+						"rsl": "IQ+0"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Knowledge"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "356aa453-a7ba-47d7-b56d-c43d3fb76c39",
+					"name": "Naturalist",
+					"reference": "B211",
+					"specialization": "Earthlike",
+					"difficulty": "iq/h",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -6,
+						"level": 11,
+						"adjusted_level": 11,
+						"points": -11
+					},
+					"calc": {
+						"level": 15,
+						"rsl": "IQ-2"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Biology",
+							"modifier": -3
+						}
+					],
+					"categories": [
+						"Animal",
+						"Natural Science",
+						"Outdoor/Exploration",
+						"Plant"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "06150106-6685-447c-8a3b-bf64d7d803fa",
+					"name": "Pharmacy",
+					"reference": "B213",
+					"specialization": "Herbal",
+					"tech_level": "8",
+					"difficulty": "iq/h",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -6,
+						"level": 11,
+						"adjusted_level": 11,
+						"points": -11
+					},
+					"calc": {
+						"level": 15,
+						"rsl": "IQ-2"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "naturalist"
+								}
+							}
+						]
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Biology",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Herb Lore",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Naturalist",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Design/Invention",
+						"Medical",
+						"Plant"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "54f2c39e-b380-4ab3-be37-fb351a79f340",
+					"name": "Pharmacy",
+					"reference": "B213",
+					"specialization": "Synthetic",
+					"tech_level": "8",
+					"difficulty": "iq/h",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -6,
+						"level": 11,
+						"adjusted_level": 11,
+						"points": -11
+					},
+					"calc": {
+						"level": 15,
+						"rsl": "IQ-2"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Chemistry",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Physician",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Design/Invention",
+						"Medical"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "f6fed118-eabf-41c7-92ad-90e0d5b7a89f",
+					"name": "Physician",
+					"reference": "B213",
+					"tech_level": "8",
+					"difficulty": "iq/h",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -7,
+						"level": 10,
+						"adjusted_level": 10,
+						"points": -10
+					},
+					"calc": {
+						"level": 15,
+						"rsl": "IQ-2"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -7
+						},
+						{
+							"type": "skill",
+							"name": "First Aid",
+							"modifier": -11
+						},
+						{
+							"type": "skill",
+							"name": "Veterinary",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Medical"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "58bd61e2-5cbf-4746-96f2-2912035e8b58",
+					"name": "Physiology",
+					"reference": "B213",
+					"specialization": "Human",
+					"tech_level": "8",
+					"difficulty": "iq/h",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -6,
+						"level": 11,
+						"adjusted_level": 11,
+						"points": -11
+					},
+					"calc": {
+						"level": 15,
+						"rsl": "IQ-2"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Diagnosis",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Physician",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Surgery",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Medical",
+						"Natural Science"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "50a4d359-04d8-4851-a158-671d8a89ef39",
+					"name": "Research",
+					"reference": "B217",
+					"tech_level": "8",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -5,
+						"level": 12,
+						"adjusted_level": 12,
+						"points": -12
+					},
+					"calc": {
+						"level": 16,
+						"rsl": "IQ-1"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "prereq_list",
+								"all": true,
+								"when_tl": {
+									"compare": "at_least",
+									"qualifier": 8
+								},
+								"prereqs": [
+									{
+										"type": "skill_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Computer Operation"
+										}
+									}
+								]
+							},
+							{
+								"type": "prereq_list",
+								"all": false,
+								"when_tl": {
+									"compare": "at_most",
+									"qualifier": 4
+								},
+								"prereqs": [
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "starts_with",
+											"qualifier": "Language"
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "Written (Native"
+										}
+									},
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "starts_with",
+											"qualifier": "Language"
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "Written (Accented)"
+										}
+									},
+									{
+										"type": "advantage_prereq",
+										"has": true,
+										"name": {
+											"compare": "starts_with",
+											"qualifier": "Language"
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "Written (Broken)"
+										}
+									}
+								]
+							}
+						]
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Writing",
+							"modifier": -3
+						}
+					],
+					"categories": [
+						"Scholarly",
+						"Spy"
+					]
+				}
+			]
+		},
+		{
+			"type": "skill_container",
+			"id": "f9f66098-847b-4001-9f7d-6b9411147034",
+			"name": "Ghost-Facer",
+			"open": true,
+			"children": [
+				{
+					"type": "skill",
+					"id": "1e0992a8-ff51-44e6-b535-c738fe5a2179",
+					"name": "Electronics Operation",
+					"reference": "B189",
+					"specialization": "Psychotronics",
+					"tech_level": "8",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -5,
+						"level": 12,
+						"adjusted_level": 12,
+						"points": -12
+					},
+					"calc": {
+						"level": 16,
+						"rsl": "IQ-1"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Repair",
+							"specialization": "Psychotronics",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Technical"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "a846e10a-ad00-46a0-90e9-0121aa990035",
+					"name": "Hidden Lore",
+					"reference": "B199",
+					"specialization": "Restless Undead",
+					"difficulty": "iq/a",
+					"points": 2,
+					"calc": {
+						"level": 17,
+						"rsl": "IQ+0"
+					},
+					"categories": [
+						"Knowledge"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "f7d19870-d54a-478d-88fb-ee8d6eeb3070",
+					"name": "Mathematics",
+					"reference": "B207",
+					"specialization": "Applied",
+					"tech_level": "8",
+					"difficulty": "iq/h",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -6,
+						"level": 11,
+						"adjusted_level": 11,
+						"points": -11
+					},
+					"calc": {
+						"level": 15,
+						"rsl": "IQ-2"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Physics",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Natural Science"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "2a2af0e3-8edf-4ab3-98ea-ebeade6cda83",
+					"name": "Physics",
+					"reference": "B213",
+					"specialization": "Paraphysics",
+					"tech_level": "8",
+					"difficulty": "iq/h",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -6,
+						"level": 11,
+						"adjusted_level": 11,
+						"points": -11
+					},
+					"calc": {
+						"level": 15,
+						"rsl": "IQ-2"
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "mathematics"
+								},
+								"specialization": {
+									"compare": "is",
+									"qualifier": "applied"
+								}
+							}
+						]
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						}
+					],
+					"categories": [
+						"Natural Science"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "7c48fe78-3852-4ea6-8da6-d97427b2ac00",
+					"name": "Theology",
+					"reference": "B226",
+					"specialization": "Shamanic",
+					"difficulty": "iq/h",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -6,
+						"level": 11,
+						"adjusted_level": 11,
+						"points": -11
+					},
+					"calc": {
+						"level": 15,
+						"rsl": "IQ-2"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Religious Ritual",
+							"specialization": "Shamanic",
+							"modifier": -4
+						}
+					],
+					"categories": [
+						"Social Sciences/Humanities"
+					]
+				}
+			]
+		},
+		{
+			"type": "skill_container",
+			"id": "0cb1f029-ade5-40f0-b037-1eb8dcfb3815",
+			"name": "Wicca",
+			"open": true,
+			"children": [
+				{
+					"type": "skill",
+					"id": "f3bdf646-667f-43f1-bf83-c43f744a9c51",
+					"name": "Alchemy",
+					"reference": "B174",
+					"tech_level": "8",
+					"difficulty": "iq/vh",
+					"points": 1,
+					"calc": {
+						"level": 14,
+						"rsl": "IQ-3"
+					},
+					"categories": [
+						"Natural Science",
+						"Occult/Magical"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "3e3da6aa-3122-4aaa-bd75-aa1b294f017b",
+					"name": "Innate Attack",
+					"reference": "B201",
+					"specialization": "Projectile",
+					"difficulty": "dx/e",
+					"points": 2,
+					"defaulted_from": {
+						"type": "dx",
+						"modifier": -4,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"calc": {
+						"level": 13,
+						"rsl": "DX+1"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Innate Attack",
+							"modifier": -2
+						}
+					],
+					"categories": [
+						"Combat/Weapon",
+						"Ranged Combat"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "5a0a9dfd-df0a-41ef-afe5-ba02c71bf198",
+					"name": "Occultism",
+					"reference": "B212",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -5,
+						"level": 12,
+						"adjusted_level": 12,
+						"points": -12
+					},
+					"calc": {
+						"level": 16,
+						"rsl": "IQ-1"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						}
+					],
+					"categories": [
+						"Occult/Magical"
+					]
+				},
+				{
+					"type": "skill_container",
+					"id": "635fd9a7-06b5-42fe-b2e8-afa7553a50c9",
+					"name": "Paths of Magic",
+					"open": true,
+					"children": [
+						{
+							"type": "skill",
+							"id": "d875b275-bdf3-4533-9d0b-5888ff0172a3",
+							"name": "Path of Body",
+							"reference": "MH1:32",
+							"difficulty": "iq/vh",
+							"points": 12,
+							"defaulted_from": {
+								"type": "skill",
+								"name": "Thaumatology",
+								"modifier": -6,
+								"level": 12,
+								"adjusted_level": 12,
+								"points": -12
+							},
+							"calc": {
+								"level": 18,
+								"rsl": "IQ+1"
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "skill_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Thaumatology"
+										}
+									}
+								]
+							},
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Thaumatology",
+									"modifier": -6
+								}
+							],
+							"categories": [
+								"Occult/Magical",
+								"Ritual Path Magic"
+							]
+						},
+						{
+							"type": "skill",
+							"id": "d577a885-5a08-4b26-b4ae-96256c345453",
+							"name": "Path of Chance",
+							"reference": "MH1:32",
+							"difficulty": "iq/vh",
+							"points": 1,
+							"defaulted_from": {
+								"type": "skill",
+								"name": "Thaumatology",
+								"modifier": -6,
+								"level": 12,
+								"adjusted_level": 12,
+								"points": -12
+							},
+							"calc": {
+								"level": 14,
+								"rsl": "IQ-3"
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "skill_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Thaumatology"
+										}
+									}
+								]
+							},
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Thaumatology",
+									"modifier": -6
+								}
+							],
+							"categories": [
+								"Occult/Magical",
+								"Ritual Path Magic"
+							]
+						},
+						{
+							"type": "skill",
+							"id": "f6cdee1a-98cb-417e-b7dc-cedbcb73ea6f",
+							"name": "Path of Crossroads",
+							"reference": "MH1:32",
+							"difficulty": "iq/vh",
+							"points": 1,
+							"defaulted_from": {
+								"type": "skill",
+								"name": "Thaumatology",
+								"modifier": -6,
+								"level": 12,
+								"adjusted_level": 12,
+								"points": -12
+							},
+							"calc": {
+								"level": 14,
+								"rsl": "IQ-3"
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "skill_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Thaumatology"
+										}
+									}
+								]
+							},
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Thaumatology",
+									"modifier": -6
+								}
+							],
+							"categories": [
+								"Occult/Magical",
+								"Ritual Path Magic"
+							]
+						},
+						{
+							"type": "skill",
+							"id": "8058ebcf-ec77-4d09-a792-4c54859d22e6",
+							"name": "Path of Energy",
+							"reference": "MH1:32",
+							"difficulty": "iq/vh",
+							"points": 4,
+							"defaulted_from": {
+								"type": "skill",
+								"name": "Thaumatology",
+								"modifier": -6,
+								"level": 12,
+								"adjusted_level": 12,
+								"points": -12
+							},
+							"calc": {
+								"level": 16,
+								"rsl": "IQ-1"
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "skill_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Thaumatology"
+										}
+									}
+								]
+							},
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Thaumatology",
+									"modifier": -6
+								}
+							],
+							"categories": [
+								"Occult/Magical",
+								"Ritual Path Magic"
+							]
+						},
+						{
+							"type": "skill",
+							"id": "513ce143-5c4b-42e6-8ef4-b5cfb2779792",
+							"name": "Path of Magic",
+							"reference": "MH1:33",
+							"difficulty": "iq/vh",
+							"points": 8,
+							"defaulted_from": {
+								"type": "skill",
+								"name": "Thaumatology",
+								"modifier": -6,
+								"level": 12,
+								"adjusted_level": 12,
+								"points": -12
+							},
+							"calc": {
+								"level": 17,
+								"rsl": "IQ+0"
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "skill_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Thaumatology"
+										}
+									}
+								]
+							},
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Thaumatology",
+									"modifier": -6
+								}
+							],
+							"categories": [
+								"Occult/Magical",
+								"Ritual Path Magic"
+							]
+						},
+						{
+							"type": "skill",
+							"id": "96733c95-5183-468b-9087-527e7294ebed",
+							"name": "Path of Matter",
+							"reference": "MH1:33",
+							"difficulty": "iq/vh",
+							"points": 4,
+							"defaulted_from": {
+								"type": "skill",
+								"name": "Thaumatology",
+								"modifier": -6,
+								"level": 12,
+								"adjusted_level": 12,
+								"points": -12
+							},
+							"calc": {
+								"level": 16,
+								"rsl": "IQ-1"
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "skill_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Thaumatology"
+										}
+									}
+								]
+							},
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Thaumatology",
+									"modifier": -6
+								}
+							],
+							"categories": [
+								"Occult/Magical",
+								"Ritual Path Magic"
+							]
+						},
+						{
+							"type": "skill",
+							"id": "514baaca-bf24-44a1-a223-adaa108234e7",
+							"name": "Path of Mind",
+							"reference": "MH1:33",
+							"difficulty": "iq/vh",
+							"points": 4,
+							"defaulted_from": {
+								"type": "skill",
+								"name": "Thaumatology",
+								"modifier": -6,
+								"level": 12,
+								"adjusted_level": 12,
+								"points": -12
+							},
+							"calc": {
+								"level": 16,
+								"rsl": "IQ-1"
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "skill_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Thaumatology"
+										}
+									}
+								]
+							},
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Thaumatology",
+									"modifier": -6
+								}
+							],
+							"categories": [
+								"Occult/Magical",
+								"Ritual Path Magic"
+							]
+						},
+						{
+							"type": "skill",
+							"id": "a15482c7-cc5d-41c4-8f0f-99861d92238e",
+							"name": "Path of Spirit",
+							"reference": "MH1:33",
+							"difficulty": "iq/vh",
+							"points": 1,
+							"defaulted_from": {
+								"type": "skill",
+								"name": "Thaumatology",
+								"modifier": -6,
+								"level": 12,
+								"adjusted_level": 12,
+								"points": -12
+							},
+							"calc": {
+								"level": 14,
+								"rsl": "IQ-3"
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "skill_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Thaumatology"
+										}
+									}
+								]
+							},
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Thaumatology",
+									"modifier": -6
+								}
+							],
+							"categories": [
+								"Occult/Magical",
+								"Ritual Path Magic"
+							]
+						},
+						{
+							"type": "skill",
+							"id": "aea61ab1-946f-4821-a702-cad55dc9d6d4",
+							"name": "Path of Undead",
+							"reference": "MH1:33",
+							"difficulty": "iq/vh",
+							"points": 1,
+							"defaulted_from": {
+								"type": "skill",
+								"name": "Thaumatology",
+								"modifier": -6,
+								"level": 12,
+								"adjusted_level": 12,
+								"points": -12
+							},
+							"calc": {
+								"level": 14,
+								"rsl": "IQ-3"
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "skill_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Thaumatology"
+										}
+									}
+								]
+							},
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Thaumatology",
+									"modifier": -6
+								}
+							],
+							"categories": [
+								"Occult/Magical",
+								"Ritual Path Magic"
+							]
+						}
+					]
+				},
+				{
+					"type": "skill",
+					"id": "3bc040cc-140b-4298-bf64-46544c1962e5",
+					"name": "Poisons",
+					"reference": "B214",
+					"tech_level": "8",
+					"difficulty": "iq/h",
+					"points": 1,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Pharmacy",
+						"modifier": -3,
+						"level": 12,
+						"adjusted_level": 12,
+						"points": -12
+					},
+					"calc": {
+						"level": 15,
+						"rsl": "IQ-2"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Chemistry",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Pharmacy",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Physician",
+							"modifier": -3
+						}
+					],
+					"categories": [
+						"Criminal/Street",
+						"Medical",
+						"Spy"
+					]
+				},
+				{
+					"type": "skill",
+					"id": "ba8f4706-e98f-48e2-acc5-327b31bb6029",
+					"name": "Thaumatology",
+					"reference": "B225",
+					"difficulty": "iq/vh",
+					"points": 12,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -7,
+						"level": 10,
+						"adjusted_level": 10,
+						"points": -10
+					},
+					"calc": {
+						"level": 18,
+						"rsl": "IQ+1"
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -7
+						}
+					],
+					"categories": [
+						"Occult/Magical"
+					]
+				}
+			]
+		}
+	],
+	"equipment": [
+		{
+			"type": "equipment",
+			"id": "0267e688-dcfe-4e93-ae6b-dd3c6ed6f8ca",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Vest, Advanced",
+			"tech_level": "8",
+			"value": "4600",
+			"weight": "17 lb",
+			"reference": "MH1:59",
+			"calc": {
+				"extended_value": "4600",
+				"extended_weight": "17 lb"
+			},
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 35,
+					"location": "torso"
+				},
+				{
+					"type": "dr_bonus",
+					"amount": 35,
+					"location": "vitals"
+				}
+			],
+			"notes": "Flexible. Concealable under clothing, not as clothing. DR 5 vs. Crushing",
+			"categories": [
+				"Body Armor"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "32db131d-f361-45ed-a80b-95afa78d3f29",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Quarterstaff",
+			"tech_level": "0",
+			"value": "10",
+			"weight": "4 lb",
+			"reference": "B273",
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "sw",
+						"base": "2"
+					},
+					"strength": "7†",
+					"usage": "Swung",
+					"reach": "1,2",
+					"parry": "+2",
+					"block": "No",
+					"calc": {
+						"level": 13,
+						"parry": "12",
+						"block": "No",
+						"damage": "1d+3 cr"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Staff"
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Spear",
+							"modifier": -2
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "2"
+					},
+					"strength": "7†",
+					"usage": "Thrust",
+					"reach": "1,2",
+					"parry": "+2",
+					"block": "No",
+					"calc": {
+						"level": 13,
+						"parry": "12",
+						"block": "No",
+						"damage": "1d+1 cr"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Staff"
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Spear",
+							"modifier": -2
+						}
+					]
+				}
+			],
+			"calc": {
+				"extended_value": "10",
+				"extended_weight": "4 lb"
+			},
+			"categories": [
+				"Melee Weapon"
+			]
+		}
+	],
+	"other_equipment": [
+		{
+			"type": "equipment",
+			"id": "a1eaefa8-a217-47ef-9a49-a579f18baf00",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Big Tent",
+			"value": "1000",
+			"weight": "0 lb",
+			"calc": {
+				"extended_value": "1000",
+				"extended_weight": "0 lb"
+			}
+		},
+		{
+			"type": "equipment_container",
+			"id": "56fc8303-008c-4053-96ad-d9445ededa43",
+			"equipped": true,
+			"description": "Budget Monster Hunter Basic Kit (TL8)",
+			"value": "0",
+			"weight": "0 lb",
+			"reference": "LMH19",
+			"calc": {
+				"extended_value": "1070",
+				"extended_weight": "12.52 lb"
+			},
+			"open": false,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "584f8cab-0f94-4f4b-b6ed-8dfb114abded",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Clothing, Ordinary, Status 0",
+					"tech_level": "7",
+					"value": "120",
+					"weight": "2 lb",
+					"reference": "HT63",
+					"calc": {
+						"extended_value": "120",
+						"extended_weight": "2 lb"
+					},
+					"categories": [
+						"Clothing"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "e8d5406b-f681-4d71-936c-bc91b69f8503",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Belt",
+					"tech_level": "5",
+					"value": "10",
+					"weight": "0 lb",
+					"reference": "HT31",
+					"calc": {
+						"extended_value": "10",
+						"extended_weight": "0 lb"
+					},
+					"categories": [
+						"General Equipment"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "7d583f13-dfcb-466c-a0e6-8c6b9c1c8d51",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Boots",
+					"tech_level": "5",
+					"value": "80",
+					"weight": "3 lb",
+					"reference": "HT68",
+					"calc": {
+						"extended_value": "80",
+						"extended_weight": "3 lb"
+					},
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 2,
+							"location": "foot"
+						}
+					],
+					"notes": "Flexible.",
+					"categories": [
+						"Defenses"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "fa594c70-5d0b-4b32-8172-756ce2500750",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Leather Gloves",
+					"tech_level": "1",
+					"value": "30",
+					"weight": "0 lb",
+					"reference": "B284",
+					"calc": {
+						"extended_value": "30",
+						"extended_weight": "0 lb"
+					},
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 2,
+							"location": "hand"
+						}
+					],
+					"categories": [
+						"Gloves"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "eb25d868-a8f8-469b-a7ff-4350181b2a97",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Hat, Cloth",
+					"tech_level": "1",
+					"value": "6",
+					"weight": "0 lb",
+					"reference": "HT64",
+					"calc": {
+						"extended_value": "6",
+						"extended_weight": "0 lb"
+					},
+					"categories": [
+						"Headgear"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "5489585b-30ff-4d7d-976d-32350339fddc",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Personal Basics",
+					"tech_level": "0",
+					"value": "5",
+					"weight": "1 lb",
+					"reference": "B288",
+					"calc": {
+						"extended_value": "5",
+						"extended_weight": "1 lb"
+					},
+					"notes": "Minimum gear for camping: -2 to any Survival roll without it. Includes utensils, tinderbox or flint and steel, towel, etc., as TL permits.",
+					"categories": [
+						"Camping and Survival Gear"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "1d5689c2-a47e-473a-8125-a031b7bba2e6",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Multi-Tool",
+					"tech_level": "5",
+					"value": "50",
+					"weight": "0.5 lb",
+					"reference": "HT26",
+					"calc": {
+						"extended_value": "50",
+						"extended_weight": "0.5 lb"
+					},
+					"categories": [
+						"General Equipment"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "88908c9b-e916-4976-b3c2-449a28337ed6",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Notebook, Pencil, and Chalk",
+					"tech_level": "6",
+					"value": "2",
+					"weight": "0.1 lb",
+					"reference": "HT17",
+					"calc": {
+						"extended_value": "2",
+						"extended_weight": "0.1 lb"
+					},
+					"notes": "Holdout -1",
+					"categories": [
+						"Information Technology"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "4c2d92bc-f16a-42c6-b3d6-1d083b221639",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Cellular Phone",
+					"tech_level": "8",
+					"value": "100",
+					"weight": "0.5 lb",
+					"reference": "HT39",
+					"calc": {
+						"extended_value": "100",
+						"extended_weight": "0.5 lb"
+					},
+					"categories": [
+						"General Equipment"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "1296abd0-367d-49f6-94b2-8fe9a6135aa4",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Digital Storage Device, Rugged",
+					"tech_level": "8",
+					"value": "60",
+					"weight": "0 lb",
+					"reference": "HT22",
+					"calc": {
+						"extended_value": "60",
+						"extended_weight": "0 lb"
+					},
+					"notes": "16 GB. Waterproof, shock-resistant, durable",
+					"categories": [
+						"Information Technology"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "2f8b1971-1dcc-4625-9e8d-7bdf53d68849",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Wristwatch",
+					"tech_level": "6",
+					"value": "25",
+					"weight": "0 lb",
+					"reference": "HT31",
+					"calc": {
+						"extended_value": "25",
+						"extended_weight": "0 lb"
+					},
+					"categories": [
+						"General Equipment"
+					]
+				},
+				{
+					"type": "equipment_container",
+					"id": "1d0a3ca2-47e2-4083-a6e7-ffdbf6583e70",
+					"equipped": true,
+					"description": "Waist Pack",
+					"tech_level": "5",
+					"value": "10",
+					"weight": "1 lb",
+					"reference": "HT54",
+					"calc": {
+						"extended_value": "582",
+						"extended_weight": "5.42 lb"
+					},
+					"notes": "Holds 10lbs.",
+					"categories": [
+						"General Equipment"
+					],
+					"open": false,
+					"children": [
+						{
+							"type": "equipment",
+							"id": "5703e689-09c9-479a-8a83-42bea3db2743",
+							"equipped": true,
+							"quantity": 1,
+							"description": "Duct Tape",
+							"tech_level": "6",
+							"value": "1",
+							"weight": "2 lb",
+							"reference": "HT26",
+							"calc": {
+								"extended_value": "1",
+								"extended_weight": "2 lb"
+							},
+							"notes": "60 yards per roll.",
+							"categories": [
+								"General Equipment"
+							]
+						},
+						{
+							"type": "equipment_container",
+							"id": "7021ce48-a9ff-4c3b-acf7-21411d7f89bb",
+							"equipped": true,
+							"description": "Small Computer, Rugged, Compact",
+							"tech_level": "8",
+							"value": "400",
+							"weight": "0.24 lb",
+							"reference": "HT20",
+							"calc": {
+								"extended_value": "500",
+								"extended_weight": "0.84 lb"
+							},
+							"notes": "Complexity 2. Stores 10 GB. M/5hrs.",
+							"categories": [
+								"Information Technology"
+							],
+							"open": true,
+							"children": [
+								{
+									"type": "equipment",
+									"id": "bb9351f4-8921-4321-856e-e5f8a05ed4af",
+									"equipped": true,
+									"quantity": 1,
+									"description": "Portable Terminal, Rugged",
+									"tech_level": "8",
+									"value": "100",
+									"weight": "0.6 lb",
+									"reference": "HT21",
+									"calc": {
+										"extended_value": "100",
+										"extended_weight": "0.6 lb"
+									},
+									"categories": [
+										"Information Technology"
+									]
+								}
+							]
+						},
+						{
+							"type": "equipment",
+							"id": "59849d03-94f0-4cdd-81ac-9c8d8a6050b5",
+							"equipped": true,
+							"quantity": 1,
+							"description": "Small Tactical Light, Cheap",
+							"tech_level": "8",
+							"value": "50",
+							"weight": "0.38 lb",
+							"reference": "HT52",
+							"weapons": [
+								{
+									"type": "melee_weapon",
+									"damage": {
+										"type": "cr",
+										"st": "thr"
+									},
+									"usage": "Punch",
+									"reach": "C",
+									"parry": "0",
+									"block": "No",
+									"calc": {
+										"level": 12,
+										"parry": "10",
+										"block": "No",
+										"damage": "1d-1 cr"
+									},
+									"defaults": [
+										{
+											"type": "dx"
+										},
+										{
+											"type": "skill",
+											"name": "Boxing"
+										},
+										{
+											"type": "skill",
+											"name": "Brawling"
+										},
+										{
+											"type": "skill",
+											"name": "Karate"
+										}
+									]
+								}
+							],
+							"calc": {
+								"extended_value": "50",
+								"extended_weight": "0.38 lb"
+							},
+							"notes": "25-yard beam. 2xXS/2hrs.",
+							"categories": [
+								"General Equipment"
+							]
+						},
+						{
+							"type": "equipment",
+							"id": "854bd2e1-480b-465b-98ae-a2e7003f2c0f",
+							"equipped": true,
+							"quantity": 2,
+							"description": "Battery (XS)",
+							"value": "0.5",
+							"weight": "0.1 lb",
+							"reference": "HT13",
+							"calc": {
+								"extended_value": "1",
+								"extended_weight": "0.2 lb"
+							},
+							"categories": [
+								"Power"
+							]
+						},
+						{
+							"type": "equipment",
+							"id": "5543e1b4-d9ee-420a-8b27-e45d758ee2d2",
+							"equipped": true,
+							"quantity": 10,
+							"description": "Chemlight",
+							"tech_level": "7",
+							"value": "2",
+							"weight": "0.1 lb",
+							"reference": "HT52",
+							"calc": {
+								"extended_value": "20",
+								"extended_weight": "1 lb"
+							},
+							"notes": "Lasts 12 hours.",
+							"categories": [
+								"General Equipment"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "equipment_container",
+			"id": "4808b11c-705f-4ec6-922a-c9e88b9c52aa",
+			"equipped": true,
+			"description": "Basic Gear",
+			"value": "0",
+			"weight": "0 lb",
+			"calc": {
+				"extended_value": "17",
+				"extended_weight": "0.2 lb"
+			},
+			"open": false,
+			"children": [
+				{
+					"type": "equipment",
+					"id": "0988a572-2f8d-45de-bbd6-6839599d08a2",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Bandages",
+					"tech_level": "8",
+					"value": "2",
+					"weight": "0.2 lb",
+					"reference": "MH1:54",
+					"calc": {
+						"extended_value": "2",
+						"extended_weight": "0.2 lb"
+					},
+					"categories": [
+						"Emergency Equipment"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "f1b1105c-2456-4709-bfca-1786faf7d633",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Cigarette Lighter",
+					"tech_level": "8",
+					"value": "10",
+					"weight": "0 lb",
+					"reference": "MH1:54",
+					"calc": {
+						"extended_value": "10",
+						"extended_weight": "0 lb"
+					},
+					"categories": [
+						"General Equipment"
+					]
+				},
+				{
+					"type": "equipment",
+					"id": "2f4c664d-97a5-4730-8006-5f1c5963907c",
+					"equipped": true,
+					"quantity": 1,
+					"description": "Mirror, Pocket",
+					"tech_level": "8",
+					"value": "5",
+					"weight": "0 lb",
+					"reference": "MH1:54",
+					"calc": {
+						"extended_value": "5",
+						"extended_weight": "0 lb"
+					}
+				}
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "1d565c9b-0b97-444c-9a87-2c2c19b3d1e9",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Anti-Monster Herbs",
+			"value": "0",
+			"weight": "0 lb",
+			"calc": {
+				"extended_value": "0",
+				"extended_weight": "0 lb"
+			}
+		},
+		{
+			"type": "equipment",
+			"id": "904d5843-e1de-4661-b4e4-4d0abe1e4a2a",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Ghost Radio",
+			"value": "0",
+			"weight": "0 lb",
+			"calc": {
+				"extended_value": "0",
+				"extended_weight": "0 lb"
+			}
+		},
+		{
+			"type": "equipment",
+			"id": "5a4d0f79-502f-4aaf-ad9b-50516f941795",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Cash",
+			"value": "8928",
+			"weight": "0 lb",
+			"calc": {
+				"extended_value": "8928",
+				"extended_weight": "0 lb"
+			}
+		},
+		{
+			"type": "equipment",
+			"id": "a02d4702-53f1-4ccc-83e4-66737efe24a0",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Rope, 3/4\", 20 yards",
+			"tech_level": "1",
+			"value": "50",
+			"weight": "10 lb",
+			"reference": "B288",
+			"calc": {
+				"extended_value": "50",
+				"extended_weight": "10 lb"
+			},
+			"notes": "Supports 1,100 lbs.",
+			"categories": [
+				"Camping and Survival Gear"
+			]
+		},
+		{
+			"type": "equipment",
+			"id": "6a2f0dc5-82ab-4f3c-bb51-426b39ff5041",
+			"equipped": true,
+			"quantity": 1,
+			"description": "Workspace Kit, Fine",
+			"tech_level": "8",
+			"value": "60000",
+			"weight": "0 lb",
+			"reference": "MH1:57",
+			"calc": {
+				"extended_value": "60000",
+				"extended_weight": "0 lb"
+			}
+		}
+	],
+	"notes": [
+		{
+			"type": "note_container",
+			"id": "ec5e9c73-96ff-4a7b-81f0-b70c98c8ae07",
+			"text": "Charms/Hanging Rituals",
+			"open": true,
+			"children": [
+				{
+					"type": "note",
+					"id": "9570bc36-f15b-481a-813a-6bd4a02f661e",
+					"text": "Strawberry Blood (3d+2)"
+				},
+				{
+					"type": "note",
+					"id": "7ca2e09c-d2f5-4d7c-a3e9-2b385b6052d5",
+					"text": "Taffeelimb (7d)"
+				},
+				{
+					"type": "note",
+					"id": "3be76c6e-e535-4513-a20a-b4f5f5e9ccd3",
+					"text": "Taffeelimb (7d)"
+				},
+				{
+					"type": "note",
+					"id": "83a864a4-fd40-4110-a522-5bafa8140952",
+					"text": "Cop Pock Marks (1 month)"
+				},
+				{
+					"type": "note",
+					"id": "f6198836-4432-4036-ac10-73f2e23c2379",
+					"text": "Mind Shield 3 (1 month)"
+				},
+				{
+					"type": "note",
+					"id": "82a6abc7-650f-4e52-99f0-b4a54f6baf82",
+					"text": "Hard Shell Candy (DR 26)"
+				},
+				{
+					"type": "note",
+					"id": "79a478db-1870-490f-9a80-7ebfdb8e4596",
+					"text": "Hard Shell Candy (DR 26)"
+				},
+				{
+					"type": "note",
+					"id": "e867e61d-864a-4c16-a77d-919d59292f41",
+					"text": "Jawbreaker (+4 brawling, 12d+3 cr, dkb)"
+				},
+				{
+					"type": "note",
+					"id": "bf31fa2f-2d2b-4ea9-b138-dd2365c4caa0",
+					"text": "Jawbreaker (+4 brawling, 12d+3 cr, dkb)"
+				},
+				{
+					"type": "note",
+					"id": "49fe79ab-a13a-4827-8cdd-23424359d3f4",
+					"text": "Jawbreaker (+4 brawling, 12d+3 cr, dkb)"
+				},
+				{
+					"type": "note",
+					"id": "7c55191f-1055-42eb-b603-ad599cbb6238",
+					"text": "Muscle Mounds (ST +20)"
+				},
+				{
+					"type": "note",
+					"id": "8b05bce5-9fcd-4126-b6e1-5fe036b8e048",
+					"text": "Honey Trap (DTR, DX -1)"
+				},
+				{
+					"type": "note",
+					"id": "eb1aa8ba-7ce4-4a26-8fbb-05ab6b62dd01",
+					"text": "Honey Trap (DTR, DX -1)"
+				},
+				{
+					"type": "note",
+					"id": "a77b76b8-545f-49d3-9d4b-18ea45cfa747",
+					"text": "Chocolate (No Nuts) (ST -5)"
+				},
+				{
+					"type": "note",
+					"id": "2d5a114f-9e94-4cd0-be23-c40878f071d6",
+					"text": "Lemon Bomb (6d)"
+				},
+				{
+					"type": "note",
+					"id": "4e4748cc-2cdc-4d7c-b798-77454653319c",
+					"text": "Lemon Bomb (6d)"
+				},
+				{
+					"type": "note",
+					"id": "076c8a7e-856e-4096-b303-e9207b253ea6",
+					"text": "Lemon Bomb (6d)"
+				},
+				{
+					"type": "note",
+					"id": "27a50920-03c2-46ea-8db5-5a81a68c7285",
+					"text": "Lemon Bomb (6d)"
+				},
+				{
+					"type": "note",
+					"id": "e0ad0b2c-0e66-4006-b8a3-75ce5e3ae7d9",
+					"text": "Strawberry Blood (3d+2)"
+				},
+				{
+					"type": "note",
+					"id": "22fef6fe-8171-4668-b3ac-358afc57c185",
+					"text": "Muscle Mounds (ST +20)"
+				},
+				{
+					"type": "note",
+					"id": "ac7d7a9d-1cda-480d-b4df-3bf2bfef5c11",
+					"text": "Jawbreaker (+4 brawling, 12d+3 cr, dkb)"
+				},
+				{
+					"type": "note",
+					"id": "6aadee16-e68e-40d4-afbb-0fc8609e14b5",
+					"text": "Chocolate (No Nuts) (ST -5)"
+				},
+				{
+					"type": "note",
+					"id": "05a3e307-4b68-400f-93f8-cf25ff2832f7",
+					"text": "Hyperspectral Hi-Chew"
+				}
+			]
+		},
+		{
+			"type": "note_container",
+			"id": "4e1cabc8-bedf-4f2b-9c88-1e51155d4429",
+			"text": "Known Rituals",
+			"open": false,
+			"children": [
+				{
+					"type": "note_container",
+					"id": "7db4788f-5e88-4250-b3c0-0151e0a53acc",
+					"text": "Anti-Fire Field [33 + 3/DR]",
+					"open": false,
+					"children": [
+						{
+							"type": "note",
+							"id": "5d71c314-fa22-49c6-8919-6a3504fdb30f",
+							"text": "Greater Destroy Energy [5]",
+							"reference": "MH1:33"
+						},
+						{
+							"type": "note",
+							"id": "61a28e96-07fe-4c42-af33-9e710331ef6f",
+							"text": "Burning DR (Force Field, Hardened 1, Ablative, Burning Only) [1/level]",
+							"reference": "B46"
+						},
+						{
+							"type": "note",
+							"id": "af90cef0-f478-4c83-b8db-2ef3dea5d2ef",
+							"text": "Duration (1 hour) [3]",
+							"reference": "MH1:35"
+						},
+						{
+							"type": "note",
+							"id": "259d4bd1-ddac-4c9c-8806-6f219e72c63f",
+							"text": "Weight (300 lbs.) [3]",
+							"reference": "MH1:35"
+						}
+					]
+				},
+				{
+					"type": "note_container",
+					"id": "d3e3eae2-a83f-4bbc-af24-853792f955de",
+					"text": "Hex of Unhealing [48]",
+					"open": false,
+					"children": [
+						{
+							"type": "note",
+							"id": "81eaf642-4a65-4797-aa54-216422ef8676",
+							"text": "Greater Destroy Body [5]",
+							"reference": "MH1:33"
+						},
+						{
+							"type": "note",
+							"id": "4468acd2-13cb-44c9-b21e-8748bf1e2089",
+							"text": "Remove Regeneration (Fast) [10]",
+							"reference": "B80"
+						},
+						{
+							"type": "note",
+							"id": "a2f81f42-a370-4085-b629-875bdafb0038",
+							"text": "Duration (10 min) [1]",
+							"reference": "MH1:35"
+						}
+					]
+				},
+				{
+					"type": "note_container",
+					"id": "1f5cfcd2-96a0-4afd-aee2-47059f705f81",
+					"text": "Scry [27/9]\nIdentify the location of a particular subject.",
+					"open": false,
+					"children": [
+						{
+							"type": "note",
+							"id": "f8c7f06f-3e6b-448b-98ff-dbf5aa4edf52",
+							"text": "Range (300 miles) [7] // 100 miles spans one end of Boston to the other",
+							"reference": "MH1:34"
+						},
+						{
+							"type": "note",
+							"id": "0cc6a654-b38b-4e48-a3b8-4ac670173df0",
+							"text": "Sense Mind [2] // This is either greater or lesser, depending on subject's willingness",
+							"reference": "MH1:33"
+						},
+						{
+							"type": "note",
+							"id": "2e036727-78b8-47b1-8c24-bdf2f8b69cca",
+							"text": "Weight (1000lbs) [4]",
+							"reference": "MH1:35"
+						}
+					]
+				},
+				{
+					"type": "note_container",
+					"id": "d4d58c76-6dab-46da-8d4a-d62f51aea9da",
+					"text": "Strawberry Blood [45]",
+					"open": false,
+					"children": [
+						{
+							"type": "note",
+							"id": "714a4e12-84c8-4e0f-89e5-d334387626ed",
+							"text": "Greater Destroy Body [5]",
+							"reference": "MH1:33"
+						},
+						{
+							"type": "note",
+							"id": "760ea388-58a0-49b3-aadd-9dcc26e52546",
+							"text": "Damage, Internal Toxic (2d+2) [6]",
+							"reference": "MH1:35"
+						},
+						{
+							"type": "note",
+							"id": "d0cad104-d07f-4d54-8ac5-b5a46217fe86",
+							"text": "Weight (1000lbs) [4]",
+							"reference": "MH1:35"
+						}
+					]
+				},
+				{
+					"type": "note_container",
+					"id": "845c8131-c79d-4069-9231-bee6cc3cee94",
+					"text": "Honey Trap [102]",
+					"open": false,
+					"children": [
+						{
+							"type": "note",
+							"id": "0026583e-a5ae-4a7f-852a-660e099bb89a",
+							"text": "Greater Destroy Body [5]",
+							"reference": "MH1:33"
+						},
+						{
+							"type": "note",
+							"id": "31c337bc-73cd-4df5-8eb9-b6a710d54c99",
+							"text": "Decreased Time Rate [20]",
+							"reference": "B129"
+						},
+						{
+							"type": "note",
+							"id": "c437ea20-59f0-43e1-8fd7-e54a4d26be37",
+							"text": "Duration (10 min) [1]",
+							"reference": "MH1:35"
+						},
+						{
+							"type": "note",
+							"id": "0b8d4e92-75ea-40e7-bb08-26fd9803c5db",
+							"text": "Weight (1000lbs) [4]",
+							"reference": "MH1:35"
+						},
+						{
+							"type": "note",
+							"id": "1e537d4e-77c0-44c4-90b4-d8e8cd03032d",
+							"text": "Reduced DX 1 [4]",
+							"reference": "B15"
+						}
+					]
+				},
+				{
+					"type": "note_container",
+					"id": "93b2d5f0-390e-4a88-a1d9-100cc740b35e",
+					"text": "Chocolate (No Nuts) [60]",
+					"open": false,
+					"children": [
+						{
+							"type": "note",
+							"id": "cf6615b0-18b8-4da8-aced-25f1ed65105c",
+							"text": "Greater Destroy Body [5]",
+							"reference": "MH1:33"
+						},
+						{
+							"type": "note",
+							"id": "68a5d811-4fec-4084-accd-b03d02256bd2",
+							"text": "Reduce ST 5 [10]",
+							"reference": "B14"
+						},
+						{
+							"type": "note",
+							"id": "115e36f2-f9df-4f74-a693-76e09bf46ff4",
+							"text": "Duration (10 min) [1]",
+							"reference": "MH1:35"
+						},
+						{
+							"type": "note",
+							"id": "39ca01e7-13f2-44b7-bffa-747f796109da",
+							"text": "Weight (1000lbs) [4]"
+						}
+					]
+				},
+				{
+					"type": "note_container",
+					"id": "478e529a-f8bf-491e-921e-60d837265819",
+					"text": "Taffeelimb [50]",
+					"open": false,
+					"children": [
+						{
+							"type": "note",
+							"id": "a7971fe4-6afa-42ce-b1d2-94035917fec8",
+							"text": "Lesser Destroy Body [5]",
+							"reference": "MH1:33"
+						},
+						{
+							"type": "note",
+							"id": "f728a716-2fb5-49dc-8953-ca81945e88be",
+							"text": "Lesser Destroy Body [5]",
+							"reference": "MH1:33"
+						},
+						{
+							"type": "note",
+							"id": "ff35f6d3-f845-4770-9c27-41b6ce01bff1",
+							"text": "Lesser Control Magic [5]",
+							"reference": "MH1:33"
+						},
+						{
+							"type": "note",
+							"id": "50af1388-a609-417d-b087-34b53457283f",
+							"text": "Damage, Internal Toxic (7d) [24]",
+							"reference": "MH1:35"
+						},
+						{
+							"type": "note",
+							"id": "dba62c84-e860-43c4-bd00-2576efedc9c2",
+							"text": "Duration (Until damage is healed) [8]",
+							"reference": "MH1:35"
+						},
+						{
+							"type": "note",
+							"id": "e62fb96b-2458-45e3-b0b3-c3e2d0b53173",
+							"text": "Weight (300lbs) [3]",
+							"reference": "MH1:35"
+						}
+					]
+				},
+				{
+					"type": "note_container",
+					"id": "1509d355-9bca-4574-a6e9-66fc3e6a625f",
+					"text": "Lemon Bomb [42]",
+					"open": false,
+					"children": [
+						{
+							"type": "note",
+							"id": "36686d9c-8c6f-47e6-a1a4-5a6f610c76a5",
+							"text": "Damage, Corrosive (Blatant, External, 6d) [8]",
+							"reference": "MH1:35"
+						},
+						{
+							"type": "note",
+							"id": "8ead2713-656c-4c72-ad50-f0891b664756",
+							"text": "Greater Create Matter [6]",
+							"reference": "MH1:33"
+						}
+					]
+				},
+				{
+					"type": "note_container",
+					"id": "0e17b630-5b25-4773-a059-d3fa49126706",
+					"text": "Infernal Candymaker",
+					"open": true,
+					"children": [
+						{
+							"type": "note_container",
+							"id": "296bca08-6c31-41b0-81ba-edf1ab9d41ab",
+							"text": "Fizzy Lifting Pop +5 [117]",
+							"open": false,
+							"children": [
+								{
+									"type": "note",
+									"id": "8f7ea878-bba6-466a-89f0-a204477f6964",
+									"text": "Duration (1 hour) [3]"
+								},
+								{
+									"type": "note",
+									"id": "d13a2aa2-bb59-4796-beb5-de4c7303bb28",
+									"text": "Greater Strengthen Body [3]"
+								},
+								{
+									"type": "note",
+									"id": "b02973ff-a990-45f6-ae69-02c191135b13",
+									"text": "Lifting ST +10 [30]"
+								},
+								{
+									"type": "note",
+									"id": "129fa1ab-050c-4c10-b418-690d55b72e2b",
+									"text": "Weight (300lbs) [3]"
+								}
+							]
+						},
+						{
+							"type": "note_container",
+							"id": "0f376281-67d3-48a5-8556-7f7486465b51",
+							"text": "Jawbreaker +5 [117]",
+							"open": false,
+							"children": [
+								{
+									"type": "note",
+									"id": "76fbb8a1-571d-4cff-9f86-7940aa3948b9",
+									"text": "+4 to Brawling [8]"
+								},
+								{
+									"type": "note",
+									"id": "ca0d05b5-e8ec-4d12-83e9-8a965d167b83",
+									"text": "Damage (12d+3 cr, delivered with Brawling, double knockback) [25]"
+								},
+								{
+									"type": "note",
+									"id": "3fce37cb-660b-4551-89e1-72887d603cc6",
+									"text": "Greater Strengthen Body [3]"
+								},
+								{
+									"type": "note",
+									"id": "54573a88-78d0-4fd1-919b-c52931a03499",
+									"text": "Weight (300lbs) [3]"
+								}
+							]
+						},
+						{
+							"type": "note_container",
+							"id": "aed0c533-65cc-48d1-980a-337df61809ed",
+							"text": "Hard Shell Candy +7 [279]\nTough Skin DR 26, Demon Bane",
+							"open": false,
+							"children": [
+								{
+									"type": "note",
+									"id": "7dd5480b-b957-4d55-8ad4-9769c011e14b",
+									"text": "DR 26 (Tough Skin, -40%; Bane (Demon), -5%) [80]"
+								},
+								{
+									"type": "note",
+									"id": "e3be190a-e2c8-4689-a6cb-29f713f9d480",
+									"text": "Duration (1 day) [7]"
+								},
+								{
+									"type": "note",
+									"id": "6dcce6ef-e856-4ced-a981-38a5756d8e83",
+									"text": "Greater Strengthen Body [3]"
+								},
+								{
+									"type": "note",
+									"id": "539d3ba9-3089-4323-915f-115bf26cee41",
+									"text": "Weight (300lbs) [3]"
+								}
+							]
+						},
+						{
+							"type": "note_container",
+							"id": "115376d3-41de-49f0-b9df-0bb8dd782b06",
+							"text": "Muscle Mounds +7 [519]\nST +20",
+							"open": false,
+							"children": [
+								{
+									"type": "note",
+									"id": "20e7a0ea-1b61-4d6a-8185-4bcfb46ad03c",
+									"text": "Duration (1 day) [7]"
+								},
+								{
+									"type": "note",
+									"id": "ed409d0a-1f0b-4173-a885-b235706cff6e",
+									"text": "Greater Strengthen Body [3]"
+								},
+								{
+									"type": "note",
+									"id": "3443250c-05ca-4138-a1dc-222cebe5737c",
+									"text": "HP -20 [-40]"
+								},
+								{
+									"type": "note",
+									"id": "fb2f339c-a4e8-48db-8bf8-e3b8e68ed423",
+									"text": "ST +20 [200]"
+								},
+								{
+									"type": "note",
+									"id": "50ee2025-51f0-47ab-99ad-5c9d8798dd58",
+									"text": "Weight (300lbs) [3]"
+								}
+							]
+						},
+						{
+							"type": "note_container",
+							"id": "0b1ee6dc-e8d1-4a2a-9968-3b7ab157a270",
+							"text": "Hyperspectral Hi-Chews +7 [207]",
+							"open": true,
+							"children": [
+								{
+									"type": "note",
+									"id": "28834d34-616b-425f-88b0-0ddb5642f3e6",
+									"text": "+4 to Vision Rolls [16]"
+								},
+								{
+									"type": "note",
+									"id": "f5b45489-2093-41ba-964c-34478ded2a1e",
+									"text": "Duration (1 day) [7]"
+								},
+								{
+									"type": "note",
+									"id": "e5312287-9ee9-4a72-99c4-2bd5fa096f93",
+									"text": "Greater Strengthen Body [3]"
+								},
+								{
+									"type": "note",
+									"id": "74a4781f-18a6-40f9-a558-06f76196c524",
+									"text": "Hyperspectral Vision (Extended Low and High, +60%) [40]"
+								},
+								{
+									"type": "note",
+									"id": "0e6fba86-b8ae-48ef-811e-16bfbde0b7fd",
+									"text": "Weight (300lbs) [3]"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "note_container",
+			"id": "e8fd17a2-0f8c-4343-9a9c-ad178abadc4d",
+			"text": "Quick-and-Dirty Rituals and Charms",
+			"reference": "TRPM26",
+			"open": false,
+			"children": [
+				{
+					"type": "note_container",
+					"id": "3d20d240-a6fd-4ac0-b6c6-1bb3299a354a",
+					"text": "Thresholds",
+					"open": true,
+					"children": [
+						{
+							"type": "note",
+							"id": "6a5472de-60ba-4435-8b2a-179c70bd8331",
+							"text": "Effective             Safe\n    Skill            Threshold"
+						},
+						{
+							"type": "note",
+							"id": "0bcdd3b1-c0ca-495b-bde2-caed4267fa17",
+							"text": "      7                       1"
+						},
+						{
+							"type": "note",
+							"id": "9d1286f2-902c-46b5-afe6-4d35a48c158a",
+							"text": "      8                       2"
+						},
+						{
+							"type": "note",
+							"id": "8cc027cb-4472-4c3a-836d-fe84882168eb",
+							"text": "      9                       3"
+						},
+						{
+							"type": "note",
+							"id": "3fa7528c-a52d-4063-b56d-e877264c7c05",
+							"text": "     10                      4"
+						},
+						{
+							"type": "note",
+							"id": "fd488457-357b-4f01-b337-38daae534dab",
+							"text": "     11                      5"
+						},
+						{
+							"type": "note",
+							"id": "2b650522-67ad-494b-953b-4d16c215a7c3",
+							"text": "     12                      6"
+						},
+						{
+							"type": "note",
+							"id": "3be93271-6f04-44c5-bc35-d408f8612dbf",
+							"text": "     13                      7"
+						},
+						{
+							"type": "note",
+							"id": "98de0650-fe68-4164-b55d-3950a0bec6b1",
+							"text": "     14                      9"
+						},
+						{
+							"type": "note",
+							"id": "3a2f5e7f-fece-47b7-96fc-226c5de22747",
+							"text": "     15                     11"
+						},
+						{
+							"type": "note",
+							"id": "304cff2f-d52b-46e8-ac88-04d0161ca374",
+							"text": "     16                     15"
+						},
+						{
+							"type": "note",
+							"id": "98aa965b-5471-402e-a112-8a2e5096d43b",
+							"text": "     17                     29"
+						},
+						{
+							"type": "note",
+							"id": "f786ebaa-3d59-43b8-838b-28353f8613b7",
+							"text": "     18                     42"
+						},
+						{
+							"type": "note",
+							"id": "8439941a-1d95-4347-8c94-f3326aad8ee6",
+							"text": "     19                     55"
+						},
+						{
+							"type": "note",
+							"id": "6e3bb9c6-eaa5-4ecc-ba15-1bb6ca923e0a",
+							"text": "     20                     65"
+						},
+						{
+							"type": "note",
+							"id": "64c488f8-a8f3-4c7c-a7bb-85ae78b3c1ab",
+							"text": "     21                     75"
+						},
+						{
+							"type": "note",
+							"id": "fb23fce7-3ca8-46fd-aa5d-13d8d738c425",
+							"text": "     +1                    +10"
+						},
+						{
+							"type": "note",
+							"id": "65d8dc19-e098-4e79-9a77-83a1b60da5d2",
+							"text": "     22                     85"
+						},
+						{
+							"type": "note",
+							"id": "77a8456d-9502-4402-8013-802821ddbf0b",
+							"text": "     23                     95"
+						},
+						{
+							"type": "note",
+							"id": "550d2d5d-6d88-43e2-830f-d7ad1dda5958",
+							"text": "     24                    105"
+						},
+						{
+							"type": "note",
+							"id": "3d2fb738-f9fb-4562-9409-db57b7daf5bc",
+							"text": "     25                    115"
+						},
+						{
+							"type": "note",
+							"id": "dddb64f1-2f18-47c3-8265-e5886a258632",
+							"text": "     26                    125"
+						},
+						{
+							"type": "note",
+							"id": "c8ba1acc-5774-43c1-b4d3-6e76c9c4a745",
+							"text": "     27                    135"
+						}
+					]
+				},
+				{
+					"type": "note_container",
+					"id": "44dd935f-a144-41a7-90f8-c2bb8c3ee29d",
+					"text": "Energy Gathering",
+					"open": true,
+					"children": [
+						{
+							"type": "note",
+							"id": "973570b2-733a-46f4-ab14-e0eadcf0aa5b",
+							"text": "15 or less                Success! Roll for quirks"
+						},
+						{
+							"type": "note",
+							"id": "ac36be7f-125d-4c61-80d0-d5f4e2195462",
+							"text": "16                            Critical failure based half the spell's energy"
+						},
+						{
+							"type": "note",
+							"id": "2044a1ef-41f3-4bc9-a83b-02dd8e91d5da",
+							"text": "17 or more              Critical failure based on the spell's full energy"
+						},
+						{
+							"type": "note",
+							"id": "ccab844f-de2b-48e0-bb90-43c165375f41",
+							"text": "-------------------------------------------------------------------------------------------"
+						},
+						{
+							"type": "note",
+							"id": "5df57ef7-b158-4a02-bcce-8e90efee0bd0",
+							"text": "Modifier: -2 if the caster used no ambient energy, -1 if he used up to half his save threshold, +1 if he exceeded his safe threshold, +2 for exceeding twice his safe threshold, +3 for more than three times his safe threshold, and so on."
+						},
+						{
+							"type": "note",
+							"id": "f062a27c-c7d2-4c4f-b2fa-8bc83574d89e",
+							"text": "Roll                          Result"
+						}
+					]
+				},
+				{
+					"type": "note_container",
+					"id": "da819b84-a26d-472d-8ac1-de7d8331e430",
+					"text": "Quirks",
+					"open": true,
+					"children": [
+						{
+							"type": "note",
+							"id": "530ccef0-9d30-4e67-9fd5-4399dd2f72ed",
+							"text": "Roll applying the reverse of the threshold modifier. Success means no quirks, failure means one quirk + one quirk per two full points by which the roll failed."
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "note_container",
+			"id": "3b3de1a1-09e2-42b0-9916-8f5a18961428",
+			"text": "Ritual Effect Table",
+			"reference": "MH1:35",
+			"open": false,
+			"children": [
+				{
+					"type": "note",
+					"id": "4440d0ad-2734-44c3-bc18-822fc48dd691",
+					"text": "Duration*          Damage†          Weight          Added Energy‡"
+				},
+				{
+					"type": "note",
+					"id": "0e503fc1-3d71-4465-8e6f-67d2abefeeef",
+					"text": "Momentary            1d                 10 lbs.                    0 "
+				},
+				{
+					"type": "note",
+					"id": "c263cd58-aa56-406c-88bb-edb59268008d",
+					"text": "10 minutes           1d+1               30 lbs.                  +1 "
+				},
+				{
+					"type": "note",
+					"id": "83c1dbce-3516-4995-9fef-e25b232b4273",
+					"text": "30 minutes           1d+2              100 lbs.                 +2 "
+				},
+				{
+					"type": "note",
+					"id": "365e5dbe-f999-4093-8ebd-fff978cd9cff",
+					"text": "1 hour                    2d-1               300 lbs.                +3"
+				},
+				{
+					"type": "note",
+					"id": "e83e12d9-ed0e-4959-96e3-b6cd4aa55221",
+					"text": "3 hours                   2d                1,000 lbs.               +4"
+				},
+				{
+					"type": "note",
+					"id": "7e8d569d-2a04-4fee-be43-579682b3840e",
+					"text": "6 hours                  2d+1             3,000 lbs.               +5"
+				},
+				{
+					"type": "note",
+					"id": "2a7f03d9-b132-4c34-b11e-8152407da474",
+					"text": "12 hours                2d+2               5 tons                   +6"
+				},
+				{
+					"type": "note",
+					"id": "f9f77f2c-26c4-4121-8756-c92e6cb1358c",
+					"text": "1 day                      3d-1              15 tons                  +7"
+				},
+				{
+					"type": "note",
+					"id": "8419a1ea-6a8e-475b-b312-0f9fc79a0e3c",
+					"text": "3 days                     3d                 50 tons                 +8 "
+				},
+				{
+					"type": "note",
+					"id": "9366e647-4b26-47e5-ad21-526633ec0f1f",
+					"text": "1 week                   3d+1             150 tons                 +9"
+				},
+				{
+					"type": "note",
+					"id": "3257b58c-8f75-47c5-ab30-cc06606df9ec",
+					"text": "2 weeks                 3d+2             450 tons                +10"
+				},
+				{
+					"type": "note",
+					"id": "e9ca8fc4-6ae1-4468-a8b4-7d6e4b716c9a",
+					"text": "1 month                 4d-1            1,350 tons               +11"
+				},
+				{
+					"type": "note",
+					"id": "4c111b29-8c16-4e6b-a48a-dc47a3c9a6dc",
+					"text": "+1 month                etc.                  x3                       +1"
+				},
+				{
+					"type": "note",
+					"id": "78ab1c0f-88fa-4bbc-b0bc-d1435f558536",
+					"text": "* For durations over a year, the added energy becomes (number of years) + 21"
+				},
+				{
+					"type": "note",
+					"id": "726e05a1-f760-4106-b14c-d44e1952553b",
+					"text": "† For most damage. Multiply added energy by 0.5 for small piercing attacks, by 1.5 for cutting or large piercing attacks, and by 2 for corrosion, fatigue, huge piercing, or impaling attacks. This assumes a malediction-type attack that bypasses DR. FOr a visible, blatant, external attack, which must be delivered by touch or thrown (using Innate Attack skill with standrad range penalties) and can be dodged, double this damage if explosive or triple it otherwise (e.g., a 3d+3 fireball adds +1 energy). The caster is considered to be the subject in this case."
+				},
+				{
+					"type": "note",
+					"id": "798bc6a7-387d-4332-8fd8-58f916b67d3b",
+					"text": "‡ If a value falls between two entries, use the energy requirement for the greater one."
+				}
+			]
+		},
+		{
+			"type": "note",
+			"id": "b920899a-7140-4ac5-aa48-ed74ca1d6a40",
+			"text": "Spell Modifiers, Divinations",
+			"reference": "MH1:34"
+		},
+		{
+			"type": "note",
+			"id": "019a36ce-90a8-4f7e-900f-a29a3bf83db2",
+			"text": "Warding",
+			"reference": "MH1:35"
+		},
+		{
+			"type": "note",
+			"id": "380eb343-7508-4d3e-b2b9-283553cc14ba",
+			"text": "Conditions",
+			"reference": "BX428"
+		}
+	],
+	"calc": {
+		"swing": "1d+1",
+		"thrust": "1d-1",
+		"basic_lift": "24 lb",
+		"lifting_st_bonus": 0,
+		"striking_st_bonus": 0,
+		"throwing_st_bonus": 0,
+		"move": [
+			6,
+			4,
+			3,
+			2,
+			1
+		],
+		"dodge": [
+			10,
+			9,
+			8,
+			7,
+			6
+		],
+		"dodge_bonus": 1,
+		"block_bonus": 1,
+		"parry_bonus": 1
+	}
+}
