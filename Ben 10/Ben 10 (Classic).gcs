@@ -13,6 +13,7 @@
 	"profile": {
 		"player_name": "Ryder",
 		"name": "Ben Tennyson",
+		"title": "Ben 10",
 		"age": "11",
 		"birthday": "July 16",
 		"eyes": "Brown",
@@ -972,7 +973,7 @@
 		}
 	],
 	"created_date": "2022-10-31T11:07:08-06:00",
-	"modified_date": "2022-10-31T12:56:32-06:00",
+	"modified_date": "2023-02-14T23:05:55-07:00",
 	"calc": {
 		"swing": "1d-2",
 		"thrust": "1d-3",
