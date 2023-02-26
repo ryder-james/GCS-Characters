@@ -2,8 +2,13 @@
 	"type": "character",
 	"version": 4,
 	"id": "2b667b39-36f2-4a58-8d27-17a52534ab8b",
-	"total_points": 500,
+	"total_points": 510,
 	"points_record": [
+		{
+			"when": "2023-02-26T12:35:58-07:00",
+			"points": 10,
+			"reason": "New Points"
+		},
 		{
 			"when": "2022-10-30T12:26:20-06:00",
 			"points": 500,
@@ -754,9 +759,10 @@
 		{
 			"attr_id": "lk",
 			"adj": 4,
+			"damage": 1,
 			"calc": {
 				"value": 4,
-				"current": 4,
+				"current": 3,
 				"points": 0
 			}
 		},
@@ -1060,6 +1066,14 @@
 			}
 		},
 		{
+			"id": "1dfc1c0f-23ad-4f51-9b41-8d39a8763604",
+			"type": "trait",
+			"name": "Trait",
+			"calc": {
+				"points": 0
+			}
+		},
+		{
 			"id": "7ea53d59-3541-4322-adc8-7c009ddbc8ab",
 			"type": "trait",
 			"name": "Enhanced Parry (Cutlass)",
@@ -1135,7 +1149,8 @@
 		{
 			"id": "93e4d609-6aa2-4638-a16b-559322d24009",
 			"type": "trait",
-			"name": "Weapon Bond (Cutlass)",
+			"name": "Imbued Weapon Bond (Cutlass)",
+			"reference": "PY13:19",
 			"tags": [
 				"Physical"
 			],
@@ -2271,6 +2286,7 @@
 					"type": "equipment",
 					"description": "Light Buckler with Spike",
 					"reference": "B287",
+					"notes": "5/20 HP",
 					"tech_level": "1",
 					"tags": [
 						"Shield"
@@ -2582,13 +2598,13 @@
 								"Concoctions",
 								"Concoctions:Potions"
 							],
-							"quantity": 5,
+							"quantity": 4,
 							"value": 120,
 							"weight": "0.5 lb",
 							"equipped": true,
 							"calc": {
-								"extended_value": 600,
-								"extended_weight": "2.5 lb"
+								"extended_value": 480,
+								"extended_weight": "2 lb"
 							}
 						},
 						{
@@ -2635,8 +2651,8 @@
 					},
 					"equipped": true,
 					"calc": {
-						"extended_value": 780,
-						"extended_weight": "4 lb"
+						"extended_value": 660,
+						"extended_weight": "3.5 lb"
 					}
 				}
 			],
@@ -2645,8 +2661,8 @@
 			"quantity": 1,
 			"equipped": true,
 			"calc": {
-				"extended_value": 1415,
-				"extended_weight": "23 lb"
+				"extended_value": 1295,
+				"extended_weight": "22.5 lb"
 			}
 		}
 	],
@@ -2702,7 +2718,6 @@
 		{
 			"id": "b6c9acde-cb97-4a7c-a586-51ac69de1f91",
 			"type": "equipment_container",
-			"open": true,
 			"children": [
 				{
 					"id": "a0015e59-d91b-4adb-ba94-e2ba6f83de15",
@@ -2893,7 +2908,6 @@
 		{
 			"id": "5fdfd67c-15a8-46f2-89c4-ff8f63d2e9e5",
 			"type": "note_container",
-			"open": true,
 			"children": [
 				{
 					"id": "8ef35e45-75f6-4725-a40f-e2c12c081a1a",
@@ -3158,11 +3172,399 @@
 		{
 			"id": "abbd9003-b001-4cae-86c5-cba5b496e751",
 			"type": "note_container",
+			"open": true,
 			"children": [
 				{
 					"id": "a4033a9d-1e2e-4cf7-8611-00e63c5819e5",
 					"type": "note",
 					"text": "\"In Formation\" - Ships in formation with each other move as a unit"
+				},
+				{
+					"id": "542ea803-bc09-4e90-a77b-4ba03d3a78dc",
+					"type": "note_container",
+					"open": true,
+					"children": [
+						{
+							"id": "4e6effc8-2d29-4faf-9dfe-26dbc3bd06f0",
+							"type": "note",
+							"text": "Dungeon Fantasy",
+							"reference": "PY36:24"
+						},
+						{
+							"id": "f864c52c-11e6-4474-9972-2b3686c38ef9",
+							"type": "note",
+							"text": "Dungeon Fantasy III",
+							"reference": "PY60:27"
+						},
+						{
+							"id": "7ffb2b86-2719-44a5-a1d8-08705fe5d529",
+							"type": "note",
+							"text": "Thaumotology",
+							"reference": "PY13:18"
+						},
+						{
+							"id": "eda2028b-f9b9-42ba-aa8f-0b38649721fb",
+							"type": "note_container",
+							"open": true,
+							"children": [
+								{
+									"id": "1905ce14-7593-4649-8196-ba0a5b68ce7e",
+									"type": "note_container",
+									"open": true,
+									"children": [
+										{
+											"id": "197e58a9-be68-4832-8519-6582510035e9",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "8f753624-673c-4798-8e2e-c9c7fac7b8ed",
+													"type": "note",
+													"text": "Melee; DX/Very Hard"
+												},
+												{
+													"id": "3dd4ddc5-8a96-4cb2-91a3-4a3c2bae8ae4",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 2.\n\nYour damaging melee weapon automatically gets to roll its usual damage against any weapon that parries it - in effect, it's destructive for parrying purposes, just like a force sword. Roll its damage normally and apply it to the parrying weapon (or *body part,* if your opponent made an unarmed parry).\u003cbr\u003e\nThis effect is *always* obvious - your weapon flames, vibrates, turns to brilliant green energy, or otherwise telegraphs its destructive nature. Thus, canny foes can avoid the worst of it by relying on Dodge instead. However, you can trigger your skill defensively (see [*Defensive Use,* p. 5](PU1:5) so that your weapon damages a rival's weapon or body when *you* parry *him.*"
+												}
+											],
+											"text": "Annihilating Weapon",
+											"reference": "PU1:6"
+										},
+										{
+											"id": "20310587-aeb3-4b3d-91d0-45e6bb3f43da",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "10ff865f-905c-4979-af46-a14e90f8a69b",
+													"type": "note",
+													"text": "General; DX/Very Hard"
+												},
+												{
+													"id": "266d71aa-6dcb-47d2-bc7a-63e6516bbd12",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 3.\n\nThis skill causes wounds from a damaging weapon to worsen after the initial attack. Choose an effect consistent with the attack you're enhancing - acid or big grups eating away at the victim, bleeding, rotting, sticky napalm, venom, etc. Whatever the visuals, the effect is to give the attack a form of [Cyclic (pp. B103-104)](B103+).\u003cbr\u003e\nAn unmodified roll means that if the innitial attack injured the target at all, he will suffer the same injury again in one day's time.\n\n*Modifiers:* For a shorter interval, roll at -2 for 1 hour, -4 for 1 minute, -6 for 10 seconds, or -8 for 1 second. Repeated cycles are possible: for standard 1 day intervals, roll at -1 per cycle after the first; for other intervals, multiply the time penalty by the total number of intervals (e.g., -24 for three cycles 1 second apart).\n\nThis is *injury* that comes right off HP - *not* damage that must penetrate DR again, be multiplied for damage type, and so forth. Should it matter, the effects are consistent with the original attack's damage type. For instance, enough continuing injury from a burning attack would reduce someone to charcoal, while the same HP loss to cutting injury would leave ground meat.\u003cbr\u003e\nWhen imbuing an attack that has a linked or follow-up effect, you must specify which part of the attack is continuing. You can't enhance more than one part of a linked attack, or both a carrier and its follow-up attack.\u003cbr\u003e\nUnless your Imbue advantage is Cosmic (+50% *or* +300%), you *must* specify some reasonably obvious way to halt the continuing injury: dousing flame, picking out grubs, applying disinfectant to rotting flesh, etc. This isn't like to matter for short intervals, of course!"
+												}
+											],
+											"text": "Continuing Attack",
+											"reference": "PU1:7"
+										},
+										{
+											"id": "953911a6-d39a-4476-8246-8559f66cf750",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "bd23f437-ae71-4677-b5b8-ad26cfa56cd1",
+													"type": "note",
+													"text": "General; DX/Very Hard"
+												},
+												{
+													"id": "074d4d37-519b-4d95-9ebf-789d802d86fa",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 3.\n\nLets you envenom your weapon or make a pressure-point strike in such a way that a living victim may suffer a *physical* [Affliction (p. B40)](B40), as if your attack has a [Side Effect (p. B109)](B109). If *any* damage penetrats the target's DR, he must make a HT roll at -1 per 2 points of penetrating damage, or suffer a harmful effect. A blow that doesn't penetrate does nothing.\u003cbr\u003e\nThe default effect of a failed HT roll is that the target is stunned. He may roll vs. HT at the same penalty every turn to recover. More potent Afflictions give a penalty to your Crippling Blow roll, but last for minutes equal to the victim's margin of failure.\u003cbr\u003e\n*Modifiers:* -1 per *-2* to ST or HT; -1 per -1 to DX; -1 per -10 points of *physical* disadvantages (but never exotic or racial effects); -2 for Coughing or Moderate Pain; -3 for Nauseated; -4 for Severe Pain; -5 for Retching; -6 for Terrible Pain; -10 for Agony or Choking; and -15 for total Paralysis. You *can* combine several effects."
+												}
+											],
+											"text": "Crippling Blow",
+											"reference": "PU1:7"
+										},
+										{
+											"id": "2d6ae8ea-ad60-4b72-b656-05da8b70038f",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "8d0e7eb9-6165-450c-bbd3-db3fb64fbb5a",
+													"type": "note",
+													"text": "General; DX/Very Hard"
+												},
+												{
+													"id": "7cb4b2d0-805b-4672-98e9-ddc9e251866e",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 3.\n\nYou can cast your weapon into the air to fight on its own. This is like any other use of an Imbuement Skill: it takes no preparation, requires 1 FP, and calls for a skill roll at the usual modifiers. You cannot \"stack\" Dancing Weapon with any other Imbuement Skill, though, because once you activate it, the weapon isn't ready in your hand!\u003cbr\u003e\nOn the turn you activate the skill, the weapon fights on its own at a skill level equal to your Dancing Weapon skill. Its Basic Move equals your own, and its damage is identical to what it would do in your hands. It engages any *one* opponent you indicate, executing Attack maneuvers to strike him when he's with range or Reach, and Move maneuvers to get to him when he isn't. This leaves you free to do something else.\u003cbr\u003e\nEnemies can attack the weapon at penalty equal to its SM. It can dodge at (Dancing Weapon/2) + 3, at -1 per defense after the first. Use its usual DR and HP to detemine breakage. If a foe manages to seize it (a grapple with DX or an unarmed grappling skill, still with SM penalties), the imbuement ends immediately and your enemy acquires a new weapon!\u003cbr\u003e\nOn later turns, you may pay 1 FP to keep the weapoon fighting...or not. If you don't, the weapon's effective skill drops by one, cumulative from turn to turn. Should skill ever fall below 3, the imbuement ends and the weapon falls to the ground wherever it may be. The only way to erase the skill penalty or \"revive\" the ewapon is to grab it and reactivate the skill.\u003cbr\u003e\nTo recover a still-active weapon, it has to be within your reach and you must take a Ready maneuver. This requires no success roll (and Fast-Draw *isn't* allowed). If it's on the ground, pick it up normally."
+												}
+											],
+											"text": "Dancing Weapon",
+											"reference": "PU1:7"
+										},
+										{
+											"id": "b6ce5dc1-5e92-44c2-be8c-d6ff5f4d212c",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "25e5ff6a-3dc4-4e1f-bdf6-2cb0ef60c693",
+													"type": "note",
+													"text": "General; DX/Very Hard"
+												},
+												{
+													"id": "57821726-a8f5-4454-9dbe-d9f2e225f1cf",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 3.\n\nThe weapon or its projectile carries a tranquilizing agent, or isn't \"drugged\" at all but strikes nonlethal pressure points. Such an attack gains a 1-point follow-up fatigue attack that obeys the rules for the [Follow-Up modifier (p. B105)](B105). If the weapon attack fails to penetrate DR, its follow-up does nothing!\u003cbr\u003e\n*Modifiers:* Higher fatigue damage gives a penalty of -1 for 1d-2, -2 for 1d-1, -3 for 1d, -4 for 1d+1, -5 for 1d+2, -6 for 2d-1, -7 for 2d, -8 for 2d+1, -9 for 2d+2, or -10 for 3d; minimum damage is 1 point in all cases."
+												}
+											],
+											"text": "Drugged Weapon",
+											"reference": "PU1:6"
+										},
+										{
+											"id": "32cb1a94-8611-413f-9f44-e1566ee7c236",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "11fa64f0-a6b7-4111-b392-6e532469b62d",
+													"type": "note",
+													"text": "General; DX/Very Hard"
+												},
+												{
+													"id": "d7ddc7f8-f2ac-45f5-9cd8-12bebbfdd5c6",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 3.\n\nThe weapon crackles with electricity and gains the [Surge modifier (p. B105)](B105). Targets such as electronics and robots with electrical systems that take over 1/3 HP from it must make a HT roll to avoid shorting out. Failure disables the target for seconds equal to the margin of failure; critical failure disables it until repaired. A critical hit with the charged-up weaon has the same effect as a critically failed HT roll.\u003cbr\u003e\nOn an unmodified skill roll, the surge is the only effect.\n\n*Modifiers:* To add follow-up electrical burning damage, roll at -1 for 1d-4, -2 for 1d-3, -3 for 1d-2, -4 for 1d-1, -5 for 1d, -6 for 1d+1, -7 for 1d+2, -8 for 2d-1, -9 for 2d, or -10 for 2d+1. In all cases, minimum damage is 1 point and metal armor is treated as DR 1 vs. the follow-up if the carrier attack doesn't penetrate."
+												}
+											],
+											"text": "Electric Weapon",
+											"reference": "PU1:7"
+										},
+										{
+											"id": "5de1a641-dea4-4c57-887b-a8dad9e0f3da",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "fa06eee5-c0a7-463a-ac8c-23b0f52ecfb2",
+													"type": "note",
+													"text": "General; DX/Very Hard"
+												},
+												{
+													"id": "6ba92854-2c48-486e-8d10-56e501a93a0e",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 3.\n\nThe weapon or its projectile becomes envenomed. Such an attack gains a 1-point follow-up toxic attack that obeys the rules for the [Follow-Up modifier (p. B105)](B105). If the weapon attack fails to penetrate DR, its follow-up does nothing!\n\n*Modifiers:* Higher toxic damage gives a penalty of -1 for 1d-\r2, -2 for 1d-1, -3 for 1d, -4 for 1d+1, -5 for 1d+2, -6 for 2d-1, -7\r for 2d, -8 for 2d+1, -9 for 2d+2, or -10 for 3d; minimum damage is 1 point in all cases."
+												}
+											],
+											"text": "Envenomed Weapon",
+											"reference": "PU1:8"
+										},
+										{
+											"id": "72da7c3b-57c5-4f4e-b99a-57f71167236c",
+											"type": "note_container",
+											"open": true,
+											"children": [
+												{
+													"id": "bc1bfb7e-30cd-4fe3-b8ff-d5811174d25d",
+													"type": "note",
+													"text": "Melee; DX/Very Hard"
+												},
+												{
+													"id": "c42d3173-2160-4bc0-86c3-db9027bbf267",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 2.\n\nYour damaging melee weapon automatically gets to roll its usual damage against any weapon that parries it - in effect, it's destructive for parrying purposes, just like a force sword. Roll its damage normally and apply it to the parrying weapon (or *body part,* if your opponent made an unarmed parry).\u003cbr\u003e\nThis effect is *always* obvious - your weapon flames, vibrates, turns to brilliant green energy, or otherwise telegraphs its destructive nature. Thus, canny foes can avoid the worst of it by relying on Dodge instead. However, you can trigger your skill defensively (see [*Defensive Use,* p. 5](PU1:5) so that your weapon damages a rival's weapon or body when *you* parry *him.*"
+												}
+											],
+											"text": "Forceful Blow",
+											"reference": "PU1:8"
+										},
+										{
+											"id": "51d4f29b-5fab-4e5d-af28-159f9cc491e8",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "6e88b3ec-4add-489e-b76b-c74e04f2085a",
+													"type": "note",
+													"text": "Melee; DX/Very Hard"
+												},
+												{
+													"id": "ebd24669-fdf8-40ec-928a-46ec4bf7d5e9",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 2.\n\nYour damaging melee weapon automatically gets to roll its usual damage against any weapon that parries it - in effect, it's destructive for parrying purposes, just like a force sword. Roll its damage normally and apply it to the parrying weapon (or *body part,* if your opponent made an unarmed parry).\u003cbr\u003e\nThis effect is *always* obvious - your weapon flames, vibrates, turns to brilliant green energy, or otherwise telegraphs its destructive nature. Thus, canny foes can avoid the worst of it by relying on Dodge instead. However, you can trigger your skill defensively (see [*Defensive Use,* p. 5](PU1:5) so that your weapon damages a rival's weapon or body when *you* parry *him.*"
+												}
+											],
+											"text": "Ghostly Weapon",
+											"reference": "PU1:8"
+										},
+										{
+											"id": "de469c43-719f-42b3-b3af-bc2b41f39b4e",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "6d702071-52ad-4df1-b0ca-6758a65492f2",
+													"type": "note",
+													"text": "Melee; DX/Very Hard"
+												},
+												{
+													"id": "15c9da5a-f001-4cb5-b025-9708a5ae10c3",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 2.\n\nYour damaging melee weapon automatically gets to roll its usual damage against any weapon that parries it - in effect, it's destructive for parrying purposes, just like a force sword. Roll its damage normally and apply it to the parrying weapon (or *body part,* if your opponent made an unarmed parry).\u003cbr\u003e\nThis effect is *always* obvious - your weapon flames, vibrates, turns to brilliant green energy, or otherwise telegraphs its destructive nature. Thus, canny foes can avoid the worst of it by relying on Dodge instead. However, you can trigger your skill defensively (see [*Defensive Use,* p. 5](PU1:5) so that your weapon damages a rival's weapon or body when *you* parry *him.*"
+												}
+											],
+											"text": "Incendiary Weapon",
+											"reference": "PU1:9"
+										},
+										{
+											"id": "38dad97f-8114-49cf-a6c4-2764bc025487",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "c5d9faa2-24e2-4a24-8572-f28358e7c49c",
+													"type": "note",
+													"text": "Melee; DX/Very Hard"
+												},
+												{
+													"id": "df55f08d-62b5-4390-9f31-e33060a500dc",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 2.\n\nYour damaging melee weapon automatically gets to roll its usual damage against any weapon that parries it - in effect, it's destructive for parrying purposes, just like a force sword. Roll its damage normally and apply it to the parrying weapon (or *body part,* if your opponent made an unarmed parry).\u003cbr\u003e\nThis effect is *always* obvious - your weapon flames, vibrates, turns to brilliant green energy, or otherwise telegraphs its destructive nature. Thus, canny foes can avoid the worst of it by relying on Dodge instead. However, you can trigger your skill defensively (see [*Defensive Use,* p. 5](PU1:5) so that your weapon damages a rival's weapon or body when *you* parry *him.*"
+												}
+											],
+											"text": "Penetrating Strike",
+											"reference": "PU1:9"
+										},
+										{
+											"id": "0e5acbce-7118-44d6-ae10-8ffcaa4cf292",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "6978ae62-3718-4621-b76a-81a51b2d3416",
+													"type": "note",
+													"text": "Melee; DX/Very Hard"
+												},
+												{
+													"id": "e3c02711-1a1f-4592-a241-9882fa1dd57c",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 2.\n\nYour damaging melee weapon automatically gets to roll its usual damage against any weapon that parries it - in effect, it's destructive for parrying purposes, just like a force sword. Roll its damage normally and apply it to the parrying weapon (or *body part,* if your opponent made an unarmed parry).\u003cbr\u003e\nThis effect is *always* obvious - your weapon flames, vibrates, turns to brilliant green energy, or otherwise telegraphs its destructive nature. Thus, canny foes can avoid the worst of it by relying on Dodge instead. However, you can trigger your skill defensively (see [*Defensive Use,* p. 5](PU1:5) so that your weapon damages a rival's weapon or body when *you* parry *him.*"
+												}
+											],
+											"text": "Project Blow",
+											"reference": "PU1:9"
+										},
+										{
+											"id": "75105134-0b13-41ba-899a-91f9a9d063a2",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "34193fec-7abc-41d1-9dbe-b7d46489e2e2",
+													"type": "note",
+													"text": "Melee; DX/Very Hard"
+												},
+												{
+													"id": "7db9aaa6-47f7-4446-ae81-43ec02e98241",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 2.\n\nYour damaging melee weapon automatically gets to roll its usual damage against any weapon that parries it - in effect, it's destructive for parrying purposes, just like a force sword. Roll its damage normally and apply it to the parrying weapon (or *body part,* if your opponent made an unarmed parry).\u003cbr\u003e\nThis effect is *always* obvious - your weapon flames, vibrates, turns to brilliant green energy, or otherwise telegraphs its destructive nature. Thus, canny foes can avoid the worst of it by relying on Dodge instead. However, you can trigger your skill defensively (see [*Defensive Use,* p. 5](PU1:5) so that your weapon damages a rival's weapon or body when *you* parry *him.*"
+												}
+											],
+											"text": "Shockwave",
+											"reference": "PU1:10"
+										},
+										{
+											"id": "6537aff7-7345-4535-a75e-102739d58f39",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "cb334d0c-9576-4c47-b6d7-dd0ad232c557",
+													"type": "note",
+													"text": "Melee; DX/Very Hard"
+												},
+												{
+													"id": "77d08f9c-f30e-4766-bd95-a69e7eb94cdf",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 2.\n\nYour damaging melee weapon automatically gets to roll its usual damage against any weapon that parries it - in effect, it's destructive for parrying purposes, just like a force sword. Roll its damage normally and apply it to the parrying weapon (or *body part,* if your opponent made an unarmed parry).\u003cbr\u003e\nThis effect is *always* obvious - your weapon flames, vibrates, turns to brilliant green energy, or otherwise telegraphs its destructive nature. Thus, canny foes can avoid the worst of it by relying on Dodge instead. However, you can trigger your skill defensively (see [*Defensive Use,* p. 5](PU1:5) so that your weapon damages a rival's weapon or body when *you* parry *him.*"
+												}
+											],
+											"text": "Stealthy Attack",
+											"reference": "PU1:10"
+										},
+										{
+											"id": "1ef2dda4-61ab-4cc4-ac5c-4c03b04b62ba",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "42ecb1c5-a1b3-4250-ad19-912fdd354007",
+													"type": "note",
+													"text": "Melee; DX/Very Hard"
+												},
+												{
+													"id": "d787c230-0c2a-4991-ba4b-f1c1205b68e6",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 2.\n\nYour damaging melee weapon automatically gets to roll its usual damage against any weapon that parries it - in effect, it's destructive for parrying purposes, just like a force sword. Roll its damage normally and apply it to the parrying weapon (or *body part,* if your opponent made an unarmed parry).\u003cbr\u003e\nThis effect is *always* obvious - your weapon flames, vibrates, turns to brilliant green energy, or otherwise telegraphs its destructive nature. Thus, canny foes can avoid the worst of it by relying on Dodge instead. However, you can trigger your skill defensively (see [*Defensive Use,* p. 5](PU1:5) so that your weapon damages a rival's weapon or body when *you* parry *him.*"
+												}
+											],
+											"text": "Stupefying Blow",
+											"reference": "PU1:10"
+										},
+										{
+											"id": "087e2b83-a714-438d-abda-68d730becd25",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "9dd99b60-b615-48ed-9134-b031b149aec7",
+													"type": "note",
+													"text": "Melee; DX/Very Hard"
+												},
+												{
+													"id": "c546d9cf-1781-4798-b894-88d6ec26db7d",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 2.\n\nYour damaging melee weapon automatically gets to roll its usual damage against any weapon that parries it - in effect, it's destructive for parrying purposes, just like a force sword. Roll its damage normally and apply it to the parrying weapon (or *body part,* if your opponent made an unarmed parry).\u003cbr\u003e\nThis effect is *always* obvious - your weapon flames, vibrates, turns to brilliant green energy, or otherwise telegraphs its destructive nature. Thus, canny foes can avoid the worst of it by relying on Dodge instead. However, you can trigger your skill defensively (see [*Defensive Use,* p. 5](PU1:5) so that your weapon damages a rival's weapon or body when *you* parry *him.*"
+												}
+											],
+											"text": "Sudden Death",
+											"reference": "PU1:10"
+										},
+										{
+											"id": "966fff6a-1d1f-40cc-8a35-3b433bda2898",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "789762b8-6c2d-46b5-9ed0-6f4bd13094ae",
+													"type": "note",
+													"text": "Melee; DX/Very Hard"
+												},
+												{
+													"id": "f7394e07-0d20-44df-835d-a4ffe5fa2ea2",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 2.\n\nYour damaging melee weapon automatically gets to roll its usual damage against any weapon that parries it - in effect, it's destructive for parrying purposes, just like a force sword. Roll its damage normally and apply it to the parrying weapon (or *body part,* if your opponent made an unarmed parry).\u003cbr\u003e\nThis effect is *always* obvious - your weapon flames, vibrates, turns to brilliant green energy, or otherwise telegraphs its destructive nature. Thus, canny foes can avoid the worst of it by relying on Dodge instead. However, you can trigger your skill defensively (see [*Defensive Use,* p. 5](PU1:5) so that your weapon damages a rival's weapon or body when *you* parry *him.*"
+												}
+											],
+											"text": "Supreme Control",
+											"reference": "PU1:10"
+										},
+										{
+											"id": "d79eb9e5-89c6-4007-a11f-475bbfd4898f",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "2edfa58d-af07-4885-b027-b93c08ecb73f",
+													"type": "note",
+													"text": "Melee; DX/Very Hard"
+												},
+												{
+													"id": "07d3d792-33d4-4842-906c-8d611abead3f",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 2.\n\nYour damaging melee weapon automatically gets to roll its usual damage against any weapon that parries it - in effect, it's destructive for parrying purposes, just like a force sword. Roll its damage normally and apply it to the parrying weapon (or *body part,* if your opponent made an unarmed parry).\u003cbr\u003e\nThis effect is *always* obvious - your weapon flames, vibrates, turns to brilliant green energy, or otherwise telegraphs its destructive nature. Thus, canny foes can avoid the worst of it by relying on Dodge instead. However, you can trigger your skill defensively (see [*Defensive Use,* p. 5](PU1:5) so that your weapon damages a rival's weapon or body when *you* parry *him.*"
+												}
+											],
+											"text": "Telescoping Weapon",
+											"reference": "PU1:10"
+										},
+										{
+											"id": "21e0b36d-bae7-42f8-ba4b-796d4220263b",
+											"type": "note_container",
+											"children": [
+												{
+													"id": "1054563e-8d10-4445-a693-a68b023674b3",
+													"type": "note",
+													"text": "Melee; DX/Very Hard"
+												},
+												{
+													"id": "b4cda93c-a094-45e5-9647-203f04f799ea",
+													"type": "note",
+													"text": "*Default:* Specialty for related weapon at same penalty as weapon default.\u003cbr\u003e\n*Prerequisite:* Imbue 2.\n\nYour damaging melee weapon automatically gets to roll its usual damage against any weapon that parries it - in effect, it's destructive for parrying purposes, just like a force sword. Roll its damage normally and apply it to the parrying weapon (or *body part,* if your opponent made an unarmed parry).\u003cbr\u003e\nThis effect is *always* obvious - your weapon flames, vibrates, turns to brilliant green energy, or otherwise telegraphs its destructive nature. Thus, canny foes can avoid the worst of it by relying on Dodge instead. However, you can trigger your skill defensively (see [*Defensive Use,* p. 5](PU1:5) so that your weapon damages a rival's weapon or body when *you* parry *him.*"
+												}
+											],
+											"text": "Traumatic Blow",
+											"reference": "PU1:11"
+										}
+									],
+									"text": "Enhancements",
+									"reference": "PU4:6"
+								}
+							],
+							"text": "Power-Ups 1: Imbuements",
+							"reference": "PU1:4"
+						}
+					],
+					"text": "Imbuement References"
 				},
 				{
 					"id": "bda54074-8a85-4653-a658-592d9a9f9a2f",
@@ -3172,7 +3574,6 @@
 				{
 					"id": "f9773ca7-4e93-48ee-a377-25f97a2a5b3b",
 					"type": "note_container",
-					"open": true,
 					"children": [
 						{
 							"id": "085c91db-cc99-4ee7-8af2-7b5d288a288e",
@@ -3194,7 +3595,7 @@
 		}
 	],
 	"created_date": "2022-04-24T15:34:00-06:00",
-	"modified_date": "2023-02-12T15:51:11-07:00",
+	"modified_date": "2023-02-26T15:30:55-07:00",
 	"calc": {
 		"swing": "2d-1",
 		"thrust": "1d",

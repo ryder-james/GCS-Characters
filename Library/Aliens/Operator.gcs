@@ -2,11 +2,11 @@
 	"type": "character",
 	"version": 4,
 	"id": "44ee84c4-a65f-45cc-8e35-b1e4ad8d0c2d",
-	"total_points": 150,
+	"total_points": 162,
 	"points_record": [
 		{
 			"when": "2023-02-16T14:37:09-07:00",
-			"points": 150,
+			"points": 162,
 			"reason": "Initial points"
 		}
 	],
@@ -20,7 +20,7 @@
 		"skin": "Light Brown",
 		"handedness": "Right",
 		"gender": "Male",
-		"tech_level": "3",
+		"tech_level": "9",
 		"height": "5'7\"",
 		"weight": "151 lb"
 	},
@@ -283,7 +283,7 @@
 					"calc": {
 						"roll_range": "-",
 						"dr": {
-							"all": 0
+							"all": 8
 						}
 					}
 				},
@@ -298,7 +298,7 @@
 					"calc": {
 						"roll_range": "3-4",
 						"dr": {
-							"all": 2
+							"all": 8
 						}
 					}
 				},
@@ -312,7 +312,7 @@
 					"calc": {
 						"roll_range": "5",
 						"dr": {
-							"all": 0
+							"all": 6
 						}
 					}
 				},
@@ -326,7 +326,7 @@
 					"calc": {
 						"roll_range": "6-7",
 						"dr": {
-							"all": 0
+							"all": 6
 						}
 					}
 				},
@@ -340,7 +340,7 @@
 					"calc": {
 						"roll_range": "8",
 						"dr": {
-							"all": 0
+							"all": 6
 						}
 					}
 				},
@@ -352,7 +352,7 @@
 					"calc": {
 						"roll_range": "9-10",
 						"dr": {
-							"all": 0
+							"all": 6
 						}
 					}
 				},
@@ -366,7 +366,7 @@
 					"calc": {
 						"roll_range": "11",
 						"dr": {
-							"all": 0
+							"all": 6
 						}
 					}
 				},
@@ -380,7 +380,7 @@
 					"calc": {
 						"roll_range": "12",
 						"dr": {
-							"all": 0
+							"all": 6
 						}
 					}
 				},
@@ -394,7 +394,7 @@
 					"calc": {
 						"roll_range": "13-14",
 						"dr": {
-							"all": 0
+							"all": 6
 						}
 					}
 				},
@@ -408,7 +408,7 @@
 					"calc": {
 						"roll_range": "15",
 						"dr": {
-							"all": 0
+							"all": 6
 						}
 					}
 				},
@@ -422,7 +422,7 @@
 					"calc": {
 						"roll_range": "16",
 						"dr": {
-							"all": 0
+							"all": 6
 						}
 					}
 				},
@@ -436,7 +436,7 @@
 					"calc": {
 						"roll_range": "17-18",
 						"dr": {
-							"all": 0
+							"all": 6
 						}
 					}
 				},
@@ -449,7 +449,7 @@
 					"calc": {
 						"roll_range": "-",
 						"dr": {
-							"all": 0
+							"all": 6
 						}
 					}
 				}
@@ -476,18 +476,18 @@
 		},
 		{
 			"attr_id": "dx",
-			"adj": 0,
+			"adj": 1,
 			"calc": {
-				"value": 10,
-				"points": 0
+				"value": 11,
+				"points": 20
 			}
 		},
 		{
 			"attr_id": "iq",
-			"adj": 0,
+			"adj": 1,
 			"calc": {
-				"value": 10,
-				"points": 0
+				"value": 11,
+				"points": 20
 			}
 		},
 		{
@@ -502,7 +502,7 @@
 			"attr_id": "will",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -510,7 +510,7 @@
 			"attr_id": "fright_check",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -518,7 +518,7 @@
 			"attr_id": "per",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -526,7 +526,7 @@
 			"attr_id": "vision",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -534,7 +534,7 @@
 			"attr_id": "hearing",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -542,7 +542,7 @@
 			"attr_id": "taste_smell",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -550,7 +550,7 @@
 			"attr_id": "touch",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -558,7 +558,7 @@
 			"attr_id": "basic_speed",
 			"adj": 0,
 			"calc": {
-				"value": 5,
+				"value": 5.25,
 				"points": 0
 			}
 		},
@@ -618,7 +618,7 @@
 						}
 					],
 					"calc": {
-						"level": 10,
+						"level": 11,
 						"parry": "No",
 						"block": "No",
 						"damage": "1d-3 cr"
@@ -653,7 +653,7 @@
 						}
 					],
 					"calc": {
-						"level": 10,
+						"level": 11,
 						"parry": "8",
 						"damage": "1d-3 cr"
 					}
@@ -689,7 +689,7 @@
 						}
 					],
 					"calc": {
-						"level": 8,
+						"level": 9,
 						"parry": "No",
 						"damage": "1d-2 cr"
 					}
@@ -698,10 +698,439 @@
 			"calc": {
 				"points": 0
 			}
+		},
+		{
+			"id": "09d15277-bfa5-49b1-9684-9646fa994068",
+			"type": "trait",
+			"name": "Gizmo",
+			"reference": "B57,MA45",
+			"tags": [
+				"Advantage",
+				"Mental"
+			],
+			"levels": 3,
+			"points_per_level": 5,
+			"can_level": true,
+			"calc": {
+				"points": 15
+			}
+		},
+		{
+			"id": "e9ea65f2-7a2e-4afc-9241-ca0506882d79",
+			"type": "trait",
+			"name": "Wild Talent",
+			"reference": "B99,P89,MA49",
+			"tags": [
+				"Advantage",
+				"Mental",
+				"Supernatural"
+			],
+			"modifiers": [
+				{
+					"id": "18b55b1d-d84e-4ec0-b8ed-77ef64d222f6",
+					"type": "modifier",
+					"name": "Retention",
+					"reference": "B99",
+					"cost": 25,
+					"disabled": true
+				},
+				{
+					"id": "50202ec6-a2c5-4557-80f1-1e29b7ec89fd",
+					"type": "modifier",
+					"name": "Emergencies Only",
+					"reference": "B100",
+					"cost": -30,
+					"disabled": true
+				},
+				{
+					"id": "10fddeca-5320-4639-ab4e-e986f0efb986",
+					"type": "modifier",
+					"name": "Focused",
+					"reference": "B99",
+					"notes": "@Type: Mental, Physical, Magical or Chi@",
+					"cost": -20,
+					"disabled": true
+				},
+				{
+					"id": "6b947b4f-1cbe-444d-89f4-a9c35cba90fc",
+					"type": "modifier",
+					"name": "Wild Ability",
+					"reference": "P90",
+					"cost": 50,
+					"disabled": true
+				},
+				{
+					"id": "e28ca336-e0c0-47b9-b547-49d38ceb5b1b",
+					"type": "modifier",
+					"name": "External",
+					"reference": "P90",
+					"cost": -20,
+					"disabled": true
+				}
+			],
+			"levels": 2,
+			"points_per_level": 20,
+			"can_level": true,
+			"calc": {
+				"points": 40
+			}
+		},
+		{
+			"id": "28c9f5fc-becb-439b-9d59-145c9ed60f83",
+			"type": "trait",
+			"name": "Intuition",
+			"reference": "B63,P56",
+			"tags": [
+				"Advantage",
+				"Mental"
+			],
+			"modifiers": [
+				{
+					"id": "e06e6e3c-d4d0-43d5-8c38-b91e8b10d310",
+					"type": "modifier",
+					"name": "Inspired",
+					"reference": "P56",
+					"cost": 100,
+					"disabled": true
+				}
+			],
+			"base_points": 15,
+			"calc": {
+				"points": 15
+			}
+		},
+		{
+			"id": "f5ae0d46-bbe7-4aad-bb86-91130a58ce02",
+			"type": "trait",
+			"name": "Luck",
+			"reference": "B66,P59",
+			"notes": "Usable once per hour of play",
+			"tags": [
+				"Advantage",
+				"Mental"
+			],
+			"modifiers": [
+				{
+					"id": "b5f2c667-bec1-442e-9ef9-f051a6c31510",
+					"type": "modifier",
+					"name": "Active",
+					"reference": "B66",
+					"cost": -40,
+					"disabled": true
+				},
+				{
+					"id": "d9965ee9-527e-4933-95ef-ef8a02ed7683",
+					"type": "modifier",
+					"name": "Aspected",
+					"reference": "B66",
+					"notes": "@Aspect@",
+					"cost": -20,
+					"disabled": true
+				},
+				{
+					"id": "67318c7d-d090-4012-a955-0d1a36052c27",
+					"type": "modifier",
+					"name": "Defensive",
+					"reference": "B66",
+					"cost": -20,
+					"disabled": true
+				},
+				{
+					"id": "4f41a545-c80c-4754-bf3c-93b9662beef2",
+					"type": "modifier",
+					"name": "Wishing",
+					"reference": "P59",
+					"cost": 100,
+					"disabled": true
+				}
+			],
+			"base_points": 15,
+			"calc": {
+				"points": 15
+			}
+		},
+		{
+			"id": "8db9ad34-0baf-438d-8bb6-9957e6f83d76",
+			"type": "trait",
+			"name": "Agoraphobia (Open Spaces)",
+			"reference": "B150",
+			"notes": "You are uncomfortable whenever you are outside, and actually become frightened when there are no walls within 50 feet.",
+			"tags": [
+				"Disadvantage",
+				"Mental"
+			],
+			"base_points": -10,
+			"cr": 12,
+			"cr_adj": "action_penalty",
+			"calc": {
+				"points": -10
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "aa5267a5-a1ea-49d8-9172-01822541bd8e",
+			"type": "skill",
+			"name": "Operator!",
+			"difficulty": "iq/w",
+			"points": 36,
+			"calc": {
+				"level": 12,
+				"rsl": "IQ+1"
+			}
+		},
+		{
+			"id": "0bd7f7b1-fa14-4f8e-9a60-bfcf541c9ca6",
+			"type": "skill",
+			"name": "Spacer",
+			"reference": "B185",
+			"tags": [
+				"Vehicle"
+			],
+			"tech_level": "9",
+			"difficulty": "iq/e",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -4,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -4
+				}
+			],
+			"calc": {
+				"level": 11,
+				"rsl": "IQ+0"
+			}
+		},
+		{
+			"id": "c2814143-592c-42e2-9b09-347f01e2f63c",
+			"type": "skill",
+			"name": "Hazardous Materials",
+			"reference": "B199",
+			"tags": [
+				"Technical"
+			],
+			"specialization": "Biological",
+			"tech_level": "9",
+			"difficulty": "iq/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				}
+			],
+			"calc": {
+				"level": 10,
+				"rsl": "IQ-1"
+			}
+		},
+		{
+			"id": "15797be9-c08c-4279-b0fe-30cfbed51ba2",
+			"type": "skill",
+			"name": "Spacer",
+			"reference": "B185",
+			"tags": [
+				"Vehicle"
+			],
+			"tech_level": "9",
+			"difficulty": "iq/e",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -4,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -4
+				}
+			],
+			"calc": {
+				"level": 11,
+				"rsl": "IQ+0"
+			}
+		},
+		{
+			"id": "5742fc9a-1790-494f-9437-5afa15b45330",
+			"type": "skill",
+			"name": "Judo",
+			"reference": "B203,MA57",
+			"notes": "Allows parrying two different attacks per turn, one with each hand.",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Weapon"
+			],
+			"difficulty": "dx/h",
+			"points": 8,
+			"encumbrance_penalty_multiplier": 1,
+			"calc": {
+				"level": 9,
+				"rsl": "DX+1"
+			}
+		}
+	],
+	"equipment": [
+		{
+			"id": "e9d29034-ea3d-4689-afb0-a7869504d116",
+			"type": "equipment",
+			"description": "Civilian Vacc Suit",
+			"reference": "UT179",
+			"notes": "Flexible. 2C/24hr.",
+			"tech_level": "9",
+			"tags": [
+				"Armor",
+				"Defenses"
+			],
+			"quantity": 1,
+			"value": 10000,
+			"weight": "25 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"location": "eye",
+					"amount": 6
+				},
+				{
+					"type": "dr_bonus",
+					"location": "skull",
+					"amount": 6
+				},
+				{
+					"type": "dr_bonus",
+					"location": "face",
+					"amount": 6
+				},
+				{
+					"type": "dr_bonus",
+					"location": "neck",
+					"amount": 6
+				},
+				{
+					"type": "dr_bonus",
+					"location": "torso",
+					"amount": 6
+				},
+				{
+					"type": "dr_bonus",
+					"location": "vitals",
+					"amount": 6
+				},
+				{
+					"type": "dr_bonus",
+					"location": "groin",
+					"amount": 6
+				},
+				{
+					"type": "dr_bonus",
+					"location": "arm",
+					"amount": 6
+				},
+				{
+					"type": "dr_bonus",
+					"location": "hand",
+					"amount": 6
+				},
+				{
+					"type": "dr_bonus",
+					"location": "leg",
+					"amount": 6
+				},
+				{
+					"type": "dr_bonus",
+					"location": "foot",
+					"amount": 6
+				},
+				{
+					"type": "dr_bonus",
+					"location": "tail",
+					"amount": 6
+				},
+				{
+					"type": "dr_bonus",
+					"location": "wing",
+					"amount": 6
+				},
+				{
+					"type": "dr_bonus",
+					"location": "fin",
+					"amount": 6
+				},
+				{
+					"type": "dr_bonus",
+					"location": "brain",
+					"amount": 6
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 10000,
+				"extended_weight": "25 lb"
+			}
+		},
+		{
+			"id": "b093c94d-d219-4881-a844-3881198ac293",
+			"type": "equipment",
+			"description": "Hyperspectral Imaging Sensor Array",
+			"reference": "UT61",
+			"notes": "32x magnification. 2D/12hr.",
+			"tech_level": "9",
+			"tags": [
+				"Sensors and Scientific Equipment"
+			],
+			"quantity": 1,
+			"value": 160000,
+			"weight": "50 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"location": "eye",
+					"amount": 2
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 160000,
+				"extended_weight": "50 lb"
+			}
+		}
+	],
+	"other_equipment": [
+		{
+			"id": "43eb4d95-59f0-4ba0-b619-bdf00715831e",
+			"type": "equipment",
+			"description": "Vacuum-proof sticky tape",
+			"reference": "UT38",
+			"notes": "150yd. x 2\"",
+			"tech_level": "9",
+			"quantity": 1,
+			"value": 2,
+			"weight": "0.125 lb",
+			"calc": {
+				"extended_value": 2,
+				"extended_weight": "0.125 lb"
+			}
 		}
 	],
 	"created_date": "2023-02-16T14:37:09-07:00",
-	"modified_date": "2023-02-16T14:37:09-07:00",
+	"modified_date": "2023-02-18T23:24:33-07:00",
 	"calc": {
 		"swing": "1d",
 		"thrust": "1d-2",

@@ -20,7 +20,7 @@
 		"skin": "Freckled",
 		"handedness": "Right",
 		"gender": "Female",
-		"tech_level": "3",
+		"tech_level": "9",
 		"height": "5'8\"",
 		"weight": "155 lb"
 	},
@@ -283,7 +283,7 @@
 					"calc": {
 						"roll_range": "-",
 						"dr": {
-							"all": 0
+							"all": 10
 						}
 					}
 				},
@@ -298,7 +298,7 @@
 					"calc": {
 						"roll_range": "3-4",
 						"dr": {
-							"all": 2
+							"all": 12
 						}
 					}
 				},
@@ -312,7 +312,7 @@
 					"calc": {
 						"roll_range": "5",
 						"dr": {
-							"all": 0
+							"all": 10
 						}
 					}
 				},
@@ -326,7 +326,7 @@
 					"calc": {
 						"roll_range": "6-7",
 						"dr": {
-							"all": 0
+							"all": 10
 						}
 					}
 				},
@@ -340,7 +340,7 @@
 					"calc": {
 						"roll_range": "8",
 						"dr": {
-							"all": 0
+							"all": 10
 						}
 					}
 				},
@@ -352,7 +352,7 @@
 					"calc": {
 						"roll_range": "9-10",
 						"dr": {
-							"all": 0
+							"all": 10
 						}
 					}
 				},
@@ -366,7 +366,7 @@
 					"calc": {
 						"roll_range": "11",
 						"dr": {
-							"all": 0
+							"all": 10
 						}
 					}
 				},
@@ -380,7 +380,7 @@
 					"calc": {
 						"roll_range": "12",
 						"dr": {
-							"all": 0
+							"all": 10
 						}
 					}
 				},
@@ -394,7 +394,7 @@
 					"calc": {
 						"roll_range": "13-14",
 						"dr": {
-							"all": 0
+							"all": 10
 						}
 					}
 				},
@@ -408,7 +408,7 @@
 					"calc": {
 						"roll_range": "15",
 						"dr": {
-							"all": 0
+							"all": 10
 						}
 					}
 				},
@@ -422,7 +422,7 @@
 					"calc": {
 						"roll_range": "16",
 						"dr": {
-							"all": 0
+							"all": 10
 						}
 					}
 				},
@@ -436,7 +436,7 @@
 					"calc": {
 						"roll_range": "17-18",
 						"dr": {
-							"all": 0
+							"all": 10
 						}
 					}
 				},
@@ -449,7 +449,7 @@
 					"calc": {
 						"roll_range": "-",
 						"dr": {
-							"all": 0
+							"all": 10
 						}
 					}
 				}
@@ -468,10 +468,10 @@
 	"attributes": [
 		{
 			"attr_id": "st",
-			"adj": 0,
+			"adj": 1,
 			"calc": {
-				"value": 10,
-				"points": 0
+				"value": 11,
+				"points": 10
 			}
 		},
 		{
@@ -484,25 +484,25 @@
 		},
 		{
 			"attr_id": "iq",
-			"adj": 0,
+			"adj": 1,
 			"calc": {
-				"value": 10,
-				"points": 0
+				"value": 11,
+				"points": 20
 			}
 		},
 		{
 			"attr_id": "ht",
-			"adj": 0,
+			"adj": 2,
 			"calc": {
-				"value": 10,
-				"points": 0
+				"value": 12,
+				"points": 20
 			}
 		},
 		{
 			"attr_id": "will",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -510,7 +510,7 @@
 			"attr_id": "fright_check",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -518,7 +518,7 @@
 			"attr_id": "per",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -526,7 +526,7 @@
 			"attr_id": "vision",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -534,7 +534,7 @@
 			"attr_id": "hearing",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -542,7 +542,7 @@
 			"attr_id": "taste_smell",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -550,7 +550,7 @@
 			"attr_id": "touch",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -558,7 +558,7 @@
 			"attr_id": "basic_speed",
 			"adj": 0,
 			"calc": {
-				"value": 5,
+				"value": 5.5,
 				"points": 0
 			}
 		},
@@ -574,8 +574,8 @@
 			"attr_id": "fp",
 			"adj": 0,
 			"calc": {
-				"value": 10,
-				"current": 10,
+				"value": 12,
+				"current": 12,
 				"points": 0
 			}
 		},
@@ -583,8 +583,8 @@
 			"attr_id": "hp",
 			"adj": 0,
 			"calc": {
-				"value": 10,
-				"current": 10,
+				"value": 11,
+				"current": 11,
 				"points": 0
 			}
 		}
@@ -621,7 +621,7 @@
 						"level": 10,
 						"parry": "No",
 						"block": "No",
-						"damage": "1d-3 cr"
+						"damage": "1d-2 cr"
 					}
 				},
 				{
@@ -655,7 +655,7 @@
 					"calc": {
 						"level": 10,
 						"parry": "8",
-						"damage": "1d-3 cr"
+						"damage": "1d-2 cr"
 					}
 				},
 				{
@@ -691,21 +691,874 @@
 					"calc": {
 						"level": 8,
 						"parry": "No",
-						"damage": "1d-2 cr"
+						"damage": "1d-1 cr"
 					}
 				}
 			],
 			"calc": {
 				"points": 0
 			}
+		},
+		{
+			"id": "d38ded53-d239-43d8-a3db-67bc6708b3b2",
+			"type": "trait",
+			"name": "Extra Life",
+			"reference": "B55",
+			"tags": [
+				"Advantage",
+				"Exotic",
+				"Mental"
+			],
+			"modifiers": [
+				{
+					"id": "a3306518-3b87-4aee-81ae-dc3f22d6e14a",
+					"type": "modifier",
+					"name": "Copy",
+					"reference": "B55",
+					"cost": -20,
+					"disabled": true
+				},
+				{
+					"id": "f039db6b-bd60-4bf0-a322-f0495cb185f8",
+					"type": "modifier",
+					"name": "Requires Body",
+					"reference": "B55",
+					"cost": -20,
+					"disabled": true
+				},
+				{
+					"id": "739fb53c-ef1a-4e34-bb37-074b6b66899f",
+					"type": "modifier",
+					"name": "Requires Body",
+					"reference": "B55",
+					"notes": "@Illegal, rare or expensive body@",
+					"cost": -40,
+					"disabled": true
+				},
+				{
+					"id": "b0d4534a-0b0c-4fda-bf4e-c10b75c4f6e4",
+					"type": "modifier",
+					"name": "Brain Pod",
+					"reference": "RSWL19",
+					"cost": -20,
+					"disabled": true
+				}
+			],
+			"levels": 1,
+			"points_per_level": 25,
+			"can_level": true,
+			"calc": {
+				"points": 25
+			}
+		},
+		{
+			"id": "77493473-8367-4729-a5da-fd1366c12f86",
+			"type": "trait",
+			"name": "Med-Syringe",
+			"reference": "B59,P51,PSI14",
+			"notes": "Can be used to heal 4 HP to any target. Make a roll against First Aid. On a success, the target heals 4 HP. On a critical failure, the recipient will instead suffer 1d damage. Apply a cumulative -3 to the roll for each successful use on the same target.\n\n4 uses. The Med-Syringe can be stolen with a QC of ST.",
+			"tags": [
+				"Advantage",
+				"Exotic",
+				"Mental"
+			],
+			"base_points": 20,
+			"calc": {
+				"points": 20
+			}
+		},
+		{
+			"id": "52436de6-31c6-48e2-b5b0-539acda62945",
+			"type": "trait",
+			"name": "Wireless Neural Interface",
+			"tags": [
+				"UT217"
+			],
+			"base_points": 17,
+			"calc": {
+				"points": 17
+			}
+		},
+		{
+			"id": "2501984d-e16f-4bc1-b7bf-9d571e33a444",
+			"type": "trait",
+			"name": "On the Edge",
+			"reference": "B146",
+			"notes": "Make a self-control roll whenever you face a life-threatening situation: piloting a burning vehicle, staring down an entire street gang while armed only with a toothbrush, etc. If you fail, you may not back down from the challenge – but you may roll again after every success roll or reaction roll relating to the situation. In combat, make a self-control roll every time you take your turn. If you fail, you must make an All-Out attack or engage in some other kind of near-insane, suicidal behavior.",
+			"tags": [
+				"Disadvantage",
+				"Mental"
+			],
+			"base_points": -15,
+			"features": [
+				{
+					"type": "reaction_bonus",
+					"situation": "from others if they witness your On the Edge behavior, unless it is someone who values bravery over self-preservation (GM’s decision), who will react at +2 instead",
+					"amount": -2
+				}
+			],
+			"cr": 12,
+			"calc": {
+				"points": -15
+			}
+		},
+		{
+			"id": "76fbb5d3-6dcc-40dc-b58e-e3cc5dfdd537",
+			"type": "trait",
+			"name": "Code of Honor",
+			"reference": "B163,MA53",
+			"notes": "Healer",
+			"tags": [
+				"Mental",
+				"Quirk"
+			],
+			"base_points": -1,
+			"calc": {
+				"points": -1
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "91278bb4-acc8-42da-936c-12c7a5b89354",
+			"type": "skill",
+			"name": "Diagnosis",
+			"reference": "B187",
+			"tags": [
+				"Medical"
+			],
+			"tech_level": "9",
+			"difficulty": "iq/h",
+			"points": 12,
+			"defaulted_from": {
+				"type": "skill",
+				"name": "Physician",
+				"modifier": -4,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -6
+				},
+				{
+					"type": "skill",
+					"name": "First Aid",
+					"modifier": -8
+				},
+				{
+					"type": "skill",
+					"name": "Physician",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Veterinary",
+					"modifier": -5
+				}
+			],
+			"calc": {
+				"level": 15,
+				"rsl": "IQ+4"
+			}
+		},
+		{
+			"id": "8516ada8-c8e5-4e0d-9980-99e0b269f488",
+			"type": "skill",
+			"name": "Electronics Operation",
+			"reference": "B189",
+			"tags": [
+				"Medical",
+				"Technical"
+			],
+			"specialization": "Medical",
+			"tech_level": "9",
+			"difficulty": "iq/a",
+			"points": 4,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Electronics Repair",
+					"specialization": "Medical",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Engineer",
+					"specialization": "Electronics",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Electronics Operation",
+					"modifier": -4
+				}
+			],
+			"calc": {
+				"level": 12,
+				"rsl": "IQ+1"
+			}
+		},
+		{
+			"id": "55e4f133-787f-4c0f-98b6-a2878a6de33a",
+			"type": "skill",
+			"name": "First Aid",
+			"reference": "B195",
+			"tags": [
+				"Everyman",
+				"Medical"
+			],
+			"tech_level": "9",
+			"difficulty": "iq/e",
+			"points": 4,
+			"defaulted_from": {
+				"type": "skill",
+				"name": "Physician",
+				"level": 11,
+				"adjusted_level": 11,
+				"points": 1
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Esoteric Medicine"
+				},
+				{
+					"type": "skill",
+					"name": "Physician"
+				},
+				{
+					"type": "skill",
+					"name": "Veterinary",
+					"modifier": -4
+				}
+			],
+			"calc": {
+				"level": 15,
+				"rsl": "IQ+4"
+			}
+		},
+		{
+			"id": "6c543210-f24f-4f25-8928-d1bce2db86b4",
+			"type": "skill",
+			"name": "Hazardous Materials",
+			"reference": "B199",
+			"tags": [
+				"Technical"
+			],
+			"specialization": "Biological",
+			"tech_level": "9",
+			"difficulty": "iq/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				}
+			],
+			"calc": {
+				"level": 10,
+				"rsl": "IQ-1"
+			}
+		},
+		{
+			"id": "ed42b5c2-0a60-4afb-bb86-4cbfe34c2905",
+			"type": "skill",
+			"name": "Hazardous Materials",
+			"reference": "B199",
+			"tags": [
+				"Technical"
+			],
+			"specialization": "Chemical",
+			"tech_level": "9",
+			"difficulty": "iq/a",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				}
+			],
+			"calc": {
+				"level": 10,
+				"rsl": "IQ-1"
+			}
+		},
+		{
+			"id": "00b43610-5bf9-4daa-a7f4-5b4f0d7d880a",
+			"type": "skill",
+			"name": "Physician",
+			"reference": "B213",
+			"tags": [
+				"Medical"
+			],
+			"tech_level": "9",
+			"difficulty": "iq/h",
+			"points": 4,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -7,
+				"level": 4,
+				"adjusted_level": 4,
+				"points": -4
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -7
+				},
+				{
+					"type": "skill",
+					"name": "First Aid",
+					"modifier": -11
+				},
+				{
+					"type": "skill",
+					"name": "Veterinary",
+					"modifier": -5
+				}
+			],
+			"calc": {
+				"level": 11,
+				"rsl": "IQ+0"
+			}
+		},
+		{
+			"id": "42be1a97-abd7-46b4-9e6b-d8584af6b2c7",
+			"type": "skill",
+			"name": "Physiology",
+			"reference": "B213",
+			"tags": [
+				"Medical",
+				"Natural Science"
+			],
+			"specialization": "Human",
+			"tech_level": "9",
+			"difficulty": "iq/h",
+			"points": 8,
+			"defaulted_from": {
+				"type": "skill",
+				"name": "Diagnosis",
+				"modifier": -5,
+				"level": 8,
+				"adjusted_level": 8,
+				"points": -8
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -6
+				},
+				{
+					"type": "skill",
+					"name": "Diagnosis",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Physician",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Surgery",
+					"modifier": -5
+				}
+			],
+			"calc": {
+				"level": 12,
+				"rsl": "IQ+1"
+			}
+		},
+		{
+			"id": "f3cdcfb3-619f-462c-898e-0e93c2123066",
+			"type": "skill",
+			"name": "Surgery",
+			"reference": "B223",
+			"tags": [
+				"Medical"
+			],
+			"tech_level": "9",
+			"difficulty": "iq/vh",
+			"points": 8,
+			"defaulted_from": {
+				"type": "skill",
+				"name": "Physician",
+				"modifier": -5,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"defaults": [
+				{
+					"type": "skill",
+					"name": "First Aid",
+					"modifier": -12
+				},
+				{
+					"type": "skill",
+					"name": "Physician",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Physiology",
+					"modifier": -8
+				},
+				{
+					"type": "skill",
+					"name": "Veterinary",
+					"modifier": -5
+				}
+			],
+			"prereqs": {
+				"type": "prereq_list",
+				"all": false,
+				"prereqs": [
+					{
+						"type": "skill_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "first aid"
+						}
+					},
+					{
+						"type": "skill_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "physician"
+						}
+					}
+				]
+			},
+			"calc": {
+				"level": 11,
+				"rsl": "IQ+0"
+			}
+		},
+		{
+			"id": "26fdae51-6ae6-4bab-8617-8947410a496b",
+			"type": "skill",
+			"name": "Vacc Suit",
+			"reference": "B192",
+			"tags": [
+				"Technical"
+			],
+			"tech_level": "9",
+			"difficulty": "dx/a",
+			"points": 8,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -5,
+				"level": 5,
+				"adjusted_level": 5,
+				"points": -5
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Diving Suit",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "NBC Suit",
+					"modifier": -2
+				},
+				{
+					"type": "skill",
+					"name": "Battlesuit",
+					"modifier": -2
+				}
+			],
+			"calc": {
+				"level": 12,
+				"rsl": "DX+2"
+			}
+		},
+		{
+			"id": "5ec9f240-78ef-42a6-97ea-1ecd92db8c32",
+			"type": "skill",
+			"name": "Spacer",
+			"reference": "B185",
+			"tags": [
+				"Vehicle"
+			],
+			"tech_level": "9",
+			"difficulty": "iq/e",
+			"points": 2,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -4,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -4
+				}
+			],
+			"calc": {
+				"level": 12,
+				"rsl": "IQ+1"
+			}
+		},
+		{
+			"id": "8ba340a5-cb53-4e8c-b1b1-b4fa78e38515",
+			"type": "skill",
+			"name": "Beam Weapons",
+			"reference": "B179",
+			"tags": [
+				"Combat",
+				"Ranged Combat",
+				"Weapon"
+			],
+			"specialization": "Pistol",
+			"tech_level": "9",
+			"difficulty": "dx/e",
+			"points": 2,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -4,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Beam Weapons",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Guns",
+					"specialization": "Pistol",
+					"modifier": -4
+				}
+			],
+			"calc": {
+				"level": 11,
+				"rsl": "DX+1"
+			}
+		}
+	],
+	"equipment": [
+		{
+			"id": "600239d4-46a0-4865-b873-083864cef01f",
+			"type": "equipment_container",
+			"open": true,
+			"children": [
+				{
+					"id": "8adc04bd-03d7-4152-943a-0ee425be597a",
+					"type": "equipment_container",
+					"open": true,
+					"children": [
+						{
+							"id": "ee389bbd-03e7-4444-8dd0-373b0c5fad0a",
+							"type": "equipment",
+							"description": "Head-Up Display (HUD)",
+							"reference": "UT24",
+							"tech_level": "9",
+							"tags": [
+								"Computers"
+							],
+							"quantity": 1,
+							"value": 50,
+							"equipped": true,
+							"calc": {
+								"extended_value": 50,
+								"extended_weight": "0 lb"
+							}
+						},
+						{
+							"id": "2a1ceb77-f872-451c-8576-714658ff4ff5",
+							"type": "equipment",
+							"description": "BioTech Diagnostics",
+							"reference": "UT25",
+							"notes": "+2 to Diagnostics",
+							"tech_level": "9",
+							"tags": [
+								"Software"
+							],
+							"quantity": 1,
+							"value": 3000,
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Diagnosis"
+									},
+									"amount": 2
+								}
+							],
+							"equipped": true,
+							"calc": {
+								"extended_value": 3000,
+								"extended_weight": "0 lb"
+							}
+						}
+					],
+					"description": "Small Computer",
+					"reference": "UT22",
+					"notes": "Complexity 6. 10TB. 2B/20hr.",
+					"tech_level": "10",
+					"tags": [
+						"Computers"
+					],
+					"quantity": 1,
+					"value": 100,
+					"weight": "0.5 lb",
+					"equipped": true,
+					"calc": {
+						"extended_value": 3150,
+						"extended_weight": "0.5 lb"
+					}
+				}
+			],
+			"description": "Reflex Vacc Suit",
+			"reference": "UT179",
+			"notes": "Flexible. DR+10 vs. piercing and cutting damage. 2C/24hr.",
+			"tech_level": "9",
+			"legality_class": "2",
+			"tags": [
+				"Armor",
+				"Defenses"
+			],
+			"quantity": 1,
+			"value": 12000,
+			"weight": "30 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"location": "eye",
+					"amount": 10
+				},
+				{
+					"type": "dr_bonus",
+					"location": "skull",
+					"amount": 10
+				},
+				{
+					"type": "dr_bonus",
+					"location": "face",
+					"amount": 10
+				},
+				{
+					"type": "dr_bonus",
+					"location": "neck",
+					"amount": 10
+				},
+				{
+					"type": "dr_bonus",
+					"location": "torso",
+					"amount": 10
+				},
+				{
+					"type": "dr_bonus",
+					"location": "vitals",
+					"amount": 10
+				},
+				{
+					"type": "dr_bonus",
+					"location": "groin",
+					"amount": 10
+				},
+				{
+					"type": "dr_bonus",
+					"location": "arm",
+					"amount": 10
+				},
+				{
+					"type": "dr_bonus",
+					"location": "hand",
+					"amount": 10
+				},
+				{
+					"type": "dr_bonus",
+					"location": "leg",
+					"amount": 10
+				},
+				{
+					"type": "dr_bonus",
+					"location": "foot",
+					"amount": 10
+				},
+				{
+					"type": "dr_bonus",
+					"location": "tail",
+					"amount": 10
+				},
+				{
+					"type": "dr_bonus",
+					"location": "wing",
+					"amount": 10
+				},
+				{
+					"type": "dr_bonus",
+					"location": "fin",
+					"amount": 10
+				},
+				{
+					"type": "dr_bonus",
+					"location": "brain",
+					"amount": 10
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 15150,
+				"extended_weight": "30.5 lb"
+			}
+		},
+		{
+			"id": "127e4975-a983-4f2c-a3b2-c44f2c1e247b",
+			"type": "equipment",
+			"description": "Holdout Laser",
+			"reference": "UT115",
+			"notes": "B/22 shots",
+			"tech_level": "10",
+			"legality_class": "3",
+			"tags": [
+				"Missile Weapon",
+				"Weaponry"
+			],
+			"quantity": 1,
+			"value": 300,
+			"weight": "0.35 lb",
+			"weapons": [
+				{
+					"id": "0a0478c8-6943-4b0c-ad3b-cd83d8ad3f25",
+					"type": "ranged_weapon",
+					"damage": {
+						"type": "burn",
+						"base": "2d",
+						"armor_divisor": 2
+					},
+					"strength": "3",
+					"accuracy": "3",
+					"range": "100/300",
+					"rate_of_fire": "3",
+					"shots": "12(3)",
+					"bulk": "-1",
+					"recoil": "1",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Beam Weapons",
+							"specialization": "Pistol"
+						},
+						{
+							"type": "skill",
+							"name": "Beam Weapons",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Pistol",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"level": 11,
+						"range": "100/300",
+						"damage": "2d(2) burn"
+					}
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 300,
+				"extended_weight": "0.35 lb"
+			}
+		},
+		{
+			"id": "86a5f355-f2e3-4f94-be8e-29b7f86332a8",
+			"type": "equipment",
+			"description": "Crash Kit",
+			"reference": "UT198",
+			"notes": "Surgery -5.",
+			"tech_level": "9",
+			"tags": [
+				"Medical"
+			],
+			"quantity": 1,
+			"value": 200,
+			"weight": "10 lb",
+			"features": [
+				{
+					"type": "skill_bonus",
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "First Aid"
+					},
+					"amount": 2
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 200,
+				"extended_weight": "10 lb"
+			}
 		}
 	],
 	"created_date": "2023-02-16T14:37:59-07:00",
-	"modified_date": "2023-02-16T14:37:59-07:00",
+	"modified_date": "2023-02-19T11:10:47-07:00",
 	"calc": {
-		"swing": "1d",
-		"thrust": "1d-2",
-		"basic_lift": "20 lb",
+		"swing": "1d+1",
+		"thrust": "1d-1",
+		"basic_lift": "24 lb",
 		"move": [
 			5,
 			4,

@@ -2,11 +2,11 @@
 	"type": "character",
 	"version": 4,
 	"id": "b0469385-3cd9-4442-9d47-4a66b44fff66",
-	"total_points": 150,
+	"total_points": 147,
 	"points_record": [
 		{
 			"when": "2023-02-16T14:30:22-07:00",
-			"points": 150,
+			"points": 147,
 			"reason": "Initial points"
 		}
 	],
@@ -19,7 +19,7 @@
 		"skin": "Dark Brown",
 		"handedness": "Right",
 		"gender": "Female",
-		"tech_level": "3",
+		"tech_level": "9",
 		"height": "5'9\"",
 		"weight": "156 lb"
 	},
@@ -325,7 +325,7 @@
 					"calc": {
 						"roll_range": "6-7",
 						"dr": {
-							"all": 0
+							"all": 4
 						}
 					}
 				},
@@ -339,7 +339,7 @@
 					"calc": {
 						"roll_range": "8",
 						"dr": {
-							"all": 0
+							"all": 4
 						}
 					}
 				},
@@ -351,7 +351,7 @@
 					"calc": {
 						"roll_range": "9-10",
 						"dr": {
-							"all": 0
+							"all": 4
 						}
 					}
 				},
@@ -365,7 +365,7 @@
 					"calc": {
 						"roll_range": "11",
 						"dr": {
-							"all": 0
+							"all": 4
 						}
 					}
 				},
@@ -379,7 +379,7 @@
 					"calc": {
 						"roll_range": "12",
 						"dr": {
-							"all": 0
+							"all": 4
 						}
 					}
 				},
@@ -393,7 +393,7 @@
 					"calc": {
 						"roll_range": "13-14",
 						"dr": {
-							"all": 0
+							"all": 4
 						}
 					}
 				},
@@ -448,7 +448,7 @@
 					"calc": {
 						"roll_range": "-",
 						"dr": {
-							"all": 0
+							"all": 4
 						}
 					}
 				}
@@ -483,10 +483,10 @@
 		},
 		{
 			"attr_id": "iq",
-			"adj": 0,
+			"adj": 2,
 			"calc": {
-				"value": 10,
-				"points": 0
+				"value": 12,
+				"points": 40
 			}
 		},
 		{
@@ -501,7 +501,7 @@
 			"attr_id": "will",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 12,
 				"points": 0
 			}
 		},
@@ -509,23 +509,23 @@
 			"attr_id": "fright_check",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 12,
 				"points": 0
 			}
 		},
 		{
 			"attr_id": "per",
-			"adj": 0,
+			"adj": -1,
 			"calc": {
-				"value": 10,
-				"points": 0
+				"value": 11,
+				"points": -5
 			}
 		},
 		{
 			"attr_id": "vision",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -533,7 +533,7 @@
 			"attr_id": "hearing",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -541,7 +541,7 @@
 			"attr_id": "taste_smell",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -549,7 +549,7 @@
 			"attr_id": "touch",
 			"adj": 0,
 			"calc": {
-				"value": 10,
+				"value": 11,
 				"points": 0
 			}
 		},
@@ -697,10 +697,1168 @@
 			"calc": {
 				"points": 0
 			}
+		},
+		{
+			"id": "66004b94-d920-4da7-8f73-eb255c28c29b",
+			"type": "trait",
+			"name": "Extra Arm",
+			"reference": "B53",
+			"tags": [
+				"Advantage",
+				"Exotic",
+				"Physical"
+			],
+			"modifiers": [
+				{
+					"id": "a4a4b3db-88eb-412b-8bee-74150d9f3040",
+					"type": "modifier",
+					"name": "Extra-Flexible",
+					"reference": "B53",
+					"cost": 50,
+					"disabled": true
+				},
+				{
+					"id": "643b368b-74ff-4f03-b6b1-9cf522139f4b",
+					"type": "modifier",
+					"name": "Temporary Disadvantage (Ham-Fisted)",
+					"reference": "B138",
+					"notes": "Robotic arms have -3 on all fine DX-based tasks",
+					"cost": -5
+				},
+				{
+					"id": "942fdfcb-f239-4c40-9224-2e1507a43e60",
+					"type": "modifier",
+					"name": "Long",
+					"reference": "B53",
+					"cost": 100,
+					"levels": 2
+				},
+				{
+					"id": "3b1fbbca-405f-4592-b831-3ae68f98ee38",
+					"type": "modifier",
+					"name": "Foot Manipulators",
+					"reference": "B53",
+					"cost": -30,
+					"disabled": true
+				},
+				{
+					"id": "82659421-f2c1-4300-9119-c2406b9403fc",
+					"type": "modifier",
+					"name": "No Physical Attack",
+					"reference": "B53",
+					"cost": -50,
+					"disabled": true
+				},
+				{
+					"id": "c6ffffa4-1d92-4c7d-9aac-2097aa9a944e",
+					"type": "modifier",
+					"name": "Short",
+					"reference": "B53",
+					"cost": -50,
+					"disabled": true
+				},
+				{
+					"id": "3d074340-af06-4b70-aa84-22da87bb081d",
+					"type": "modifier",
+					"name": "Weak",
+					"reference": "B53",
+					"notes": "Half body ST",
+					"cost": -25,
+					"disabled": true
+				},
+				{
+					"id": "b2cccad5-b178-43ec-afc4-eae1c478a0cc",
+					"type": "modifier",
+					"name": "Weak",
+					"reference": "B53",
+					"notes": "Quarter body ST",
+					"cost": -50,
+					"disabled": true
+				},
+				{
+					"id": "9c654aa3-228f-4f8b-9f0f-58672c44ea9a",
+					"type": "modifier",
+					"name": "Weapon Mount",
+					"reference": "B53",
+					"cost": -80,
+					"disabled": true
+				},
+				{
+					"id": "e6cb0172-3f80-40db-a521-1c88f00105f6",
+					"type": "modifier",
+					"name": "No Grasping Hand",
+					"reference": "MATG28",
+					"cost": -40,
+					"disabled": true
+				}
+			],
+			"levels": 3,
+			"points_per_level": 10,
+			"can_level": true,
+			"calc": {
+				"points": 89
+			}
+		},
+		{
+			"id": "251a3369-c9e8-492e-a861-5c27fb533956",
+			"type": "trait",
+			"name": "Indecisive",
+			"reference": "B140",
+			"notes": "Make a self-control roll whenever a choice confronts you, modified downward by 1 for each alternative you can see. If you fail, you do nothing.",
+			"tags": [
+				"Disadvantage",
+				"Mental"
+			],
+			"base_points": -10,
+			"cr": 12,
+			"calc": {
+				"points": -10
+			}
+		},
+		{
+			"id": "35ad63c9-cc0a-45cb-82e5-168eb961017b",
+			"type": "trait",
+			"name": "Noisy",
+			"reference": "B146",
+			"tags": [
+				"Disadvantage",
+				"Physical"
+			],
+			"levels": 1,
+			"points_per_level": -2,
+			"features": [
+				{
+					"type": "skill_bonus",
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "stealth"
+					},
+					"amount": -2,
+					"per_level": true
+				}
+			],
+			"can_level": true,
+			"calc": {
+				"points": -2
+			}
+		},
+		{
+			"id": "76b6ddff-08b4-4f50-b5cc-f8d7b14544ce",
+			"type": "trait",
+			"name": "Affected by Magnetism",
+			"reference": "PU6:12",
+			"tags": [
+				"Exotic",
+				"Physical",
+				"Quirk"
+			],
+			"base_points": -1,
+			"calc": {
+				"points": -1
+			}
+		},
+		{
+			"id": "80fbc601-a598-45ff-b743-67bf44965815",
+			"type": "trait",
+			"name": "Attentive",
+			"reference": "PU6:17",
+			"tags": [
+				"Mental",
+				"Quirk"
+			],
+			"base_points": -1,
+			"calc": {
+				"points": -1
+			}
+		},
+		{
+			"id": "066c4b49-4c5a-423f-8a51-ad739d2fc58f",
+			"type": "trait",
+			"name": "Bad Posture",
+			"reference": "PU6:13",
+			"tags": [
+				"Physical",
+				"Quirk",
+				"Social"
+			],
+			"base_points": -1,
+			"calc": {
+				"points": -1
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "037b4448-f6a7-4b40-8ee3-42f8335ff132",
+			"type": "skill_container",
+			"children": [
+				{
+					"id": "bf161836-94c2-4d69-bbb1-de54f3a45f92",
+					"type": "skill",
+					"name": "Armoury",
+					"reference": "B178",
+					"tags": [
+						"Maintenance",
+						"Military",
+						"Repair"
+					],
+					"specialization": "Battlesuits",
+					"tech_level": "9",
+					"difficulty": "iq/a",
+					"points": 2,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -5,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Battlesuits",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "68186ba1-a02a-4488-85c1-d50d0e877378",
+					"type": "skill",
+					"name": "Armoury",
+					"reference": "B178",
+					"tags": [
+						"Maintenance",
+						"Military",
+						"Repair"
+					],
+					"specialization": "Heavy Weapons",
+					"tech_level": "9",
+					"difficulty": "iq/a",
+					"points": 2,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -5,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Heavy Weapons",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "5c4bdbbb-cc36-4122-ad9b-c61210335114",
+					"type": "skill",
+					"name": "Armoury",
+					"reference": "B178",
+					"tags": [
+						"Maintenance",
+						"Military",
+						"Repair"
+					],
+					"specialization": "Heavy Weapons",
+					"tech_level": "9",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -5,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Heavy Weapons",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"level": 11,
+						"rsl": "IQ-1"
+					}
+				},
+				{
+					"id": "d9d1e21e-1399-470c-93be-e0f82486ed70",
+					"type": "skill",
+					"name": "Armoury",
+					"reference": "B178",
+					"tags": [
+						"Maintenance",
+						"Military",
+						"Repair"
+					],
+					"specialization": "Vehicular Armor",
+					"tech_level": "9",
+					"difficulty": "iq/a",
+					"points": 2,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -5,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Vehicular Armor",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				}
+			],
+			"name": "Armoury"
+		},
+		{
+			"id": "8695cb4a-271e-40e2-bc8e-1af4c2a7a8c6",
+			"type": "skill",
+			"name": "Axe/Mace",
+			"reference": "B208",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Weapon"
+			],
+			"difficulty": "dx/a",
+			"points": 8,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -5,
+				"level": 5,
+				"adjusted_level": 5,
+				"points": -5
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Two-Handed Axe/Mace",
+					"modifier": -3
+				},
+				{
+					"type": "skill",
+					"name": "Flail",
+					"modifier": -4
+				}
+			],
+			"calc": {
+				"level": 12,
+				"rsl": "DX+2"
+			}
+		},
+		{
+			"id": "aad0c290-e3b8-4e0c-a0f1-7b877cb0afeb",
+			"type": "skill_container",
+			"children": [
+				{
+					"id": "8cb8cd36-2e18-4266-9734-07804a55e346",
+					"type": "skill",
+					"name": "Computer Operation",
+					"reference": "B184",
+					"tags": [
+						"Everyman",
+						"Scholarly",
+						"Technical"
+					],
+					"tech_level": "9",
+					"difficulty": "iq/e",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -4,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "7acc20bf-3b42-4322-9597-b23c1926013c",
+					"type": "skill",
+					"name": "Computer Programming",
+					"reference": "B184",
+					"tags": [
+						"Design",
+						"Invention"
+					],
+					"tech_level": "9",
+					"difficulty": "iq/h",
+					"points": 2,
+					"calc": {
+						"level": 11,
+						"rsl": "IQ-1"
+					}
+				},
+				{
+					"id": "8a62dd68-6d2c-4b7f-b01e-28e8da348588",
+					"type": "skill",
+					"name": "Computer Programming",
+					"reference": "B184",
+					"tags": [
+						"Design",
+						"Invention"
+					],
+					"specialization": "AI",
+					"tech_level": "9",
+					"difficulty": "iq/h",
+					"points": 2,
+					"calc": {
+						"level": 11,
+						"rsl": "IQ-1"
+					}
+				}
+			],
+			"name": "Computers"
+		},
+		{
+			"id": "787ee25f-4239-4afa-aa3e-a8be5cf96079",
+			"type": "skill",
+			"name": "Electrician",
+			"reference": "B189",
+			"tags": [
+				"Maintenance",
+				"Repair"
+			],
+			"tech_level": "9",
+			"difficulty": "iq/a",
+			"points": 4,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Engineer",
+					"specialization": "Electrical",
+					"modifier": -3
+				}
+			],
+			"calc": {
+				"level": 13,
+				"rsl": "IQ+1"
+			}
+		},
+		{
+			"id": "9a3b0372-866f-46f8-ade5-31d4dfa332ba",
+			"type": "skill_container",
+			"children": [
+				{
+					"id": "2f36f67a-5e3b-43da-9f26-c0e6b498931e",
+					"type": "skill",
+					"name": "Electronics Operation",
+					"reference": "B189",
+					"tags": [
+						"Technical"
+					],
+					"specialization": "Communications",
+					"tech_level": "9",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -5,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Repair",
+							"specialization": "Communications",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -5
+						}
+					],
+					"calc": {
+						"level": 11,
+						"rsl": "IQ-1"
+					}
+				},
+				{
+					"id": "3feab195-9f23-45f1-8b97-c422f72b84ea",
+					"type": "skill",
+					"name": "Electronics Operation",
+					"reference": "B189",
+					"tags": [
+						"Criminal",
+						"Spy",
+						"Street",
+						"Technical"
+					],
+					"specialization": "Security",
+					"tech_level": "9",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -5,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"specialization": "Security",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"level": 11,
+						"rsl": "IQ-1"
+					}
+				},
+				{
+					"id": "d97bd682-bfcc-4e3e-a28d-718f53e1c8f2",
+					"type": "skill",
+					"name": "Electronics Operation",
+					"reference": "B189",
+					"tags": [
+						"Technical"
+					],
+					"specialization": "Sensors",
+					"tech_level": "9",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -5,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Repair",
+							"specialization": "Sensors",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"level": 11,
+						"rsl": "IQ-1"
+					}
+				},
+				{
+					"id": "d7d1f9ea-e13b-42dc-9ef9-37288e751322",
+					"type": "skill",
+					"name": "Electronics Repair",
+					"reference": "B190",
+					"tags": [
+						"Maintenance",
+						"Repair"
+					],
+					"specialization": "Communications",
+					"tech_level": "9",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Electronics Operation",
+						"specialization": "Communications",
+						"modifier": -3,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"specialization": "Communications",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Repair",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"level": 11,
+						"rsl": "IQ-1"
+					}
+				},
+				{
+					"id": "6e36c0e1-d9ef-46b0-b91b-a7a782de4d82",
+					"type": "skill",
+					"name": "Electronics Repair",
+					"reference": "B190",
+					"tags": [
+						"Maintenance",
+						"Repair"
+					],
+					"specialization": "Computer",
+					"tech_level": "9",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Computer Operation",
+						"modifier": -3,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Computer Operation",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Repair",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"level": 11,
+						"rsl": "IQ-1"
+					}
+				},
+				{
+					"id": "974b6668-686c-4871-8b02-199dd16deedf",
+					"type": "skill",
+					"name": "Electronics Repair",
+					"reference": "B190",
+					"tags": [
+						"Maintenance",
+						"Repair"
+					],
+					"specialization": "Security",
+					"tech_level": "9",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Electronics Operation",
+						"specialization": "Security",
+						"modifier": -3,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"specialization": "Security",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Repair",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"level": 11,
+						"rsl": "IQ-1"
+					}
+				},
+				{
+					"id": "d9278b74-c3a2-4e51-8c66-95c402388c57",
+					"type": "skill",
+					"name": "Electronics Repair",
+					"reference": "B190",
+					"tags": [
+						"Maintenance",
+						"Repair"
+					],
+					"specialization": "Sensors",
+					"tech_level": "9",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Electronics Operation",
+						"specialization": "Sensors",
+						"modifier": -3,
+						"level": 8,
+						"adjusted_level": 8,
+						"points": -8
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"specialization": "Sensors",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Repair",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"level": 11,
+						"rsl": "IQ-1"
+					}
+				}
+			],
+			"name": "Electronics Operation and Repair"
+		},
+		{
+			"id": "c7f355ef-6775-4de2-ab92-8d498d6501e0",
+			"type": "skill",
+			"name": "Guns",
+			"reference": "B198",
+			"tags": [
+				"Combat",
+				"Ranged Combat",
+				"Weapon"
+			],
+			"specialization": "Pistol",
+			"tech_level": "9",
+			"difficulty": "dx/e",
+			"points": 1,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -4,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Guns",
+					"specialization": "Grenade Launcher",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Guns",
+					"specialization": "Gyroc",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Guns",
+					"specialization": "Light Anti-Armor Weapon",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Guns",
+					"specialization": "Light Machine Gun",
+					"modifier": -2
+				},
+				{
+					"type": "skill",
+					"name": "Guns",
+					"specialization": "Musket",
+					"modifier": -2
+				},
+				{
+					"type": "skill",
+					"name": "Beam Weapons",
+					"specialization": "Pistol",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Guns",
+					"specialization": "Rifle",
+					"modifier": -2
+				},
+				{
+					"type": "skill",
+					"name": "Guns",
+					"specialization": "Shotgun",
+					"modifier": -2
+				},
+				{
+					"type": "skill",
+					"name": "Guns",
+					"specialization": "Submachine Gun",
+					"modifier": -2
+				}
+			],
+			"calc": {
+				"level": 10,
+				"rsl": "DX+0"
+			}
+		},
+		{
+			"id": "82630f24-da7c-4f8d-abf2-cd82dd28a3c4",
+			"type": "skill_container",
+			"children": [
+				{
+					"id": "332d16c1-692b-4bff-aba7-9981618befdb",
+					"type": "skill",
+					"name": "Mechanic",
+					"reference": "B207",
+					"tags": [
+						"Maintenance",
+						"Repair"
+					],
+					"specialization": "High-Performance Spacecraft",
+					"tech_level": "9",
+					"difficulty": "iq/a",
+					"points": 4,
+					"defaulted_from": {
+						"type": "iq",
+						"modifier": -5,
+						"level": 7,
+						"adjusted_level": 7,
+						"points": -7
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "High-Performance Spacecraft",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Machinist",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Mechanic",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"level": 13,
+						"rsl": "IQ+1"
+					}
+				},
+				{
+					"id": "a80e765f-239a-49cf-8c43-ff81053e52d7",
+					"type": "skill",
+					"name": "Mechanic",
+					"reference": "B207",
+					"tags": [
+						"Maintenance",
+						"Repair"
+					],
+					"specialization": "Mecha",
+					"tech_level": "9",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaulted_from": {
+						"type": "skill",
+						"name": "Mechanic",
+						"specialization": "High-Performance Spacecraft",
+						"modifier": -4,
+						"level": 9,
+						"adjusted_level": 9,
+						"points": -9
+					},
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Mecha",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Machinist",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Mechanic",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"level": 11,
+						"rsl": "IQ-1"
+					}
+				}
+			],
+			"name": "Mechanic"
+		},
+		{
+			"id": "d9949434-bfdc-46d0-868d-e1019d250bcc",
+			"type": "skill",
+			"name": "Spacer",
+			"reference": "B185",
+			"tags": [
+				"Vehicle"
+			],
+			"tech_level": "9",
+			"difficulty": "iq/e",
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -4,
+				"level": 8,
+				"adjusted_level": 8,
+				"points": -8
+			},
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -4
+				}
+			],
+			"calc": {
+				"level": 12,
+				"rsl": "IQ+0"
+			}
+		}
+	],
+	"equipment": [
+		{
+			"id": "677f599f-0f0c-431e-8629-3c3027cbe645",
+			"type": "equipment",
+			"description": "Reflex Bodysuit",
+			"reference": "UT172",
+			"notes": "DR+8 vs. piercing and cutting. Flexible.",
+			"tech_level": "9",
+			"legality_class": "3",
+			"tags": [
+				"Defenses"
+			],
+			"quantity": 1,
+			"value": 900,
+			"weight": "6 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"location": "torso",
+					"amount": 4
+				},
+				{
+					"type": "dr_bonus",
+					"location": "vitals",
+					"amount": 4
+				},
+				{
+					"type": "dr_bonus",
+					"location": "groin",
+					"amount": 4
+				},
+				{
+					"type": "dr_bonus",
+					"location": "arm",
+					"amount": 4
+				},
+				{
+					"type": "dr_bonus",
+					"location": "leg",
+					"amount": 4
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 900,
+				"extended_weight": "6 lb"
+			}
+		},
+		{
+			"id": "3dbd603b-4ccd-45dd-afab-53a84b31faf7",
+			"type": "equipment",
+			"description": "Wrench",
+			"legality_class": "4",
+			"quantity": 1,
+			"weight": "2 lb",
+			"weapons": [
+				{
+					"id": "f4265663-4a09-46c9-a4ab-5283dea520d5",
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "sw"
+					},
+					"strength": "8",
+					"usage": "Swing",
+					"reach": "1",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -7
+						},
+						{
+							"type": "skill",
+							"name": "Axe/Mace",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"level": 10,
+						"parry": "8",
+						"damage": "1d cr"
+					}
+				}
+			],
+			"equipped": true,
+			"calc": {
+				"extended_value": 0,
+				"extended_weight": "2 lb"
+			}
 		}
 	],
 	"created_date": "2023-02-16T14:30:22-07:00",
-	"modified_date": "2023-02-16T14:32:04-07:00",
+	"modified_date": "2023-02-17T23:50:46-07:00",
 	"calc": {
 		"swing": "1d",
 		"thrust": "1d-2",
